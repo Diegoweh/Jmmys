@@ -5,6 +5,7 @@ import SatisfaceSection from '@/components/layout/SatisfaceSection';
 import { motion } from 'framer-motion';
 import { useState } from 'react'
 import React from "react";
+import CircularGallery from '@/components/CircularGallery';
 
 
 
@@ -21,30 +22,20 @@ export default function Home() {
       <SatisfaceSection />
 
       {/* Náutica Pizza Section */}
-      <section className="bg-blue py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-5xl md:text-6xl font-bold text-white mb-12 flex items-center gap-4">
-            <span className="text-orange text-6xl">⚓</span>
-            NÁUTICA
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="transform -rotate-6 bg-white rounded-lg shadow-2xl aspect-square overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                Pizza 1
-              </div>
-            </div>
-            <div className="transform rotate-3 bg-white rounded-lg shadow-2xl aspect-square overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                Pizza 2
-              </div>
-            </div>
-            <div className="transform -rotate-3 bg-white rounded-lg shadow-2xl aspect-square overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                Pizza 3
-              </div>
-            </div>
-          </div>
+      <section className="bg-blue py-8 md:py-12 px-0">
+        <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
+          <motion.h3
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange tracking-tight cubano"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            Nuestras Pizzas
+          </motion.h3>
+        </div>
+        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
+          <CircularGallery bend={5} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
         </div>
       </section>
 
@@ -58,11 +49,7 @@ export default function Home() {
             Y Sabe Bueno
           </p>
 
-          <div className="relative h-96 rounded-2xl overflow-hidden bg-gray-800">
-            <div className="w-full h-full flex items-center justify-center text-gray-400">
-              Pizza Hero Image
-            </div>
-          </div>
+          
         </div>
       </section>
 

@@ -236,9 +236,7 @@ class Media {
         varying vec2 vUv;
         void main() {
           vUv = uv;
-          vec3 p = position;
-          p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * (0.1 + uSpeed * 0.5);
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
         }
       `,
       fragment: `
@@ -264,14 +262,15 @@ class Media {
             vUv.y * ratio.y + (1.0 - ratio.y) * 0.5
           );
           vec4 color = texture2D(tMap, uv);
-          
+
           float d = roundedBoxSDF(vUv - 0.5, vec2(0.5 - uBorderRadius), uBorderRadius);
-          
+
           // Smooth antialiasing for edges
           float edgeSmooth = 0.002;
           float alpha = 1.0 - smoothstep(-edgeSmooth, edgeSmooth, d);
-          
-          gl_FragColor = vec4(color.rgb, alpha);
+
+          // Multiply with image's original alpha channel
+          gl_FragColor = vec4(color.rgb, color.a * alpha);
         }
       `,
       uniforms: {
@@ -478,51 +477,51 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `https://picsum.photos/seed/1/800/600?grayscale`,
+        image: `/img/pizzas/pizza1.webp`,
         text: 'Bridge'
       },
       {
-        image: `https://picsum.photos/seed/2/800/600?grayscale`,
+        image: `/img/pizzas/pizza2.webp`,
         text: 'Desk Setup'
       },
       {
-        image: `https://picsum.photos/seed/3/800/600?grayscale`,
+        image: `/img/pizzas/pizza3.webp`,
         text: 'Waterfall'
       },
       {
-        image: `https://picsum.photos/seed/4/800/600?grayscale`,
+        image: `/img/pizzas/pizza4.webp`,
         text: 'Strawberries'
       },
       {
-        image: `https://picsum.photos/seed/5/800/600?grayscale`,
+        image: `/img/pizzas/pizza5.webp`,
         text: 'Deep Diving'
       },
       {
-        image: `https://picsum.photos/seed/16/800/600?grayscale`,
+        image: `/img/pizzas/pizza6.webp`,
         text: 'Train Track'
       },
       {
-        image: `https://picsum.photos/seed/17/800/600?grayscale`,
+        image: `/img/pizzas/pizza7.webp`,
         text: 'Santorini'
       },
       {
-        image: `https://picsum.photos/seed/8/800/600?grayscale`,
+        image: `/img/pizzas/pizza8.webp`,
         text: 'Blurry Lights'
       },
       {
-        image: `https://picsum.photos/seed/9/800/600?grayscale`,
+        image: `/img/pizzas/pizza9.webp`,
         text: 'New York'
       },
       {
-        image: `https://picsum.photos/seed/10/800/600?grayscale`,
+        image: `/img/pizzas/pizza10.webp`,
         text: 'Good Boy'
       },
       {
-        image: `https://picsum.photos/seed/21/800/600?grayscale`,
+        image: `/img/pizzas/pizza11.webp`,
         text: 'Coastline'
       },
       {
-        image: `https://picsum.photos/seed/12/800/600?grayscale`,
+        image: `/img/pizzas/pizza12.webp`,
         text: 'Palm Trees'
       }
     ];
@@ -659,7 +658,7 @@ export default function CircularGallery({
   bend = 3,
   textColor = '#ffffff',
   borderRadius = 0.05,
-  font = 'bold 30px Figtree',
+  font = 'bold 30px cubano',
   scrollSpeed = 2,
   scrollEase = 0.05
 }: CircularGalleryProps) {
