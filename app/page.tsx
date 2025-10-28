@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react'
 import React from "react";
 import CircularGallery from '@/components/CircularGallery';
+import { OrderBox } from '@/components/OrderBox';
 
 
 
@@ -40,75 +41,26 @@ export default function Home() {
       </section>
 
       {/* Se Ve Bueno Section */}
-      <section className="bg-black py-20 px-6 relative">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-5xl md:text-6xl font-bold text-white mb-4">
+      <section
+        className="relative bg-[url('/img/bannerSeVeBueno.webp')] bg-cover bg-center bg-no-repeat py-36 px-6"
+      >
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        <div className="relative max-w-7xl mx-auto text-start text-white">
+          <h3 className="text-5xl md:text-7xl font-extrabold leading-none drop-shadow-lg cubano">
             SE VE BUENO
           </h3>
-          <p className="text-4xl md:text-5xl font-script italic text-white mb-8">
-            Y Sabe Bueno
+          <p className="text-5xl md:text-7xl font-script italic mt-2 drop-shadow-lg demo-relgone">
+            Y <span className="font-bold not-italic cubano">Sabe</span> Bueno
           </p>
-
-          
         </div>
       </section>
 
       {/* Cómo Ordenar Section */}
-      <section className="bg-cream py-20 px-6">
+      <section className="bg-cream px-6 py-4">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-b from-yellow to-orange rounded-3xl p-12 shadow-2xl">
-            <h3 className="text-4xl md:text-5xl font-bold text-center text-white mb-12">
-              ¿CÓMO ORDENAR?
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-orange">
-                  1
-                </div>
-                <h4 className="font-bold text-white text-xl mb-2">CATÁLOGO DE</h4>
-                <h4 className="font-bold text-white text-xl mb-2">PRODUCTOS</h4>
-                <p className="text-white text-sm">
-                  Explora nuestro delicioso menú y elige tus favoritos
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-orange">
-                  2
-                </div>
-                <h4 className="font-bold text-white text-xl mb-2">ORDENAR CON</h4>
-                <h4 className="font-bold text-white text-xl mb-2">NOSOTROS</h4>
-                <p className="text-white text-sm">
-                  Realiza tu pedido fácil y rápido
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-orange">
-                  3
-                </div>
-                <h4 className="font-bold text-white text-xl mb-2">ENTRE</h4>
-                <h4 className="font-bold text-white text-xl mb-2">30 Y 45 MINUTOS</h4>
-                <p className="text-white text-sm">
-                  Recibe tu pedido fresco y caliente
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <button className="bg-orange text-white px-12 py-4 rounded-full text-xl font-bold hover:bg-orange-dark transition shadow-lg">
-                ORDENAR AHORA
-              </button>
-            </div>
-          </div>
-
-          {/* Pizza Box Decoration */}
-          <div className="mt-8 text-center">
-            <div className="bg-gradient-to-r from-orange via-red to-blue text-white py-6 px-8 inline-block rounded-lg">
-              <h2 className="text-6xl md:text-7xl font-bold">JIMMY'S</h2>
-            </div>
-          </div>
+          <OrderBox />          
         </div>
       </section>
 
