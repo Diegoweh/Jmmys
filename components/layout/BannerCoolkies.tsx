@@ -54,7 +54,7 @@ const Banner: React.FC<BannerProps> = ({
           </div>
 
           {/* Layout personalizado para desktop */}
-          <div className="hidden lg:flex items-center justify-center gap-6 xl:gap-8 relative">
+          <div className="hidden lg:flex items-center justify-center gap-6 xl:gap-2 relative">
             {images.map((src, i) => {
               // Diferentes tamaños y posiciones para cada imagen
               const styles = [

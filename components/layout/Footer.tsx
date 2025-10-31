@@ -36,10 +36,10 @@ export default function Footer() {
                 height="80"
               />
               <div>
-                <h3 className="text-3xl font-bold text-orange-700 cubano">
+                <h3 className="text-3xl font-bold text-orange cubano">
                   JIMMY'S
                 </h3>
-                <p className="text-orange-600 font-medium">
+                <p className="text-orange font-medium">
                   Tu próxima obsesión
                 </p>
               </div>
@@ -66,7 +66,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="text-center sm:text-left">
-              <h4 className="font-bold text-lg text-orange-700 mb-1">
+              <h4 className="font-bold text-lg text-orange mb-1">
                 Escanea y ordena
               </h4>
               <p className="text-sm text-gray-600">
@@ -78,7 +78,7 @@ export default function Footer() {
 
           {/* Contacto */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold text-orange-700 cubano">CONTACTO</h4>
+            <h4 className="text-xl font-bold text-orange cubano">CONTACTO</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Teléfono */}
               <div className="flex items-center gap-3 text-white">

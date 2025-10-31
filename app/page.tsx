@@ -25,7 +25,7 @@ export default function Home() {
       <Header />      
 
       {/* Náutica Pizza Section */}
-      <section className="bg-[#afd8e8] py-8 md:py-12 px-0">
+      <section className="bg-sky-300 py-8 md:py-12 px-0">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
           <motion.h3
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange tracking-tight cubano"
