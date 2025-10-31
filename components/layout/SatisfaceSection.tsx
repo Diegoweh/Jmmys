@@ -78,7 +78,7 @@ export default function SatisfaceSection() {
                 left-[44%] sm:left-[50%] md:left-[48%] lg:left-[47%]
                 top-[22%] sm:top-[28%] md:top-[32%] lg:top-[35%]
                 w-24 sm:w-20 md:w-36 lg:w-40
-                z-30
+                z-29
               "
               delay={0.3}
             />
@@ -105,7 +105,7 @@ export default function SatisfaceSection() {
                 right-1 sm:right-4 md:right-8 lg:right-10
                 top-0 sm:-top-2 md:-top-6
                 w-24 sm:w-20 md:w-36 lg:w-40
-                z-40
+                z-29
               "
               delay={0.35}
             />
@@ -130,7 +130,7 @@ export default function SatisfaceSection() {
                 absolute 
                 left-1 sm:left-4 md:left-8 lg:left-10
                 bottom-2 sm:bottom-4 md:bottom-8
-                z-40
+                z-29
               "
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}

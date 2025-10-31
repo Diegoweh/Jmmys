@@ -22,10 +22,7 @@ export const Header: React.FC = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Navbar - Always visible on top */}
-      <div className="absolute top-0 left-0 right-0 z-30">
-        <Navbar logoSrc="/img/logo.png" cartCount={0} />
-      </div>
+      
 
       {/* Slide 1: Imagen con texto y decoraciones */}
       <div
@@ -114,7 +111,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Indicadores de navegación (dots) */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}
@@ -130,7 +127,7 @@ export const Header: React.FC = () => {
       {/* Botones de navegación lateral */}
       <button
         onClick={() => setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full backdrop-blur-sm transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full backdrop-blur-sm transition-all"
         aria-label="Slide anterior"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +136,7 @@ export const Header: React.FC = () => {
       </button>
       <button
         onClick={() => setCurrentSlide((prev) => (prev + 1) % totalSlides)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full backdrop-blur-sm transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-0 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full backdrop-blur-sm transition-all"
         aria-label="Siguiente slide"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

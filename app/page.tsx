@@ -7,6 +7,11 @@ import { useState } from 'react'
 import React from "react";
 import CircularGallery from '@/components/CircularGallery';
 import { OrderBox } from '@/components/OrderBox';
+import CoolkiesBanner from '@/components/layout/CoolkiesBanner';
+import BannerCoolkies from '@/components/layout/BannerCoolkies';
+import Banner from '@/components/layout/BannerCoolkies';
+import UbicanosSection from '@/components/layout/UbicanosSection';
+import Footer from '@/components/layout/Footer';
 
 
 
@@ -17,13 +22,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       
-      <Header />
-
-      {/* Satisface Section */}
-      <SatisfaceSection />
+      <Header />      
 
       {/* Náutica Pizza Section */}
-      <section className="bg-blue py-8 md:py-12 px-0">
+      <section className="bg-[#afd8e8] py-8 md:py-12 px-0">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
           <motion.h3
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange tracking-tight cubano"
@@ -65,92 +67,36 @@ export default function Home() {
       </section>
 
       {/* Cookies Section */}
-      <section className="bg-yellow py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-6xl md:text-7xl font-bold text-white mb-12 font-script italic">
-            Cookies
-          </h3>
+      <Banner
+          backgroundImage="/img/banner.png"
+          height="h-[420px]"
+          overlay
+          overlayOpacity="bg-opacity-40"
+          images={[
+            '/img/coolkids.png',
+            '/img/cookie3.webp',
+            '/img/cookie2.webp',
+            '/img/cookie4.webp'
+          ]}
+      />      
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-square rounded-full overflow-hidden shadow-xl bg-gray-200">
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  Cookie {i}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 h-8 bg-white opacity-20"></div>
-          <div className="grid grid-cols-8 gap-2 mt-2">
-            {Array.from({ length: 16 }).map((_, i) => (
-              <div key={i} className={`h-8 ${i % 2 === 0 ? 'bg-yellow' : 'bg-white'}`}></div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Satisface Section */}
+      <SatisfaceSection />
 
       {/* Ubicanos Section */}
-      <section className="bg-cream py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-5xl md:text-6xl font-bold text-orange mb-4 font-script italic">
-            Ubicanos
-          </h3>
-          <p className="text-2xl md:text-3xl text-gray-700 mb-8">
-            Lo bueno está a la vuelta de la esquina
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-orange rounded-2xl p-8 text-white">
-              <h4 className="text-2xl font-bold mb-4">NUESTRA UBICACIÓN</h4>
-              <p className="mb-2">Calle Principal #123</p>
-              <p className="mb-2">Colonia Centro</p>
-              <p className="mb-4">Ciudad, Estado, CP</p>
-              <button className="bg-white text-orange px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">
-                VER EN MAPA
-              </button>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden shadow-lg aspect-video bg-gray-200">
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                Store Interior Image
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <UbicanosSection
+        title="Encuéntranos"
+        address="Av. de la Marina 603, Ejidal Francisco Villa, 82127 Mazatlán, Sin."
+        hours={[
+          "Lunes a Domingo",
+          "11:00 AM - 10:00 PM"
+        ]}
+        phone="(669) 123-4567"
+        mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6575222911565!2d-106.44167168819807!3d23.255546507504736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f535649e734e1%3A0xd02627dc0e3d47a4!2sAv.%20de%20la%20Marina%20603%2C%20Ejidal%20Francisco%20Villa%2C%2082127%20Mazatl%C3%A1n%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1761849036767!5m2!1ses-419!2smx"
+      />
 
       {/* Footer */}
-      <footer className="bg-orange text-white py-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">JIMMY'S</h2>
-              <p className="text-sm">Tu próxima obsesión</p>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">SÍGUENOS</h4>
-              <div className="flex gap-4">
-                <a href="#" className="hover:text-yellow transition">📘 Facebook</a>
-                <a href="#" className="hover:text-yellow transition">📷 Instagram</a>
-                <a href="#" className="hover:text-yellow transition">🎵 TikTok</a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">ESCANEA PARA ORDENAR</h4>
-              <div className="w-32 h-32 bg-white rounded-lg flex items-center justify-center">
-                <div className="text-orange font-bold text-xs">QR CODE</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm">
-            <p>&copy; 2024 Jimmy's Pizza. Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

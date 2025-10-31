@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Sub } from "@radix-ui/react-dropdown-menu";
+import SubNavbar from "@/components/layout/SubNavbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Navbar - Always visible on top */}
+        <div className="absolute top-0 left-0 right-0 z-30">
+          <Navbar logoSrc="/img/logo.png" cartCount={0} />
+          <SubNavbar />
+        </div>
         {children}
       </body>
     </html>
