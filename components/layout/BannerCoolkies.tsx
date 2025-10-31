@@ -59,13 +59,13 @@ const Banner: React.FC<BannerProps> = ({
               // Diferentes tamaños y posiciones para cada imagen
               const styles = [
                 // Imagen 1: Pequeña, arriba a la izquierda
-                "w-40 xl:w-98 -translate-y-38",
+                "w-40 md:w-70 xl:w-98 -translate-y-38",
                 // Imagen 2: Grande, centrada arriba
-                "w-56 xl:w-74 -translate-y-12 z-10",
+                "w-56 md:w-60 xl:w-74 -translate-y-12 z-10",
                 // Imagen 3: Mediana, centrada abajo
-                "w-48 xl:w-99 -translate-y-18",
+                "w-48 md:w-70 xl:w-99 -translate-y-18",
                 // Imagen 4: Pequeña, abajo a la derecha
-                "w-40 xl:w-78 -translate-y-8"
+                "w-40 md:w-60 xl:w-78 -translate-y-8"
               ];
 
               // Diferentes direcciones de entrada para cada imagen
