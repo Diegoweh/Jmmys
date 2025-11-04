@@ -44,35 +44,6 @@ const characters: Character[] = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: {
-    y: 50,
-    opacity: 0,
-    scale: 0.8
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 12
-    }
-  }
-};
-
 export default function MenuCharacters() {
   return (
     <>
@@ -104,17 +75,18 @@ export default function MenuCharacters() {
         </motion.div>
 
         {/* Grid de Personajes */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {characters.map((character) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+          {characters.map((character, index) => (
             <motion.div
               key={character.id}
-              variants={itemVariants}
+              initial={{ y: 50, opacity: 0, scale: 0.8 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.1
+              }}
               whileHover={{
                 scale: 1.1,
                 rotate: [0, -5, 5, -5, 0],
@@ -154,7 +126,7 @@ export default function MenuCharacters() {
               </Link>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
     </>
