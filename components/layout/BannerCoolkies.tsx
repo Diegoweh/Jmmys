@@ -117,7 +117,7 @@ const ExampleUsage = () => {
         overlay
         overlayOpacity="bg-opacity-40"
         images={[
-          '/img/coolkids.png',
+          '/img/toons/full1.webp.png',
           '/img/cookie4.webp',
           '/img/cookie2.webp',
           '/img/cookie.webp'

@@ -12,6 +12,7 @@ import BannerCoolkies from '@/components/layout/BannerCoolkies';
 import Banner from '@/components/layout/BannerCoolkies';
 import UbicanosSection from '@/components/layout/UbicanosSection';
 import Footer from '@/components/layout/Footer';
+import MenuCharacters from '@/components/MenuCharacters';
 
 
 
@@ -41,6 +42,9 @@ export default function Home() {
           <CircularGallery bend={5} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
         </div>
       </section>
+
+      {/* Menu Characters Section */}
+      <MenuCharacters />
 
       {/* Se Ve Bueno Section */}
       <section
@@ -73,12 +77,14 @@ export default function Home() {
           overlay
           overlayOpacity="bg-opacity-40"
           images={[
-            '/img/coolkids.png',
+            '/img/toons/full2.webp',
             '/img/cookie3.webp',
             '/img/cookie2.webp',
             '/img/cookie4.webp'
           ]}
-      />      
+      />
+
+      <CoolkiesBanner />      
 
       {/* Satisface Section */}
       <SatisfaceSection />

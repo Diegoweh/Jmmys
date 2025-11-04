@@ -2,6 +2,7 @@
 
 // Navbar.tsx
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useState } from 'react';
 import React from 'react';
 
@@ -94,14 +95,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           <span>PIDE X</span>
           <img src="/img/delivery.png" alt="Uber Eats" className="h-6 w-auto" />
         </button> */}
-        <button
-          onClick={onPickupClick}
-          className="px-4 py-2 bg-blue text-white rounded-full text-sm font-medium flex items-center gap-2"
-        >
-          <span>{cartCount}</span>
-          RECOGER
+        <Link
+          href="/tienda"
+          className="px-4 py-2 bg-sky-500 text-white rounded-full text-sm font-medium flex items-center gap-2">
+          ORDENAR
           <img src="/img/bag.png" alt="bag" className="h-5 w-auto" />
-        </button>
+        </Link>
       </motion.nav>
 
       {/* Botón Hamburguesa (Mobile) */}
@@ -120,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Menú Mobile (Overlay) con animación */}
       <motion.div
         id="mobile-menu"
-        className="md:hidden fixed inset-0 bg-black/95 z-40 overflow-y-auto"
+        className="md:hidden fixed inset-0 bg-sky-500/95 z-40 overflow-y-auto"
         initial={{ x: '100%' }}
         animate={{ x: isMenuOpen ? 0 : '100%' }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -156,20 +155,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>
               Inicio
             </MobileNavLink>
-            <MobileNavAccordion title="Nosotros">
-              <MobileNavSubLink href="/nosotros#historia" onClick={() => setIsMenuOpen(false)}>Historia</MobileNavSubLink>
-              <MobileNavSubLink href="/nosotros#equipo" onClick={() => setIsMenuOpen(false)}>Equipo</MobileNavSubLink>
-              <MobileNavSubLink href="/nosotros#carreras" onClick={() => setIsMenuOpen(false)}>Carreras</MobileNavSubLink>
+            <MobileNavAccordion title="Menu">
+              <MobileNavSubLink href="/menu/pizza" onClick={() => setIsMenuOpen(false)}>Pizza</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/hamburguesas" onClick={() => setIsMenuOpen(false)}>Hamburguesas</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/galletas" onClick={() => setIsMenuOpen(false)}>Galletas</MobileNavSubLink>
             </MobileNavAccordion>
-            <MobileNavAccordion title="Servicios">
-              <MobileNavSubLink href="/servicios/catering" onClick={() => setIsMenuOpen(false)}>Caterings</MobileNavSubLink>
-              <MobileNavSubLink href="/servicios/eventos" onClick={() => setIsMenuOpen(false)}>Eventos</MobileNavSubLink>
-              <MobileNavSubLink href="/servicios/envios" onClick={() => setIsMenuOpen(false)}>Envíos</MobileNavSubLink>
-            </MobileNavAccordion>
-            <MobileNavAccordion title="Blogs">
-              <MobileNavSubLink href="/blog/recetas" onClick={() => setIsMenuOpen(false)}>Recetas</MobileNavSubLink>
-              <MobileNavSubLink href="/blog/noticias" onClick={() => setIsMenuOpen(false)}>Noticias</MobileNavSubLink>
-              <MobileNavSubLink href="/blog/tips" onClick={() => setIsMenuOpen(false)}>Tips</MobileNavSubLink>
+            <MobileNavAccordion title="Ordenar">
+              <MobileNavSubLink href="/ordenar/delivery" onClick={() => setIsMenuOpen(false)}>Delivery</MobileNavSubLink>
+              <MobileNavSubLink href="/ordenar/pickup" onClick={() => setIsMenuOpen(false)}>Pickup</MobileNavSubLink>
+              <MobileNavSubLink href="/ordenar/reservar" onClick={() => setIsMenuOpen(false)}>Reservar</MobileNavSubLink>
             </MobileNavAccordion>
             <MobileNavAccordion title="Tienda">
               <MobileNavSubLink href="/tienda/pizzas" onClick={() => setIsMenuOpen(false)}>Pizzas</MobileNavSubLink>
@@ -223,17 +217,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             <img src="/img/delivery.png" alt="Uber Eats" className="h-6 w-auto" />
           </motion.button> */}
 
-          <motion.button
-            onClick={() => { onPickupClick?.(); setIsMenuOpen(false); }}
-            className="px-6 py-3 bg-blue text-white rounded-full text-lg font-medium flex items-center gap-3"
+          <motion.a
+            href="/tienda"
+            onClick={() => setIsMenuOpen(false)}
+            className="px-6 py-3 bg-orange text-white rounded-full text-lg font-medium flex items-center gap-3"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: isMenuOpen ? 0 : 50, opacity: isMenuOpen ? 1 : 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <span>{cartCount}</span>
-            RECOGER
+            ORDENAR
             <img src="/img/bag.png" alt="bag" className="h-6 w-auto" />
-          </motion.button>
+          </motion.a>
         </nav>
       </motion.div>
     </motion.header>

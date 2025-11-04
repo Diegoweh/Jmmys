@@ -90,7 +90,7 @@ export default function CoolkiesBanner({
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
               >
                 <motion.img
-                  src="/img/coolkids.png"
+                  src="/img/toons/full2.webp"
                   alt="Coolkids logo"
                   className="w-64 lg:w-80 drop-shadow-2xl"
                   whileHover={{
@@ -158,7 +158,7 @@ export default function CoolkiesBanner({
             <div className="md:hidden flex flex-col items-center gap-8">
               {/* Logo primero en mobile */}
               <motion.img
-                src="/img/coolkids.png"
+                src="/img/toons/full2.webp"
                 alt="Coolkids logo"
                 className="w-48 sm:w-56 drop-shadow-2xl"
                 initial={{ y: -50, opacity: 0 }}

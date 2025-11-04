@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 
 /**
  * SubNavbar
- * - Left: 6 links (Inicio (no dropdown), Nosotros, Servicios, Blogs, Tienda, Contacto)
+ * - Left: 6 links (Inicio (no dropdown), Nosotros, Servicios, ordenar, Tienda, Contacto)
  * - Each (except Inicio) opens a shadcn/ui dropdown.
  * - Right: Social icons (Facebook, Instagram, TikTok)
  *
@@ -16,31 +16,23 @@ import { ChevronDown } from "lucide-react";
 export function SubNavbar() {
   const menu = [
     { key: "inicio", label: "Inicio", href: "/" },
+    
     {
-      key: "nosotros",
-      label: "Nosotros",
+      key: "menu",
+      label: "Menu",
       items: [
-        { label: "Historia", href: "/nosotros#historia" },
-        { label: "Equipo", href: "/nosotros#equipo" },
-        { label: "Carreras", href: "/nosotros#carreras" },
+        { label: "Pizza", href: "/menu/pizza" },
+        { label: "Hamburguesas", href: "/menu/hamburguesas" },
+        { label: "Galletas", href: "/menu/galletas" },
       ],
     },
     {
-      key: "servicios",
-      label: "Servicios",
+      key: "ordenar",
+      label: "Ordenar",
       items: [
-        { label: "Caterings", href: "/servicios/catering" },
-        { label: "Eventos", href: "/servicios/eventos" },
-        { label: "Envíos", href: "/servicios/envios" },
-      ],
-    },
-    {
-      key: "blogs",
-      label: "Blogs",
-      items: [
-        { label: "Recetas", href: "/blog/recetas" },
-        { label: "Noticias", href: "/blog/noticias" },
-        { label: "Tips", href: "/blog/tips" },
+        { label: "Delivery", href: "/ordenar/delivery" },
+        { label: "Pickup", href: "/ordenar/pickup" },
+        { label: "Reservar", href: "/ordenar/reservar" },
       ],
     },
     {
