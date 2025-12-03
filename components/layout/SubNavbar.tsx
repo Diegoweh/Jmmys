@@ -47,11 +47,7 @@ export function SubNavbar() {
     {
       key: "contacto",
       label: "Contacto",
-      items: [
-        { label: "Formulario", href: "/contacto#form" },
-        { label: "Ubicación", href: "/contacto#ubicacion" },
-        { label: "Soporte", href: "/contacto#soporte" },
-      ],
+      href: "/contacto",
     },
   ] as const;
 
@@ -62,11 +58,11 @@ export function SubNavbar() {
           {/* Left: Links */}
           <nav className="hidden md:flex items-center gap-2 lg:gap-4 text-sm">
             {menu.map((item) => {
-              if (item.key === "inicio") {
+              if ("href" in item) {
                 return (
                   <Link
                     key={item.key}
-                    href={item.href!}
+                    href={item.href}
                     className="px-3 py-2 rounded-md hover:bg-white/10 transition-colors font-medium"
                   >
                     {item.label}

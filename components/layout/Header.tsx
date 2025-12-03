@@ -102,7 +102,7 @@ export const Header: React.FC = () => {
             loop
             playsInline
           >
-            <source src="https://www.pexels.com/es-es/download/video/3752508/" type="video/mp4" />
+            <source src="https://www.pexels.com/es-es/download/video/4131833/" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
           {/* Overlay oscuro opcional sobre el video */}
