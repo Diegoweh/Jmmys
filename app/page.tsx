@@ -7,12 +7,12 @@ import { useState } from 'react'
 import React from "react";
 import CircularGallery from '@/components/CircularGallery';
 import { OrderBox } from '@/components/OrderBox';
-import CoolkiesBanner from '@/components/layout/CoolkiesBanner';
-import BannerCoolkies from '@/components/layout/BannerCoolkies';
+
 import Banner from '@/components/layout/BannerCoolkies';
 import UbicanosSection from '@/components/layout/UbicanosSection';
 import Footer from '@/components/layout/Footer';
 import MenuCharacters from '@/components/MenuCharacters';
+import SnackGallery from '@/components/layout/SnackGallery';
 
 
 
@@ -63,6 +63,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SnacksGallery */}
+      <section className="bg-orange py-8 md:py-12 px-0">
+        <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
+          <motion.h3
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-400 tracking-tight cubano"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            Nuestras Burgers
+          </motion.h3>
+        </div>
+        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
+          <SnackGallery bend={-5} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+        </div>
+      </section>
+
       {/* Cómo Ordenar Section */}
       <section className="bg-cream px-6 py-4">
         <div className="max-w-5xl mx-auto">
@@ -84,7 +102,7 @@ export default function Home() {
           ]}
       />
 
-      <CoolkiesBanner />      
+       
 
       {/* Satisface Section */}
       <SatisfaceSection />
