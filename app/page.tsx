@@ -46,23 +46,7 @@ export default function Home() {
 
       {/* Menu Characters Section */}
       <MenuCharacters />
-
-      {/* Se Ve Bueno Section */}
-      <section
-        className="relative bg-[url('/img/bannerSeVeBueno.webp')] bg-cover bg-center bg-no-repeat py-36 px-6"
-      >
-        {/* Overlay oscuro */}
-        <div className="absolute inset-0 bg-black/30"></div>
-
-        <div className="relative max-w-7xl mx-auto text-start text-white">
-          <h3 className="text-5xl md:text-7xl font-extrabold leading-none drop-shadow-lg cubano">
-            SE VE BUENO
-          </h3>
-          <p className="text-5xl md:text-7xl font-script italic mt-2 drop-shadow-lg demo-relgone">
-            Y <span className="font-bold not-italic cubano">Sabe</span> Bueno
-          </p>
-        </div>
-      </section>
+      
 
       {/* SnacksGallery */}
       <section className="bg-orange py-8 md:py-12 px-0">
@@ -82,6 +66,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Se Ve Bueno Section */}
+      <section
+        className="relative bg-[url('/img/bannerSeVeBueno.webp')] bg-cover bg-center bg-no-repeat py-36 px-6"
+      >
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        <div className="relative max-w-7xl mx-auto text-start text-white">
+          <h3 className="text-5xl md:text-7xl font-extrabold leading-none drop-shadow-lg cubano">
+            SE VE BUENO
+          </h3>
+          <p className="text-5xl md:text-7xl font-script italic mt-2 drop-shadow-lg demo-relgone">
+            Y <span className="font-bold not-italic cubano">Sabe</span> Bueno
+          </p>
+        </div>
+      </section>
+
       {/* DipsGallery */}
       <section className="bg-transparent py-8 md:py-12 px-0">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
@@ -96,7 +97,7 @@ export default function Home() {
           </motion.h3>
         </div>
         <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
-          <DipsGallery bend={0} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+          <DipsGallery bend={0} textColor="#ff6b35" borderRadius={0.05} scrollEase={0.02}/>
         </div>
       </section>
 
