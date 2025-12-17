@@ -31,17 +31,24 @@ const characters: Character[] = [
     href: '/menu/ensaladas'
   },
   {
-    id: 'freskiboy',
-    name: 'Bebidas',
-    image: '/img/toons/freskiboy.svg',
-    href: '/tienda/bebidas'
-  },
-  {
     id: 'alaladin',
-    name: 'Snacks',
+    name: 'Alitas & Boneless',
     image: '/img/toons/alaladin.svg',
     href: '/menu/alitas'
-  }
+  },
+  {
+    id: 'postres',
+    name: 'Bebidas & Postres',
+    image: '/img/toons/freskiboy.svg',
+    href: '/menu/postres'
+  },
+  {
+    id: 'papicar',
+    name: "Pa'picar",
+    image: '/img/toons/alaladin.svg',
+    href: '/menu/para-compartir'
+  },
+  
 ];
 
 export default function MenuCharacters() {
@@ -59,7 +66,7 @@ export default function MenuCharacters() {
         }
       `}</style>
 
-      <section className="bg-cream py-16 px-6">
+      <section id="menu" className="bg-cream py-16 px-6">
         <div className="max-w-7xl mx-auto">
         {/* Título */}
         <motion.div
@@ -75,7 +82,7 @@ export default function MenuCharacters() {
         </motion.div>
 
         {/* Grid de Personajes */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
           {characters.map((character, index) => (
             <motion.div
               key={character.id}
@@ -87,14 +94,14 @@ export default function MenuCharacters() {
                 ease: "easeOut",
                 delay: index * 0.1
               }}
-              whileHover={{
-                scale: 1.1,
-                rotate: [0, -5, 5, -5, 0],
-                transition: {
-                  scale: { duration: 0.3 },
-                  rotate: { duration: 0.5 }
-                }
-              }}
+              // whileHover={{
+              //   scale: 1.1,
+              //   rotate: [0, -5, 5, -5, 0],
+              //   transition: {
+              //     scale: { duration: 0.3 },
+              //     rotate: { duration: 0.5 }
+              //   }
+              // }}
               whileTap={{ scale: 0.95 }}
             >
               <Link href={character.href} className="block group">

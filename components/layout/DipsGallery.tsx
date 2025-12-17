@@ -478,51 +478,51 @@ class App {
     const defaultItems = [
       {
         image: `/img/dips/salsa-1.webp`,
-        text: 'Bridge'
+        text: 'Buffalo'
       },
-      {
-        image: `/img/dips/salsa-2.webp`,
-        text: 'Desk Setup'
-      },
-      {
-        image: `/img/dips/salsa-3.webp`,
-        text: 'Waterfall'
-      },
+      // {
+      //   image: `/img/dips/salsa-2.webp`,
+      //   text: 'Desk Setup'
+      // },
+      // {
+      //   image: `/img/dips/salsa-3.webp`,
+      //   text: 'Waterfall'
+      // },
       {
         image: `/img/dips/salsa-4.webp`,
-        text: 'Strawberries'
+        text: 'BBQ Smoke'
       },
       {
         image: `/img/dips/salsa-5.webp`,
-        text: 'Deep Diving'
+        text: 'Truffalo'
       },
+      // {
+      //   image: `/img/dips/salsa-6.webp`,
+      //   text: 'Train Track'
+      // },      
+      // {
+      //   image: `/img/dips/salsa-8.webp`,
+      //   text: 'Blurry Lights'
+      // },
       {
-        image: `/img/dips/salsa-6.webp`,
-        text: 'Train Track'
+        image: `/img/dips/salsa-9.webp`,
+        text: 'Hot Honey'
       },
       {
         image: `/img/dips/salsa-7.webp`,
-        text: 'Santorini'
+        text: 'BuffaRanch'
       },
-      {
-        image: `/img/dips/salsa-8.webp`,
-        text: 'Blurry Lights'
-      },
-      {
-        image: `/img/dips/salsa-9.webp`,
-        text: 'New York'
-      },
-      {
-        image: `/img/dips/salsa-10.webp`,
-        text: 'Good Boy'
-      },
-      {
-        image: `/img/dips/salsa-11.webp`,
-        text: 'Coastline'
-      },
+      // {
+      //   image: `/img/dips/salsa-10.webp`,
+      //   text: 'Good Boy'
+      // },
+      // {
+      //   image: `/img/dips/salsa-11.webp`,
+      //   text: 'Coastline'
+      // },
       {
         image: `/img/dips/salsa-12.webp`,
-        text: 'Palm Trees'
+        text: 'Korean Crunch'
       }
     ];
 

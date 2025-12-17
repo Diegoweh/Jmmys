@@ -27,7 +27,8 @@ export default function SatisfaceSection() {
           tu antojo más grande
         </motion.p>
 
-        <motion.button
+        <motion.a
+          href="#menu"
           className="bg-orange text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium hover:bg-orange-dark transition shadow-md text-sm sm:text-base cubano"
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -35,7 +36,7 @@ export default function SatisfaceSection() {
           viewport={{ once: true }}
         >
           VER MENÚ
-        </motion.button>
+        </motion.a>
 
         {/* Collage - Responsive Container */}
         <div className="relative mt-8 sm:mt-12 md:mt-14 lg:mt-16">

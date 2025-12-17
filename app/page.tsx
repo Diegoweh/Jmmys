@@ -24,7 +24,13 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       
-      <Header />      
+      <Header />
+
+      {/* Satisface Section */}
+      <SatisfaceSection />
+
+      {/* Menu Characters Section */}
+      <MenuCharacters />      
 
       {/* Náutica Pizza Section */}
       <section className="bg-sky-300 py-8 md:py-12 px-0">
@@ -42,17 +48,13 @@ export default function Home() {
         <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
           <CircularGallery bend={5} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
         </div>
-      </section>
-
-      {/* Menu Characters Section */}
-      <MenuCharacters />
-      
+      </section>      
 
       {/* SnacksGallery */}
       <section className="bg-orange py-8 md:py-12 px-0">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
           <motion.h3
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-400 tracking-tight cubano"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-300 tracking-tight cubano"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
@@ -63,6 +65,24 @@ export default function Home() {
         </div>
         <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
           <SnackGallery bend={-5} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+        </div>
+      </section>      
+
+      {/* DipsGallery */}
+      <section className="bg-transparent py-8 md:py-12 px-0">
+        <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
+          <motion.h3
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-400 tracking-tight cubano"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            Alitas y Boneless
+          </motion.h3>
+        </div>
+        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
+          <DipsGallery bend={0} textColor="#ff6b35" borderRadius={0.05} scrollEase={0.02}/>
         </div>
       </section>
 
@@ -80,24 +100,6 @@ export default function Home() {
           <p className="text-5xl md:text-7xl font-script italic mt-2 drop-shadow-lg demo-relgone">
             Y <span className="font-bold not-italic cubano">Sabe</span> Bueno
           </p>
-        </div>
-      </section>
-
-      {/* DipsGallery */}
-      <section className="bg-transparent py-8 md:py-12 px-0">
-        <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
-          <motion.h3
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-400 tracking-tight cubano"
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            Alitas y Boneless
-          </motion.h3>
-        </div>
-        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
-          <DipsGallery bend={0} textColor="#ff6b35" borderRadius={0.05} scrollEase={0.02}/>
         </div>
       </section>
 
@@ -121,11 +123,7 @@ export default function Home() {
             '/img/cookie4.webp'
           ]}
       />
-
-       
-
-      {/* Satisface Section */}
-      <SatisfaceSection />
+      
 
       {/* Ubicanos Section */}
       <UbicanosSection
@@ -139,8 +137,7 @@ export default function Home() {
         mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6575222911565!2d-106.44167168819807!3d23.255546507504736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f535649e734e1%3A0xd02627dc0e3d47a4!2sAv.%20de%20la%20Marina%20603%2C%20Ejidal%20Francisco%20Villa%2C%2082127%20Mazatl%C3%A1n%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1761849036767!5m2!1ses-419!2smx"
       />
 
-      {/* Footer */}
-      <Footer />
+      
     </div>
   );
 }

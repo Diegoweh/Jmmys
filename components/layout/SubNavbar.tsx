@@ -23,27 +23,30 @@ export function SubNavbar() {
       items: [
         { label: "Pizza", href: "/menu/pizza" },
         { label: "Hamburguesas", href: "/menu/hamburguesas" },
-        { label: "Galletas", href: "/menu/galletas" },
+        { label: "Ensaladas", href: "/menu/ensaladas" },
+        { label: "Alitas & Boneless", href: "/menu/alitas" },
+        { label: "Pa' picar", href: "/menu/para-compartir" },
+        { label: "Postres & Bebidas", href: "/menu/postres" },
       ],
     },
-    {
-      key: "ordenar",
-      label: "Ordenar",
-      items: [
-        { label: "Delivery", href: "/ordenar/delivery" },
-        { label: "Pickup", href: "/ordenar/pickup" },
-        { label: "Reservar", href: "/ordenar/reservar" },
-      ],
-    },
-    {
-      key: "tienda",
-      label: "Tienda",
-      items: [
-        { label: "Pizzas", href: "/tienda/pizzas" },
-        { label: "Bebidas", href: "/tienda/bebidas" },
-        { label: "Promos", href: "/tienda/promos" },
-      ],
-    },
+    // {
+    //   key: "ordenar",
+    //   label: "Ordenar",
+    //   items: [
+    //     { label: "Delivery", href: "/ordenar/delivery" },
+    //     { label: "Pickup", href: "/ordenar/pickup" },
+    //     { label: "Reservar", href: "/ordenar/reservar" },
+    //   ],
+    // },
+    // {
+    //   key: "tienda",
+    //   label: "Tienda",
+    //   items: [
+    //     { label: "Pizzas", href: "/tienda/pizzas" },
+    //     { label: "Bebidas", href: "/tienda/bebidas" },
+    //     { label: "Promos", href: "/tienda/promos" },
+    //   ],
+    // },
     {
       key: "contacto",
       label: "Contacto",
@@ -91,6 +94,12 @@ export function SubNavbar() {
 
           {/* Right: Socials */}
           <div className="flex items-center gap-3">
+            {/* <Link
+              href="/tienda"
+              className="px-4 py-2 bg-sky-500 text-white rounded-full text-sm font-medium flex items-center gap-2">
+              ORDENAR
+              <img src="/img/bag.png" alt="bag" className="h-5 w-auto" />
+            </Link> */}
             <a
               href="https://facebook.com"
               target="_blank"

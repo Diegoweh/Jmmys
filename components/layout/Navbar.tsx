@@ -88,19 +88,19 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Botones existentes */}
-        {/* <button
+        <button
           onClick={onDeliveryClick}
           className="px-4 py-2 bg-white text-orange rounded-full text-lg font-medium cubano flex items-center gap-2"
         >
           <span>PIDE X</span>
           <img src="/img/delivery.png" alt="Uber Eats" className="h-6 w-auto" />
-        </button> */}
-        <Link
+        </button>
+        {/* <Link
           href="/tienda"
           className="px-4 py-2 bg-sky-500 text-white rounded-full text-sm font-medium flex items-center gap-2">
           ORDENAR
           <img src="/img/bag.png" alt="bag" className="h-5 w-auto" />
-        </Link>
+        </Link>  */}
       </motion.nav>
 
       {/* Botón Hamburguesa (Mobile) */}
@@ -206,7 +206,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* === ACTION BUTTONS === */}
-          {/* <motion.button
+          <motion.button
             onClick={() => { onDeliveryClick?.(); setIsMenuOpen(false); }}
             className="px-6 py-3 bg-white text-orange rounded-full text-lg font-medium cubano flex items-center gap-3"
             initial={{ y: 50, opacity: 0 }}
@@ -215,9 +215,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <span>PIDE X</span>
             <img src="/img/delivery.png" alt="Uber Eats" className="h-6 w-auto" />
-          </motion.button> */}
+          </motion.button>
 
-          <motion.a
+          {/* <motion.a
             href="/tienda"
             onClick={() => setIsMenuOpen(false)}
             className="px-6 py-3 bg-orange text-white rounded-full text-lg font-medium flex items-center gap-3"
@@ -227,7 +227,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             ORDENAR
             <img src="/img/bag.png" alt="bag" className="h-6 w-auto" />
-          </motion.a>
+          </motion.a> */}
         </nav>
       </motion.div>
     </motion.header>

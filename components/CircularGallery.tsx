@@ -477,53 +477,53 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `/img/pizzas/pizza1.webp`,
-        text: 'Bridge'
+        image: `/img/pizzas/pizza13.webp`,
+        text: 'Truffalo Chica'
       },
       {
-        image: `/img/pizzas/pizza2.webp`,
-        text: 'Desk Setup'
+        image: `/img/pizzas/pizza14.webp`,
+        text: 'Pork Belly'
       },
       {
-        image: `/img/pizzas/pizza3.webp`,
-        text: 'Waterfall'
+        image: `/img/pizzas/pizza15.webp`,
+        text: 'Pepperonisima'
       },
       {
-        image: `/img/pizzas/pizza4.webp`,
-        text: 'Strawberries'
+        image: `/img/pizzas/pizza16.webp`,
+        text: 'Hot Mammy'
       },
       {
-        image: `/img/pizzas/pizza5.webp`,
-        text: 'Deep Diving'
+        image: `/img/pizzas/pizza17.webp`,
+        text: 'Dinamita'
       },
       {
-        image: `/img/pizzas/pizza6.webp`,
-        text: 'Train Track'
+        image: `/img/pizzas/pizza18.webp`,
+        text: 'Veggy Lovers'
       },
-      {
-        image: `/img/pizzas/pizza7.webp`,
-        text: 'Santorini'
-      },
-      {
-        image: `/img/pizzas/pizza8.webp`,
-        text: 'Blurry Lights'
-      },
-      {
-        image: `/img/pizzas/pizza9.webp`,
-        text: 'New York'
-      },
-      {
-        image: `/img/pizzas/pizza10.webp`,
-        text: 'Good Boy'
-      },
-      {
-        image: `/img/pizzas/pizza11.webp`,
-        text: 'Coastline'
-      },
-      {
-        image: `/img/pizzas/pizza12.webp`,
-        text: 'Palm Trees'
-      }
+      // {
+      //   image: `/img/pizzas/pizza7.webp`,
+      //   text: 'Santorini'
+      // },
+      // {
+      //   image: `/img/pizzas/pizza8.webp`,
+      //   text: 'Blurry Lights'
+      // },
+      // {
+      //   image: `/img/pizzas/pizza9.webp`,
+      //   text: 'New York'
+      // },
+      // {
+      //   image: `/img/pizzas/pizza10.webp`,
+      //   text: 'Good Boy'
+      // },
+      // {
+      //   image: `/img/pizzas/pizza11.webp`,
+      //   text: 'Coastline'
+      // },
+      // {
+      //   image: `/img/pizzas/pizza12.webp`,
+      //   text: 'Palm Trees'
+      // }
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

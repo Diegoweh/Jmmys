@@ -477,53 +477,33 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `/img/snacks/burger1.avif`,
-        text: 'Bridge'
+        image: `/img/burgers/burger1.webp`,
+        text: 'Korean'
       },
       {
-        image: `/img/snacks/burger2.avif`,
-        text: 'Desk Setup'
+        image: `/img/burgers/burger2.webp`,
+        text: 'Especial'
       },
       {
-        image: `/img/snacks/burger3.avif`,
-        text: 'Waterfall'
+        image: `/img/burgers/burger3.webp`,
+        text: 'Cheeseburger'
       },
       {
-        image: `/img/snacks/burger4.avif`,
-        text: 'Strawberries'
+        image: `/img/burgers/burger4.webp`,
+        text: 'Smoky'
       },
       {
-        image: `/img/snacks/burger5.avif`,
-        text: 'Deep Diving'
+        image: `/img/burgers/burger5.webp`,
+        text: 'Royale'
       },
       {
-        image: `/img/snacks/burger6.avif`,
-        text: 'Train Track'
+        image: `/img/burgers/burger6.webp`,
+        text: 'ChickenBBQ'
       },
       {
-        image: `/img/snacks/burger7.avif`,
-        text: 'Santorini'
-      },
-      {
-        image: `/img/snacks/burger8.avif`,
-        text: 'Blurry Lights'
-      },
-      {
-        image: `/img/snacks/burger9.avif`,
-        text: 'New York'
-      },
-      {
-        image: `/img/snacks/burger10.avif`,
-        text: 'Good Boy'
-      },
-      {
-        image: `/img/snacks/fries.avif`,
-        text: 'Coastline'
-      },
-      {
-        image: `/img/snacks/fries2.avif`,
-        text: 'Palm Trees'
-      }
+        image: `/img/burgers/burger7.webp`,
+        text: 'Majestic'
+      },      
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

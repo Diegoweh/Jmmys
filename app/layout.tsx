@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Sub } from "@radix-ui/react-dropdown-menu";
 import SubNavbar from "@/components/layout/SubNavbar";
+import FloatingWhatsApp from "@/components/ui/FoatingWhatsApp";
+import Footer from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +38,9 @@ export default function RootLayout({
           <SubNavbar />
         </div>
         {children}
+        <FloatingWhatsApp />
+        {/* Footer */}
+      <Footer />
       </body>
     </html>
   );
