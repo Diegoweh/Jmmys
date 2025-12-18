@@ -2,8 +2,14 @@ import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
 
 export const metadata = {
-  title: 'Alitas y Boneless - Jimmy\'s',
-  description: 'Alitas y boneless con las mejores salsas y sabores únicos',
+  title: 'Alitas y Boneless - Jimmy\'s Mazatlán',
+  description: 'Las mejores alitas y boneless en Mazatlán. Buffalo Classic, Hot Honey, Truffalo Supreme y más. Salsas artesanales únicas. ¡Ordena ya!',
+  keywords: ['alitas mazatlán', 'boneless mazatlán', 'buffalo wings', 'alitas a domicilio'],
+  openGraph: {
+    title: 'Alitas y Boneless - Jimmy\'s',
+    description: 'Salsas artesanales únicas y sabores increíbles',
+    images: ['/img/alitas/buffalo-classic.webp'],
+  },
 };
 
 export default function AlitasPage() {

@@ -18,7 +18,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
     "Lunes a Domingo",
     "11:00 AM - 10:00 PM"
   ],
-  phone = "(669) 123-4567",
+  phone = "(669) 135090",
   mapUrl
 }) => {
   return (

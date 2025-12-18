@@ -2,8 +2,14 @@ import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
 
 export const metadata = {
-  title: 'Ensaladas - Jimmy\'s',
-  description: 'Ensaladas frescas con ingredientes premium y aderezos caseros',
+  title: 'Ensaladas Frescas - Jimmy\'s Mazatlán',
+  description: 'Ensaladas frescas con ingredientes premium y aderezos caseros en Mazatlán. César Style, Jimmy\'s Garden y Taco Ranch Superstar.',
+  keywords: ['ensaladas mazatlán', 'ensalada césar', 'comida saludable', 'ensaladas frescas'],
+  openGraph: {
+    title: 'Ensaladas Frescas - Jimmy\'s',
+    description: 'Ingredientes premium y aderezos caseros',
+    images: ['/img/ensaladas/cesar-style.webp'],
+  },
 };
 
 export default function EnsaladasPage() {

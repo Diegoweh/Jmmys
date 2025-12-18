@@ -2,8 +2,14 @@ import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
 
 export const metadata = {
-  title: 'Hamburguesas - Jimmy\'s',
-  description: 'Las mejores hamburguesas con carne Top Sirloin y ingredientes premium',
+  title: 'Hamburguesas Gourmet - Jimmy\'s Mazatlán',
+  description: 'Hamburguesas 100% Top Sirloin en Mazatlán. Desde la Original Cheeseburger hasta La Bestia Ruffles. Ingredientes premium y sabores únicos.',
+  keywords: ['hamburguesas mazatlán', 'burger gourmet', 'top sirloin', 'hamburguesas a domicilio'],
+  openGraph: {
+    title: 'Hamburguesas Gourmet - Jimmy\'s',
+    description: '100% Top Sirloin con ingredientes premium',
+    images: ['/img/burgers/original-cheeseburger.webp'],
+  },
 };
 
 export default function HamburguesasPage() {

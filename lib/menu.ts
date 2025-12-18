@@ -100,7 +100,7 @@ export const menuItems: MenuItem[] = [
     category: "PA_PICAR_Y_COMPARTIR",
     name: "Jalapeño Popper Panetto",
     description:
-      "Pan artesanal suave y doradito, horneado al estilo garlic bread con mantequilla aromática y hierbas finas. Ligero picor de jalapeño y mezcla de tres quesos derretidos. Se sirve con Chunky Pomodoro artesanal fresca y espesa.",
+      "Garlic bread artesanal con jalapeño y 3 quesos derretidos. Se sirve con Chunky Pomodoro. Picante e irresistible.",
     price: 159,
     currency: "MXN",
     imageUrl: "/img/papicar/jalapeno-popper-panetto.webp",
@@ -112,7 +112,7 @@ export const menuItems: MenuItem[] = [
     category: "PA_PICAR_Y_COMPARTIR",
     name: "Epic Fries",
     description:
-      "Papas doradas, crujientes y sazonadas al estilo Jimmy’s. Perfectas para compartir, pero difíciles de soltar.",
+      "Papas doradas y crujientes, sazonadas al estilo Jimmy’s. Difíciles de soltar.",
     price: 89,
     currency: "MXN",
     imageUrl: "/img/papicar/epic-fries.webp",
@@ -124,7 +124,7 @@ export const menuItems: MenuItem[] = [
     category: "PA_PICAR_Y_COMPARTIR",
     name: "Crispy Rings",
     description:
-      "Aros de cebolla capeados, crujientes y hechos al momento. Servidos con aderezo Ranch casero.",
+      "Aros de cebolla capeados y crujientes. Se sirven con Ranch casero.",
     price: 109,
     currency: "MXN",
     imageUrl: "/img/papicar/crispy-rings.webp",
@@ -190,7 +190,7 @@ export const menuItems: MenuItem[] = [
     category: "PA_PICAR_Y_COMPARTIR",
     name: "Mac Attack Bombs",
     description:
-      "Bites de Mac & Cheese doraditas y crujientes por fuera, cremosas por dentro. Acompañadas de aderezo queso tocino.",
+      "Bites de mac & cheese crujientes por fuera y cremosos por dentro. Se sirven con aderezo de queso tocino.",
     price: 129,
     currency: "MXN",
     imageUrl: "/img/papicar/mac-attack-bombs.webp",
@@ -206,7 +206,7 @@ export const menuItems: MenuItem[] = [
     category: "ENSALADAS",
     name: "César Style Salad",
     description:
-      "Lechuga romana, parmesano, crutones y aderezo César casero con el toque Jimmy’s.",
+      "Lechuga romana, parmesano, crutones y aderezo César casero. Agrega pollo grill o crunchy +$29.",
     price: 117,
     currency: "MXN",
     imageUrl: "/img/ensaladas/cesar-style.webp",
@@ -219,7 +219,7 @@ export const menuItems: MenuItem[] = [
     category: "ENSALADAS",
     name: "Jimmy’s Garden Salad",
     description:
-      "Lechugas mixtas con manzana verde, arándanos, nuez garapiñada, tomate cherry y queso de cabra. Aderezo especial a base de balsámico.",
+      "Lechugas mixtas, manzana verde, arándanos, nuez garapiñada y queso de cabra con balsámico.Pollo grill o crunchy +$29 · Camarón grill +$59.",
     price: 145,
     currency: "MXN",
     imageUrl: "/img/ensaladas/jimmys-garden.webp",
@@ -232,7 +232,7 @@ export const menuItems: MenuItem[] = [
     category: "ENSALADAS",
     name: "Taco Ranch Superstar Salad",
     description:
-      "Pollo grill, tocino, aguacate, tomate cherry y cheddar rayado sobre mix de lechugas frescas con tiritas de tortilla roja crujiente. Bañada con ranch casero.",
+      "Pollo grill, tocino, aguacate, cheddar y tortilla crujiente con ranch casero. Cambio por camarón +$59.",
     price: 139,
     currency: "MXN",
     imageUrl: "/img/ensaladas/taco-ranch-superstar.webp",
@@ -249,7 +249,7 @@ export const menuItems: MenuItem[] = [
     category: "ALITAS",
     name: "Buffalo Classic",
     description:
-      "Versión premiada estilo Buffalo: picor equilibrado, sabor potente. Servidas con apio, toque de cebollín y ranch casero.",
+      "Clásicas al estilo Buffalo, picor equilibrado y sabor potente. Se sirven con apio, cebollín y ranch casero.",
     price: 169,
     currency: "MXN",
     imageUrl: "/img/alitas/buffalo-classic.webp",
@@ -261,7 +261,7 @@ export const menuItems: MenuItem[] = [
     category: "ALITAS",
     name: "Jack BBQ Smoke",
     description:
-      "Salsa BBQ con Bourbon Jack Daniels, ajonjolí blanco, toque de cebollín y cebollita crispy. Rayada con ranch artesanal y brotes microgreen.",
+      "BBQ con Bourbon Jack Daniels, ajonjolí y cebollita crispy. Ahumadas, intensas y deliciosas.",
     price: 175,
     currency: "MXN",
     imageUrl: "/img/alitas/jack-smoke.webp",
@@ -273,7 +273,7 @@ export const menuItems: MenuItem[] = [
     category: "ALITAS",
     name: "BuffaRanch",
     description:
-      "Mitad Buffalo, mitad Ranch. Coronadas con aderezo ¡Ay Caramba!, ajonjolí negro y Crunchy Peas.",
+      "Mitad Buffalo, mitad Ranch. Bañadas en mezcla especial con ¡Ay Caramba!, ajonjolí negro y Crunchy Peas.",
     price: 175,
     currency: "MXN",
     imageUrl: "/img/alitas/buffaranch.webp",
@@ -285,7 +285,7 @@ export const menuItems: MenuItem[] = [
     category: "ALITAS",
     name: "Hot Honey",
     description:
-      "Alitas glaseadas con miel picante de agave: dulces y picantes en equilibrio. Terminan con aderezo Yum Yum, tocino crujiente y brotes verdes.",
+      "Alitas glaseadas con miel picante de agave.Dulce, picante y perfectamente balanceadas.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/alitas/hot-honey.webp",
@@ -297,7 +297,7 @@ export const menuItems: MenuItem[] = [
     category: "ALITAS",
     name: "Truffalo Supreme",
     description:
-      "Buffalo al siguiente nivel con toque de trufa. Con ajonjolí negro, rayada con aderezo Yum Yum y brotes verdes.",
+      "Buffalo con toque de trufa. Intensa, elegante y llena de sabor.",
     price: 185,
     currency: "MXN",
     imageUrl: "/img/alitas/truffalo-supreme.webp",
@@ -309,7 +309,7 @@ export const menuItems: MenuItem[] = [
     category: "ALITAS",
     name: "Korean Crunch",
     description:
-      "Fusión asiática de gouchang, miel, soya y jengibre. Finalizadas con mayonesa dulce, pepino encurtido y cebolla crujiente.",
+      "Gochujang, miel, soya y jengibre. Dulce, picante y crujiente.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/alitas/korean-crunch.webp",
@@ -325,7 +325,7 @@ export const menuItems: MenuItem[] = [
     category: "BONELESS",
     name: "Boneless Buffalo Classic",
     description:
-      "Crujientes por fuera, jugosos por dentro, hechos con pechuga de pollo de libre pastoreo. Versión premiada estilo Buffalo con apio, cebollín y ranch casero.",
+      "Clásicas al estilo Buffalo, picor equilibrado y sabor potente. Se sirven con apio, cebollín y ranch casero.",
     price: 169,
     currency: "MXN",
     imageUrl: "/img/boneless/buffalo-classic.webp",
@@ -337,7 +337,7 @@ export const menuItems: MenuItem[] = [
     category: "BONELESS",
     name: "Boneless Jack BBQ Smoke",
     description:
-      "Boneless con salsa BBQ con Bourbon Jack Daniels, ajonjolí blanco, toque de cebollín y cebollita crispy. Rayado con ranch artesanal y brotes microgreen.",
+      "BBQ con Bourbon Jack Daniels, ajonjolí y cebollita crispy. Ahumadas, intensas y deliciosas.",
     price: 175,
     currency: "MXN",
     imageUrl: "/img/boneless/jack-bbq-smoke.webp",
@@ -349,7 +349,7 @@ export const menuItems: MenuItem[] = [
     category: "BONELESS",
     name: "Boneless BuffaRanch",
     description:
-      "Mitad Buffalo, mitad Ranch. Coronados con aderezo ¡Ay Caramba!, ajonjolí negro y Crunchy Peas.",
+      "Mitad Buffalo, mitad Ranch. Bañadas en mezcla especial con ¡Ay Caramba!, ajonjolí negro y Crunchy Peas.",
     price: 175,
     currency: "MXN",
     imageUrl: "/img/boneless/buffaranch.webp",
@@ -361,7 +361,7 @@ export const menuItems: MenuItem[] = [
     category: "BONELESS",
     name: "Boneless Hot Honey",
     description:
-      "Glaseados con miel de agave y chiles: dulces y picantes. Terminan con aderezo Yum Yum, tocino crujiente y brotes verdes.",
+      "Alitas glaseadas con miel picante de agave.Dulce, picante y perfectamente balanceadas.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/boneless/hot-honey.webp",
@@ -373,7 +373,7 @@ export const menuItems: MenuItem[] = [
     category: "BONELESS",
     name: "Boneless Truffalo Supreme",
     description:
-      "Toque de trufa con topping de ajonjolí negro, rayado con aderezo Yum Yum y brotes verdes.",
+      "Buffalo con toque de trufa. Intensa, elegante y llena de sabor.",
     price: 185,
     currency: "MXN",
     imageUrl: "/img/boneless/truffalo-supreme.webp",
@@ -385,7 +385,7 @@ export const menuItems: MenuItem[] = [
     category: "BONELESS",
     name: "Boneless Korean Crunch",
     description:
-      "Gouchang, miel, soya y jengibre. Finalizados con mayonesa dulce, pepino encurtido y cebolla crujiente.",
+      "Gochujang, miel, soya y jengibre. Dulce, picante y crujiente.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/boneless/korean-crunch.webp",
@@ -401,7 +401,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "La Original Cheeseburger",
     description:
-      "100% Top Sirloin con cheddar fundido, tomate, lechuga, cebolla y pepinillos. La que lo empezó todo.",
+      "100% Top Sirloin con cheddar, tomate, lechuga, cebolla y pepinillos.",
     price: 99,
     currency: "MXN",
     imageUrl: "/img/burgers/original-cheeseburger.webp",
@@ -413,7 +413,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "JIMMYS Royale Burger",
     description:
-      "Pan brioche recién horneado, doble carne, mozzarella, mermelada de tocino con bourbon, cheddar derretido, tocino ahumado y mantequilla de maní dulce.",
+      "Doble carne, mozzarella, cheddar, tocino ahumado y mermelada de tocino con bourbon.Con toque de mantequilla de maní dulce.",
     price: 169,
     currency: "MXN",
     imageUrl: "/img/burgers/jimmys-royale.webp",
@@ -425,7 +425,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "CrunchyLishus Chicken Korean Burger",
     description:
-      "Pechuga de pollo crunchy bañada en salsa koreana: ensalada de col, pepinos encurtidos, ajonjolí y aderezo ajua con sirasha.",
+      "Pollo crunchy en salsa coreana con col, pepino encurtido y ajonjolí.",
     price: 169,
     currency: "MXN",
     imageUrl: "/img/burgers/crunchylishus-korean.webp",
@@ -437,7 +437,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "CrunchyLishus Chicken BBQ Burger",
     description:
-      "Pechuga de pollo crunchy bañada en salsa BBQ smoke con tocino, piña grill y cebollín.",
+      "Pollo crunchy en BBQ smoke con tocino, piña grill y cebollín.",
     price: 169,
     currency: "MXN",
     imageUrl: "/img/burgers/crunchylishus-bbq.webp",
@@ -449,7 +449,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "Especial Burger",
     description:
-      "Top Sirloin con mozzarella fundida, champiñones salteados, lascas de aguacate, tocino ahumado, lechuga, tomate y cebolla.",
+      "Top sirloin con mozzarella, champiñones, aguacate y tocino ahumado.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/burgers/especial.webp",
@@ -461,7 +461,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "Majestic Bacon Burger",
     description:
-      "Doble Top Sirloin con mozzarella fundida, champiñones salteados, espinaca baby, tocino crujiente, salsa queso tocino y aderezo Ay Caramba.",
+      "Doble top sirloin con mozzarella, champiñones y tocino crujiente.",
     price: 189,
     currency: "MXN",
     imageUrl: "/img/burgers/majestic-bacon.webp",
@@ -473,7 +473,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "Smoky Jack BBQ Burger",
     description:
-      "Top Sirloin con tocino extra, doble queso americano, cebolla crispy, piña al grill y salsa BBQ Smoky Jack.",
+      "Top sirloin con tocino extra, doble queso americano y BBQ Smoky Jack.",
     price: 175,
     currency: "MXN",
     imageUrl: "/img/burgers/smoky-jack-bbq.webp",
@@ -485,7 +485,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "La Bestia Ruffles Burger",
     description:
-      "Top Sirloin con croqueta de mac & cheese, cheddar, tocino crujiente, salsa queso tocino y aderezo Ruffle-Ranch. Coronada con papas Ruffles.",
+      "Top sirloin con mac & cheese, cheddar, tocino y Ruffle-Ranch.",
     price: 189,
     currency: "MXN",
     imageUrl: "/img/burgers/bestia-ruffles.webp",
@@ -501,7 +501,7 @@ export const menuItems: MenuItem[] = [
     category: "PIZZAS",
     name: "La Pepperonísima",
     description:
-      "Machín pepperoni doradito, mezcla de tres quesos, salsa pomodoro artesanal y parmesano reggiano rallado.",
+      "Machin Pepperoni y queso mozzarella derretido.",
     price: 189,
     currency: "MXN",
     imageUrl: "/img/pizzas/pepperonisima.webp",
@@ -513,7 +513,7 @@ export const menuItems: MenuItem[] = [
     category: "PIZZAS",
     name: "Hot Mammy",
     description:
-      "Pepperoni, jalapeños confitados y un toque de jalapeño fresco. Mousse de tres quesos + Chunky Pomodoro artesanal. Remate de miel picante.",
+      "Jalapeños, pepperoni y un picor que se queda contigo.",
     price: 239,
     currency: "MXN",
     imageUrl: "/img/pizzas/hot-mammy.webp",
@@ -525,7 +525,7 @@ export const menuItems: MenuItem[] = [
     category: "PIZZAS",
     name: "La Pork Belly Pizza",
     description:
-      "Cubos de pork belly braseado sobre CheeseCrust crujiente, mezcla de quesos, salsa coreana artesanal, cebollín y crunch de cacahuate troceado.",
+      "Pork belly confitado, jugoso y lleno de sabor.",
     price: 299,
     currency: "MXN",
     imageUrl: "/img/pizzas/pork-belly.webp",
@@ -537,7 +537,7 @@ export const menuItems: MenuItem[] = [
     category: "PIZZAS",
     name: "Veggy Lovers Pizza",
     description:
-      "Mozzarella y gouda con champiñones y tomatitos cherry confitados. Mousse de tres quesos, espinaca baby, parmesano reggiano y reducción balsámica cítrica. Finalizada con Chunky Pomodoro.",
+      "Vegetales frescos, excelente sabor y mucho queso. ",
     price: 247,
     currency: "MXN",
     imageUrl: "/img/pizzas/veggy-lovers.webp",
@@ -561,7 +561,7 @@ export const menuItems: MenuItem[] = [
     category: "PIZZAS",
     name: "Truffalo Chica Wow (TCW)",
     description:
-      "Boneless jugosos con salsa Truffalo (picor + aroma a trufa), tocino crujiente, brotes verdes y ranch casero para balance perfecto.",
+      "Boneless trufalo, tocino y queso derretido. Aromática y sofisticada.",
     price: 384,
     currency: "MXN",
     imageUrl: "/img/pizzas/truffalo-chica-wow.webp",
@@ -573,7 +573,7 @@ export const menuItems: MenuItem[] = [
     category: "PIZZAS",
     name: "La Rockefeller Pizza",
     description:
-      "Camarones sinaloenses salteados en mantequilla y ajo sobre salsa blanca estilo Rockefeller. Champiñones, tomatitos cherry, quesos gratinados, espinaca baby y parmesano reggiano.",
+      "Camarones con salsa cremosita premium.",
     price: 359,
     currency: "MXN",
     imageUrl: "/img/pizzas/rockefeller.webp",

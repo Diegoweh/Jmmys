@@ -2,8 +2,8 @@ import { Mail, MapPin, Phone, Instagram, ExternalLink } from "lucide-react"
 
 // Constantes para mejor mantenibilidad
 const CONTACT_INFO = {
-  phone: "+525692135090",
-  phoneDisplay: "569 213 5090",
+  phone: "+526692135090",
+  phoneDisplay: "6692 135 090",
   instagram: "@jimmysmut",
   instagramUrl: "https://instagram.com/jimmysmut",
   address: {
@@ -56,7 +56,7 @@ export default function Footer() {
               <div className="absolute inset-0 bg-linear-to-r from-orange-400 to-orange-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
               <div className="relative bg-white p-2 rounded-xl border-2 border-orange-200">
                 <img
-                  src="/qr-code.png"
+                  src="/QrWeb.jpg"
                   alt="QR Menú Digital"
                   className="w-24 h-24 object-contain"
                   loading="lazy"
@@ -163,14 +163,14 @@ export default function Footer() {
             <div className="flex flex-col items-start">
               <img
                 src="/img/cafe.png"
-                alt="Jimmy's Café"
+                alt="Jimmys Café"
                 className="w-24 h-24 drop-shadow-xl transform transition-transform hover:scale-110 hover:rotate-6 mb-4"
                 loading="lazy"
                 width="96"
                 height="96"
               />
               <h3 className="text-3xl xl:text-4xl font-bold text-orange-700 cubano">
-                JIMMY'S
+                JIMMYS
               </h3>
               <p className="text-orange-600 font-medium text-lg">
                 Tu próxima obsesión
@@ -188,7 +188,7 @@ export default function Footer() {
               <div className="absolute inset-0 bg-linear-to-r from-orange-400 to-orange-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
               <div className="relative bg-white p-4 rounded-2xl border-2 border-orange-200 shadow-lg">
                 <img
-                  src="/qr-code.png"
+                  src="/QrWeb.jpg"
                   alt="QR Menú Digital"
                   className="w-32 h-32 object-contain"
                   loading="lazy"
@@ -298,7 +298,7 @@ export default function Footer() {
         {/* Legal y copyright */}
         <div className="text-center space-y-2">
           <p className="text-gray-700 text-sm">
-            © {new Date().getFullYear()} Jimmy's Café • Todos los derechos reservados
+            © {new Date().getFullYear()} Jimmys • Todos los derechos reservados
           </p>
           <nav aria-label="Enlaces legales">
             <ul className="flex justify-center gap-4 text-sm">

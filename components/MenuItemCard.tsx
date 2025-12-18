@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { MenuItem } from '@/lib/menu';
 
 interface MenuItemCardProps {
@@ -10,6 +11,9 @@ interface MenuItemCardProps {
 }
 
 export default function MenuItemCard({ item, index }: MenuItemCardProps) {
+  // Generar mensaje de WhatsApp
+  const whatsappMessage = `Hola, quisiera ordenar *${item.name}* y también quisiera agregar...`;
+  const whatsappUrl = `https://wa.me/526692135090?text=${encodeURIComponent(whatsappMessage)}`;
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -66,9 +70,14 @@ export default function MenuItemCard({ item, index }: MenuItemCardProps) {
             <span className="text-lg ml-1">{item.currency}</span>
           </span>
 
-          <button className="bg-orange hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition-colors duration-300">
+          <Link
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition-colors duration-300 inline-block"
+          >
             Ordenar
-          </button>
+          </Link>
         </div>
 
         {/* Opciones disponibles */}

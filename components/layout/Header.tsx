@@ -6,7 +6,20 @@ import { Navbar } from './Navbar';
 
 export const Header: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const totalSlides = 2; // Slide 1: Imagen con texto | Slide 2: Video
+
+  // Detectar si es mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-advance carousel every 5 seconds
   useEffect(() => {
@@ -56,7 +69,7 @@ export const Header: React.FC = () => {
           <m.img
             src="/img/meal.webp"
             alt=""
-            className="absolute top-2 -right-5 md:-right-16 lg:-right-10 w-38 h-38 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-86 xl:h-86 object-contain z-5 sm:block"
+            className="absolute top-8 -right-5 md:-right-16 lg:-right-10 w-38 h-38 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-86 xl:h-86 object-contain z-5 sm:block"
             initial={{ x: 200, opacity: 0 }}
             animate={currentSlide === 0 ? { x: 0, opacity: 1 } : { x: 200, opacity: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -101,8 +114,13 @@ export const Header: React.FC = () => {
             muted
             loop
             playsInline
+            key={isMobile ? 'mobile' : 'desktop'}
           >
-            <source src="https://www.pexels.com/es-es/download/video/4131833/" type="video/mp4" />
+            {isMobile ? (
+              <source src="/video/jimmys-mobile-compressed.mp4" type="video/mp4" />
+            ) : (
+              <source src="https://www.pexels.com/es-es/download/video/4131833/" type="video/mp4" />
+            )}
             Tu navegador no soporta videos HTML5.
           </video>
           {/* Overlay oscuro opcional sobre el video */}

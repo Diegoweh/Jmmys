@@ -101,7 +101,7 @@ export function SubNavbar() {
               <img src="/img/bag.png" alt="bag" className="h-5 w-auto" />
             </Link> */}
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/jimmysmzt"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -110,7 +110,7 @@ export function SubNavbar() {
               <FacebookIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/jimmysmzt"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -118,15 +118,15 @@ export function SubNavbar() {
             >
               <InstagramIcon className="h-5 w-5" />
             </a>
-            <a
-              href="https://tiktok.com"
+            {/* <a
+              href="https://tiktok.com/jimmysmzt"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
               className="p-2 rounded-md hidden md:block hover:bg-white/10 transition-colors"
             >
               <TiktokIcon className="h-5 w-5" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

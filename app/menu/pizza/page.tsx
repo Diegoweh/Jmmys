@@ -2,8 +2,14 @@ import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
 
 export const metadata = {
-  title: 'Pizzas - Jimmy\'s',
-  description: 'Descubre nuestras deliciosas pizzas con base CheeseCrust',
+  title: 'Pizzas con CheeseCrust - Jimmy\'s Mazatlán',
+  description: 'Las mejores pizzas en Mazatlán con base CheeseCrust crujiente. Desde La Pepperonísima hasta Truffalo Chica Wow. ¡Ordena ahora por WhatsApp!',
+  keywords: ['pizzas mazatlán', 'pizza cheesecrust', 'pepperoni pizza', 'pizza a domicilio mazatlán'],
+  openGraph: {
+    title: 'Pizzas con CheeseCrust - Jimmy\'s',
+    description: 'Las mejores pizzas en Mazatlán con ingredientes premium',
+    images: ['/img/pizzas/pepperonisima.webp'],
+  },
 };
 
 export default function PizzasPage() {

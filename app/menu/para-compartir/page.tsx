@@ -2,8 +2,14 @@ import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
 
 export const metadata = {
-  title: 'Pa\'picar y Compartir - Jimmy\'s',
-  description: 'Deliciosos platillos para compartir con amigos y familia',
+  title: 'Pa\'picar y Compartir - Jimmy\'s Mazatlán',
+  description: 'Deliciosos snacks para compartir: Epic Fries, Mac Attack Bombs, Jalapeño Popper Panetto y más. Perfectos para picar en Mazatlán.',
+  keywords: ['snacks mazatlán', 'papas a la francesa', 'aros de cebolla', 'para compartir'],
+  openGraph: {
+    title: 'Pa\'picar y Compartir - Jimmy\'s',
+    description: 'Snacks perfectos para compartir con amigos',
+    images: ['/img/papicar/epic-fries.webp'],
+  },
 };
 
 export default function ParaCompartirPage() {

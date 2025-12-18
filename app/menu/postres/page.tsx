@@ -2,8 +2,14 @@ import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
 
 export const metadata = {
-  title: 'Postres - Jimmy\'s',
-  description: 'Deliciosos postres caseros para endulzar tu día',
+  title: 'Postres y Bebidas - Jimmy\'s Mazatlán',
+  description: 'Deliciosos postres caseros y bebidas refrescantes en Mazatlán. Coolkie Skillets, cafés helados Rooky y bebidas Juzzy. ¡Endulza tu día!',
+  keywords: ['postres mazatlán', 'cafés helados', 'galletas', 'bebidas frías mazatlán'],
+  openGraph: {
+    title: 'Postres y Bebidas - Jimmy\'s',
+    description: 'Dulces tentaciones y bebidas refrescantes',
+    images: ['/img/postres/coolkie-chocochips.webp'],
+  },
 };
 
 export default function PostresPage() {

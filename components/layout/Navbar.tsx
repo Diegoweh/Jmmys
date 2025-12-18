@@ -138,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <PhoneIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Llámanos</span>
-                <span className="text-base font-medium">+1 12345678</span>
+                <span className="text-base font-medium">+52 6692 135 090</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -158,23 +158,24 @@ export const Navbar: React.FC<NavbarProps> = ({
             <MobileNavAccordion title="Menu">
               <MobileNavSubLink href="/menu/pizza" onClick={() => setIsMenuOpen(false)}>Pizza</MobileNavSubLink>
               <MobileNavSubLink href="/menu/hamburguesas" onClick={() => setIsMenuOpen(false)}>Hamburguesas</MobileNavSubLink>
-              <MobileNavSubLink href="/menu/galletas" onClick={() => setIsMenuOpen(false)}>Galletas</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/ensaladas" onClick={() => setIsMenuOpen(false)}>Ensaladas</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/alitas" onClick={() => setIsMenuOpen(false)}>Alitas & Boneless</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/para-compartir" onClick={() => setIsMenuOpen(false)}>Pa' Picar</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/postres" onClick={() => setIsMenuOpen(false)}>Postres & Bebidas</MobileNavSubLink>
             </MobileNavAccordion>
-            <MobileNavAccordion title="Ordenar">
+            {/* <MobileNavAccordion title="Ordenar">
               <MobileNavSubLink href="/ordenar/delivery" onClick={() => setIsMenuOpen(false)}>Delivery</MobileNavSubLink>
               <MobileNavSubLink href="/ordenar/pickup" onClick={() => setIsMenuOpen(false)}>Pickup</MobileNavSubLink>
               <MobileNavSubLink href="/ordenar/reservar" onClick={() => setIsMenuOpen(false)}>Reservar</MobileNavSubLink>
-            </MobileNavAccordion>
-            <MobileNavAccordion title="Tienda">
+            </MobileNavAccordion> */}
+            {/* <MobileNavAccordion title="Tienda">
               <MobileNavSubLink href="/tienda/pizzas" onClick={() => setIsMenuOpen(false)}>Pizzas</MobileNavSubLink>
               <MobileNavSubLink href="/tienda/bebidas" onClick={() => setIsMenuOpen(false)}>Bebidas</MobileNavSubLink>
               <MobileNavSubLink href="/tienda/promos" onClick={() => setIsMenuOpen(false)}>Promos</MobileNavSubLink>
-            </MobileNavAccordion>
-            <MobileNavAccordion title="Contacto">
-              <MobileNavSubLink href="/contacto#form" onClick={() => setIsMenuOpen(false)}>Formulario</MobileNavSubLink>
-              <MobileNavSubLink href="/contacto#ubicacion" onClick={() => setIsMenuOpen(false)}>Ubicación</MobileNavSubLink>
-              <MobileNavSubLink href="/contacto#soporte" onClick={() => setIsMenuOpen(false)}>Soporte</MobileNavSubLink>
-            </MobileNavAccordion>
+            </MobileNavAccordion> */}
+            <MobileNavLink href="/#contacti" onClick={() => setIsMenuOpen(false)}>
+              Contacto
+            </MobileNavLink>
           </div>
 
           {/* === SOCIAL ICONS === */}
