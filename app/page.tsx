@@ -24,10 +24,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       
-      <Header />
-
-      {/* Satisface Section */}
-      <SatisfaceSection />
+      <Header />      
 
       {/* Menu Characters Section */}
       <MenuCharacters />      
@@ -123,6 +120,9 @@ export default function Home() {
             '/img/cookie4.webp'
           ]}
       />
+
+      {/* Satisface Section */}
+      <SatisfaceSection />
       
 
       {/* Ubicanos Section */}

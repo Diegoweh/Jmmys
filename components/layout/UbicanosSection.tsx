@@ -90,7 +90,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
               </div>
 
               {/* Teléfono */}
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <svg
                   className="w-6 h-6 text-orange mt-1 shrink-0"
                   fill="none"
@@ -113,7 +113,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
                     {phone}
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Botón opcional */}
