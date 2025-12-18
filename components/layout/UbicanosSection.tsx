@@ -16,7 +16,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
   address = "Av. de la Marina 603, Ejidal Francisco Villa, 82127 Mazatlán, Sin.",
   hours = [
     "Lunes a Domingo",
-    "11:00 AM - 10:00 PM"
+    "1:00 PM - 10:00 PM"
   ],
   phone = "(669) 135090",
   mapUrl
@@ -90,7 +90,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
               </div>
 
               {/* Teléfono */}
-              {/* <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3">
                 <svg
                   className="w-6 h-6 text-orange mt-1 shrink-0"
                   fill="none"
@@ -113,7 +113,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
                     {phone}
                   </a>
                 </div>
-              </div> */}
+              </div>
             </div>
 
             {/* Botón opcional */}

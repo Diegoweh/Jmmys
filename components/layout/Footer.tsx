@@ -4,8 +4,8 @@ import { Mail, MapPin, Phone, Instagram, ExternalLink } from "lucide-react"
 const CONTACT_INFO = {
   phone: "+526692135090",
   phoneDisplay: "6692 135 090",
-  instagram: "@jimmysmut",
-  instagramUrl: "https://instagram.com/jimmysmut",
+  instagram: "@jimmysmzt",
+  instagramUrl: "https://instagram.com/jimmysmzt",
   address: {
     street: "Av. La Marina 603 B",
     neighborhood: "Eco. Villa",

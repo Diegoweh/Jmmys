@@ -115,9 +115,9 @@ export default function Home() {
           overlayOpacity="bg-opacity-40"
           images={[
             '/img/toons/full2.webp',
-            '/img/cookie3.webp',
-            '/img/cookie2.webp',
-            '/img/cookie4.webp'
+            '/img/coockie3.webp',
+            '/img/coockie2.webp',
+            '/img/coockie4.webp'
           ]}
       />
 
@@ -131,9 +131,9 @@ export default function Home() {
         address="Av. de la Marina 603, Ejidal Francisco Villa, 82127 Mazatlán, Sin."
         hours={[
           "Lunes a Domingo",
-          "11:00 AM - 10:00 PM"
+          "01:00 PM - 10:00 PM"
         ]}
-        phone="(669) 123-4567"
+        phone="(669) 213 5090"
         mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.6575222911565!2d-106.44167168819807!3d23.255546507504736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f535649e734e1%3A0xd02627dc0e3d47a4!2sAv.%20de%20la%20Marina%20603%2C%20Ejidal%20Francisco%20Villa%2C%2082127%20Mazatl%C3%A1n%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1761849036767!5m2!1ses-419!2smx"
       />
 

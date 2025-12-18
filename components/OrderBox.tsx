@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function OrderBox() {
     const staggerContainer = {
@@ -62,21 +63,21 @@ const titleSlide = {
             {[
             {
                 n: '1',
-                t1: 'Entrega de',
-                t2: 'Pedidos',
-                p: 'Haga clic en "ORDENE AHORA", elija su horario y listo: será entregada directamente en su puerta.',
+                t1: 'Explora el',
+                t2: 'Menú',
+                p: 'Revisa el menú y elige la sección que más se te antoje.',
             },
             {
                 n: '2',
-                t1: 'Ordenar con',
-                t2: 'Anticipación',
-                p: 'Planifique con antelación siguiendo los mismos sencillos pasos. Elija entrega a domicilio o recogida.',
+                t1: 'Elige tu',
+                t2: 'Producto',
+                p: 'Selecciona el producto, ajusta detalles si aplica y agrégalo.',
             },
             {
                 n: '3',
-                t1: 'Entrá',
-                t2: '',
-                p: 'Para recoger o comer en el local durante el horario de atención.',
+                t1: 'Ordena',
+                t2: 'Fácil',
+                p: 'Da clic en ordenar y finaliza tu pedido.',
                 cta: true,
             },
             ].map((s, i) => (
@@ -120,14 +121,18 @@ const titleSlide = {
 
                 {s.cta && (
                 <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
-                    viewport={{ once: true }}
+                className="mt-5"
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
+                viewport={{ once: true }}
                 >
-                    <Button className="mt-3 bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2 uppercase">
-                    Ordena Ahora
-                    </Button>
+                <Link
+                    href="#menu"
+                    className="w-full px-8 h-11 text-white bg-orange-500 hover:bg-orange-600 font-bold uppercase inline-flex items-center justify-center rounded-md"
+                >
+                    Menú
+                </Link>
                 </motion.div>
                 )}
             </motion.div>
@@ -136,7 +141,7 @@ const titleSlide = {
         </div>
 
         {/* ------- Layout MÓVIL (por defecto) ------- */}
-        <div className="md:hidden w-full px-4 -mt-10">
+        <div className="md:hidden w-full px-4 -mt-10 mb-4">
         <motion.h2
             className="text-white text-center font-extrabold uppercase tracking-wide text-[clamp(18px,6vw,26px)] drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] mb-3"
             initial={{ x: -100, opacity: 0 }}
@@ -151,18 +156,18 @@ const titleSlide = {
             {[
             {
                 n: '1',
-                title: 'Entrega de pedidos',
-                text: 'Haga clic en "ORDENE AHORA", elija su horario y listo: la llevamos a tu puerta.',
+                title: 'Explora el menú',
+                text: 'Revisa el menú y elige la sección que más se te antoje.',
             },
             {
                 n: '2',
-                title: 'Ordenar con anticipación',
-                text: 'Mismos pasos, y eliges entrega a domicilio o recogida en restaurante.',
+                title: 'Elige tu producto',
+                text: 'Selecciona el producto, ajusta detalles si aplica y agrégalo.',
             },
             {
                 n: '3',
-                title: 'Entrá',
-                text: 'Para recoger o comer en el local durante el horario de atención.',
+                title: 'Ordena',
+                text: 'Da clic en ordenar y finaliza tu pedido.',
             },
             ].map((s, i) => (
             <motion.div
@@ -209,15 +214,18 @@ const titleSlide = {
         </div>
 
         <motion.div
-            className="mt-5"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
-            viewport={{ once: true }}
+        className="mt-5"
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
+        viewport={{ once: true }}
         >
-            <Button className="w-full h-11 text-base bg-orange-500 hover:bg-orange-600 font-bold uppercase">
-            Ordena Ahora
-            </Button>
+        <Link
+            href="#menu"
+            className="w-full h-11 text-white bg-orange-500 hover:bg-orange-600 font-bold uppercase inline-flex items-center justify-center rounded-md"
+        >
+            Menú
+        </Link>
         </motion.div>
         </div>
 

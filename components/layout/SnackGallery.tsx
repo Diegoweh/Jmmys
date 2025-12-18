@@ -503,6 +503,10 @@ class App {
       {
         image: `/img/burgers/burger7.webp`,
         text: 'Majestic'
+      },
+      {
+        image: `/img/burgers/burger8.webp`,
+        text: 'La Bestia'
       },      
     ];
     const galleryItems = items && items.length ? items : defaultItems;

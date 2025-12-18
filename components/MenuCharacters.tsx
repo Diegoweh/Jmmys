@@ -23,18 +23,18 @@ const characters: Character[] = [
     name: 'Hamburguesas',
     image: '/img/toons/burgersini.svg',
     href: '/menu/hamburguesas'
+  },  
+  {
+    id: 'alaladin',
+    name: 'Alitas & Boneless',
+    image: '/img/toons/alaladin.svg',
+    href: '/menu/alitas'
   },
   {
     id: 'ensaladin',
     name: 'Ensaladas',
     image: '/img/toons/ensaladin.svg',
     href: '/menu/ensaladas'
-  },
-  {
-    id: 'alaladin',
-    name: 'Alitas & Boneless',
-    image: '/img/toons/alaladin.svg',
-    href: '/menu/alitas'
   },
   {
     id: 'postres',
