@@ -22,7 +22,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
   mapUrl
 }) => {
   return (
-    <section className="py-16 lg:py-24 bg-cream">
+    <section id="contacto" className="py-16 lg:py-24 bg-cream">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 

@@ -50,7 +50,7 @@ export function SubNavbar() {
     {
       key: "contacto",
       label: "Contacto",
-      href: "/contacto",
+      href: "/#contacto",
     },
   ] as const;
 
