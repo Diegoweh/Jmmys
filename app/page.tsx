@@ -4,13 +4,13 @@ import Navbar, { Header } from '@/components/layout/Header';
 import SatisfaceSection from '@/components/layout/SatisfaceSection';
 import { motion } from 'framer-motion';
 import { useState } from 'react'
-import React from "react";
+
 import CircularGallery from '@/components/CircularGallery';
 import { OrderBox } from '@/components/OrderBox';
 
 import Banner from '@/components/layout/BannerCoolkies';
 import UbicanosSection from '@/components/layout/UbicanosSection';
-import Footer from '@/components/layout/Footer';
+
 import MenuCharacters from '@/components/MenuCharacters';
 import SnackGallery from '@/components/layout/SnackGallery';
 import DipsGallery from '@/components/layout/DipsGallery';
@@ -128,7 +128,7 @@ export default function Home() {
       {/* Ubicanos Section */}
       <UbicanosSection
         title="Encuéntranos"
-        address="Av. de la Marina 603, Ejidal Francisco Villa, 82127 Mazatlán, Sin."
+        address="Av. Carlos Canseco 603 - Mazatlán, Sin."
         hours={[
           "Lunes a Domingo",
           "01:00 PM - 10:00 PM"

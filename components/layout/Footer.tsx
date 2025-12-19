@@ -1,4 +1,5 @@
-import { Mail, MapPin, Phone, Instagram, ExternalLink } from "lucide-react"
+import { Mail, MapPin, Phone, Instagram, Facebook, Music, ExternalLink } from "lucide-react"
+import { RiTiktokLine } from "react-icons/ri";
 
 // Constantes para mejor mantenibilidad
 const CONTACT_INFO = {
@@ -6,9 +7,13 @@ const CONTACT_INFO = {
   phoneDisplay: "6692 135 090",
   instagram: "@jimmysmzt",
   instagramUrl: "https://instagram.com/jimmysmzt",
+  facebook: "Jimmy's Mazatlán",
+  facebookUrl: "https://facebook.com/jimmysmzt",
+  tiktok: "@jimmysmzt",
+  tiktokUrl: "https://tiktok.com/@jimmysmzt",
   address: {
-    street: "Av. La Marina 603 B",
-    neighborhood: "Eco. Villa",
+    street: "Av. Carlos Canseco 603",
+    neighborhood: "Fco. Villa",
     postalCode: "82127",
     city: "Mazatlán, Sinaloa, México"
   }
@@ -103,7 +108,7 @@ export default function Footer() {
                   <Instagram className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600 uppercase tracking-wide">Síguenos</p>
+                  <p className="text-xs text-gray-600 uppercase tracking-wide">Instagram</p>
                   <a
                     href={CONTACT_INFO.instagramUrl}
                     target="_blank"
@@ -112,6 +117,46 @@ export default function Footer() {
                     aria-label={`Visitar Instagram ${CONTACT_INFO.instagram}`}
                   >
                     {CONTACT_INFO.instagram}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Facebook */}
+              <div className="flex items-center gap-3 text-white">
+                <div className="group/icon inline-flex p-2.5 bg-orange rounded-xl transition shadow-sm hover:bg-orange-50 hover:text-orange-600">
+                  <Facebook className="w-5 h-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-600 uppercase tracking-wide">Facebook</p>
+                  <a
+                    href={CONTACT_INFO.facebookUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="font-bold text-lg text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-1"
+                    aria-label={`Visitar Facebook ${CONTACT_INFO.facebook}`}
+                  >
+                    {CONTACT_INFO.facebook}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* TikTok */}
+              <div className="flex items-center gap-3 text-white">
+                <div className="group/icon inline-flex p-2.5 bg-orange rounded-xl transition shadow-sm hover:bg-orange-50 hover:text-orange-600">
+                  <RiTiktokLine className="w-5 h-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-600 uppercase tracking-wide">TikTok</p>
+                  <a
+                    href={CONTACT_INFO.tiktokUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="font-bold text-lg text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-1"
+                    aria-label={`Visitar TikTok ${CONTACT_INFO.tiktok}`}
+                  >
+                    {CONTACT_INFO.tiktok}
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
@@ -234,7 +279,7 @@ export default function Footer() {
                   <Instagram className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600 uppercase tracking-wide">Síguenos</p>
+                  <p className="text-xs text-gray-600 uppercase tracking-wide">Instagram</p>
                   <a
                     href={CONTACT_INFO.instagramUrl}
                     target="_blank"
@@ -243,6 +288,50 @@ export default function Footer() {
                     aria-label={`Visitar Instagram ${CONTACT_INFO.instagram}`}
                   >
                     {CONTACT_INFO.instagram}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Facebook */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-3 text-white">
+                <div className="group/icon inline-flex p-2.5 bg-orange rounded-xl transition shadow-sm hover:bg-orange-50 hover:text-orange-600">
+                  <Facebook className="w-5 h-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-600 uppercase tracking-wide">Facebook</p>
+                  <a
+                    href={CONTACT_INFO.facebookUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="font-bold text-lg text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-1"
+                    aria-label={`Visitar Facebook ${CONTACT_INFO.facebook}`}
+                  >
+                    {CONTACT_INFO.facebook}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* TikTok */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-3 text-white">
+                <div className="group/icon inline-flex p-2.5 bg-orange rounded-xl transition shadow-sm hover:bg-orange-50 hover:text-orange-600">
+                  <RiTiktokLine className="w-5 h-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-600 uppercase tracking-wide">TikTok</p>
+                  <a
+                    href={CONTACT_INFO.tiktokUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="font-bold text-lg text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-1"
+                    aria-label={`Visitar TikTok ${CONTACT_INFO.tiktok}`}
+                  >
+                    {CONTACT_INFO.tiktok}
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>

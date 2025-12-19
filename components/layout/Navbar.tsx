@@ -84,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center gap-6 pr-2 mr-2 border-r border-white/20">
           <InfoItem icon={<ClockIcon />} label="Horario" value="1 – 10 PM" />
           <InfoItem icon={<PhoneIcon />} label="Llámanos" value="+52 669 213 5090" />
-          <InfoItem icon={<PinIcon />} label="Dirección" value="Av. de la Marina 603 B" />
+          <InfoItem icon={<PinIcon />} label="Dirección" value="Av. Carlos Canseco 603" />
         </div>
 
         {/* Botones existentes */}
@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <ClockIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Horario</span>
-                <span className="text-base font-medium">2 – 10 PM</span>
+                <span className="text-base font-medium">1 – 10 PM</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <PinIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Dirección</span>
-                <span className="text-base font-medium">Av. Carlos Canseco</span>
+                <span className="text-base font-medium">Av. Carlos Canseco 603</span>
               </div>
             </div>
           </div>

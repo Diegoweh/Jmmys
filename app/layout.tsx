@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jimmy's - Tu próxima obsesión",
+  title: "Jimmy's - Tu próxima genial obsesión",
   description: "Satisface tu antojo más grande con nuestras deliciosas pizzas, hamburguesas, alitas y más. Restaurante en Mazatlán con las mejores opciones para disfrutar.",
   keywords: ['pizzas mazatlán', 'hamburguesas mazatlán', 'alitas mazatlán', 'restaurante mazatlán', 'comida rápida', 'Jimmy\'s', 'boneless', 'postres'],
   authors: [{ name: 'Jimmy\'s Restaurant' }],
@@ -70,12 +70,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="m-0 p-0 w-full h-full overscroll-none">
       <head>
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden overscroll-none m-0 p-0 w-full min-h-screen`}
       >
         {/* Navbar - Always visible on top */}
         <div className="absolute top-0 left-0 right-0 z-30">

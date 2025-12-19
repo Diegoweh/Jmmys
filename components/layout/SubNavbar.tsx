@@ -117,8 +117,8 @@ export function SubNavbar() {
               className="p-2 rounded-md hidden md:block hover:bg-white/10 transition-colors"
             >
               <InstagramIcon className="h-5 w-5" />
-            </a>
-            {/* <a
+            </a>            
+            <a
               href="https://tiktok.com/jimmysmzt"
               target="_blank"
               rel="noopener noreferrer"
@@ -126,7 +126,7 @@ export function SubNavbar() {
               className="p-2 rounded-md hidden md:block hover:bg-white/10 transition-colors"
             >
               <TiktokIcon className="h-5 w-5" />
-            </a> */}
+            </a>
           </div>
         </div>
       </div>

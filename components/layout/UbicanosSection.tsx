@@ -143,13 +143,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
           </motion.div>
 
           {/* Mapa a la derecha */}
-          <motion.div
-            className="w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <div className="w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <iframe
               src={mapUrl}
               width="100%"
@@ -160,7 +154,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
               referrerPolicy="no-referrer-when-downgrade"
               title="Ubicación en Google Maps"
             />
-          </motion.div>
+          </div>
 
         </div>
       </div>
