@@ -447,7 +447,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-especial",
     category: "BURGERS",
-    name: "Especial Burger",
+    name: "Deli Burger",
     description:
       "Top sirloin con mozzarella, champiñones, aguacate y tocino ahumado.",
     price: 179,

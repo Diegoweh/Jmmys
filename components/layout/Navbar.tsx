@@ -131,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <ClockIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Horario</span>
-                <span className="text-base font-medium">1 – 10 PM</span>
+                <span className="text-base font-medium">01:00 PM – 10:00 PM</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -155,7 +155,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>
               Inicio
             </MobileNavLink>
-            <MobileNavAccordion title="Menu">
+            <MobileNavAccordion title="Menú">
               <MobileNavSubLink href="/menu/pizza" onClick={() => setIsMenuOpen(false)}>Pizza</MobileNavSubLink>
               <MobileNavSubLink href="/menu/hamburguesas" onClick={() => setIsMenuOpen(false)}>Hamburguesas</MobileNavSubLink>
               <MobileNavSubLink href="/menu/ensaladas" onClick={() => setIsMenuOpen(false)}>Ensaladas</MobileNavSubLink>

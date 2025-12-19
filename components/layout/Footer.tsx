@@ -42,7 +42,7 @@ export default function Footer() {
               />
               <div>
                 <h3 className="text-3xl font-bold text-orange cubano">
-                  JIMMY'S
+                  JIMMYS
                 </h3>
                 <p className="text-orange font-medium">
                   Tu próxima obsesión
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           {/* QR Code */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+          {/* <div className="flex flex-col sm:flex-row items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
             <div className="relative group">
               <div className="absolute inset-0 bg-linear-to-r from-orange-400 to-orange-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
               <div className="relative bg-white p-2 rounded-xl border-2 border-orange-200">
@@ -79,7 +79,7 @@ export default function Footer() {
                 y haz tu pedido desde tu celular
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Contacto */}
           <div className="space-y-6">
@@ -201,7 +201,7 @@ export default function Footer() {
         </div>
 
         {/* Layout para DESKTOP - Grid de 4 columnas */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-8 xl:gap-12 mb-12">
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8 xl:gap-12 mb-12">
 
           {/* Columna 1: Logo + Descripción */}
           <div className="space-y-6">
@@ -228,7 +228,7 @@ export default function Footer() {
           </div>
 
           {/* Columna 2: QR Code */}
-          <div className="flex items-start justify-center">
+          {/* <div className="flex items-start justify-center">
             <div className="relative group">
               <div className="absolute inset-0 bg-linear-to-r from-orange-400 to-orange-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
               <div className="relative bg-white p-4 rounded-2xl border-2 border-orange-200 shadow-lg">
@@ -245,7 +245,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Columna 3: Contacto */}
           <div className="space-y-6">

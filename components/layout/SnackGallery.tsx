@@ -482,7 +482,7 @@ class App {
       },
       {
         image: `/img/burgers/burger2.webp`,
-        text: 'Especial'
+        text: 'Deli Burger'
       },
       {
         image: `/img/burgers/burger3.webp`,
