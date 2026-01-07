@@ -77,10 +77,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden overscroll-none m-0 p-0 w-full min-h-screen`}
       >
-        {/* Navbar - Always visible on top */}
-        <div className="absolute top-0 left-0 right-0 z-30">
-          <Navbar logoSrc="/img/logo.png" cartCount={0} />
-          <SubNavbar />
+        {/* Header - Fixed Navigation over video */}
+        <div className="fixed top-0 left-0 right-0 z-30 pointer-events-none">
+          <div className="pointer-events-auto">
+            <Navbar logoSrc="/img/logo.png" />
+            <SubNavbar />
+          </div>
         </div>
         {children}
         <FloatingWhatsApp />

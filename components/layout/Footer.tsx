@@ -3,8 +3,8 @@ import { RiTiktokLine } from "react-icons/ri";
 
 // Constantes para mejor mantenibilidad
 const CONTACT_INFO = {
-  phone: "+526692135090",
-  phoneDisplay: "6692 135 090",
+  phone: "+526692139090",
+  phoneDisplay: "6692 139 090",
   instagram: "@jimmysmzt",
   instagramUrl: "https://instagram.com/jimmysmzt",
   facebook: "Jimmy's Mazatlán",
