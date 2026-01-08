@@ -67,6 +67,7 @@ interface TitleProps {
   text: string;
   textColor?: string;
   font?: string;
+  yOffset?: number;
 }
 
 class Title {
@@ -76,9 +77,10 @@ class Title {
   text: string;
   textColor: string;
   font: string;
+  yOffset: number;
   mesh!: Mesh;
 
-  constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }: TitleProps) {
+  constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif', yOffset = -0.5 }: TitleProps) {
     autoBind(this);
     this.gl = gl;
     this.plane = plane;
@@ -86,6 +88,7 @@ class Title {
     this.text = text;
     this.textColor = textColor;
     this.font = font;
+    this.yOffset = yOffset;
     this.createMesh();
   }
 
@@ -122,7 +125,7 @@ class Title {
     const textHeightScaled = this.plane.scale.y * 0.15;
     const textWidthScaled = textHeightScaled * aspect;
     this.mesh.scale.set(textWidthScaled, textHeightScaled, 1);
-    this.mesh.position.y = -this.plane.scale.y * 0.5 - textHeightScaled * 0.5 - 0.05;
+    this.mesh.position.y = this.plane.scale.y * this.yOffset - textHeightScaled * 0.5 - 0.05;
     this.mesh.setParent(this.plane);
   }
 }
@@ -147,6 +150,7 @@ interface MediaProps {
   scene: Transform;
   screen: ScreenSize;
   text: string;
+  price?: string;
   viewport: Viewport;
   bend: number;
   textColor: string;
@@ -165,6 +169,7 @@ class Media {
   scene: Transform;
   screen: ScreenSize;
   text: string;
+  price?: string;
   viewport: Viewport;
   bend: number;
   textColor: string;
@@ -173,6 +178,7 @@ class Media {
   program!: Program;
   plane!: Mesh;
   title!: Title;
+  priceLabel?: Title;
   scale!: number;
   padding!: number;
   width!: number;
@@ -192,6 +198,7 @@ class Media {
     scene,
     screen,
     text,
+    price,
     viewport,
     bend,
     textColor,
@@ -207,6 +214,7 @@ class Media {
     this.scene = scene;
     this.screen = screen;
     this.text = text;
+    this.price = price;
     this.viewport = viewport;
     this.bend = bend;
     this.textColor = textColor;
@@ -215,6 +223,7 @@ class Media {
     this.createShader();
     this.createMesh();
     this.createTitle();
+    this.createPrice();
     this.onResize();
   }
 
@@ -307,7 +316,21 @@ class Media {
       renderer: this.renderer,
       text: this.text,
       textColor: this.textColor,
-      font: this.font
+      font: this.font,
+      yOffset: -0.5
+    });
+  }
+
+  createPrice() {
+    if (!this.price) return;
+    this.priceLabel = new Title({
+      gl: this.gl,
+      plane: this.plane,
+      renderer: this.renderer,
+      text: this.price,
+      textColor: this.textColor,
+      font: this.font ? this.font.replace(/\d+px/, '24px') : 'bold 24px cubano',
+      yOffset: -0.68
     });
   }
 
@@ -373,7 +396,7 @@ class Media {
 }
 
 interface AppConfig {
-  items?: { image: string; text: string }[];
+  items?: { image: string; text: string; price?: string }[];
   bend?: number;
   textColor?: string;
   borderRadius?: number;
@@ -399,7 +422,7 @@ class App {
   scene!: Transform;
   planeGeometry!: Plane;
   medias: Media[] = [];
-  mediasImages: { image: string; text: string }[] = [];
+  mediasImages: { image: string; text: string; price?: string }[] = [];
   screen!: { width: number; height: number };
   viewport!: { width: number; height: number };
   raf: number = 0;
@@ -469,7 +492,7 @@ class App {
   }
 
   createMedias(
-    items: { image: string; text: string }[] | undefined,
+    items: { image: string; text: string; price?: string }[] | undefined,
     bend: number = 1,
     textColor: string,
     borderRadius: number,
@@ -478,27 +501,33 @@ class App {
     const defaultItems = [
       {
         image: `/img/pizzas/pizza13.webp`,
-        text: 'Truffalo Chica'
+        text: 'Truffalo Chica',
+        price: '$240'
       },
       {
         image: `/img/pizzas/pizza14.webp`,
-        text: 'Pork Belly'
+        text: 'Pork Belly',
+        price: '$260'
       },
       {
         image: `/img/pizzas/pizza15.webp`,
-        text: 'Pepperonisima'
+        text: 'Pepperonisima',
+        price: '$230'
       },
       {
         image: `/img/pizzas/pizza16.webp`,
-        text: 'Hot Mammy'
+        text: 'Hot Mammy',
+        price: '$250'
       },
       {
         image: `/img/pizzas/pizza17.webp`,
-        text: 'Dinamita'
+        text: 'Dinamita',
+        price: '$255'
       },
       {
         image: `/img/pizzas/pizza18.webp`,
-        text: 'Veggy Lovers'
+        text: 'Veggy Lovers',
+        price: '$220'
       },
       // {
       //   image: `/img/pizzas/pizza7.webp`,
@@ -538,6 +567,7 @@ class App {
         scene: this.scene,
         screen: this.screen,
         text: data.text,
+        price: data.price,
         viewport: this.viewport,
         bend,
         textColor,
@@ -644,7 +674,7 @@ class App {
 }
 
 interface CircularGalleryProps {
-  items?: { image: string; text: string }[];
+  items?: { image: string; text: string; price?: string }[];
   bend?: number;
   textColor?: string;
   borderRadius?: number;

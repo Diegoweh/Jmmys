@@ -137,17 +137,21 @@ export function SubNavbar() {
         </div>
       </div>
 
-      {/* Menú Mobile (Overlay) */}
+      {/* Menú Mobile (Dropdown desde arriba) */}
       <motion.div
         id="mobile-menu"
-        className="md:hidden fixed inset-0 bg-sky-500/95 z-40 overflow-y-auto"
-        initial={{ x: '100%' }}
-        animate={{ x: isMenuOpen ? 0 : '100%' }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className="md:hidden fixed left-0 right-0 bg-black/95 shadow-2xl z-40 overflow-y-auto max-h-[85vh]"
+        style={{ top: isScrolled ? '3rem' : '7.5rem' }} // Ajusta según la altura del navbar
+        initial={{ y: '-100%', opacity: 0 }}
+        animate={{
+          y: isMenuOpen ? 0 : '-100%',
+          opacity: isMenuOpen ? 1 : 0
+        }}
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
       >
-        <nav className="flex flex-col items-center py-20 px-6 gap-6">
+        <nav className="flex flex-col items-center py-6 px-6 gap-3">
           {/* === INFO EN MÓVIL === */}
-          <div className="w-full max-w-sm grid grid-cols-1 gap-4 text-white mb-4">
+          <div className="w-full max-w-sm grid grid-cols-1 gap-3 text-white mb-2">
             <div className="flex items-center gap-3">
               <ClockIcon />
               <div className="leading-tight">
@@ -172,7 +176,7 @@ export function SubNavbar() {
           </div>
 
           {/* === NAVIGATION LINKS === */}
-          <div className="w-full max-w-sm space-y-2 text-white mb-4">
+          <div className="w-full max-w-sm space-y-1 text-white mb-2">
             <MobileNavLink href="/" onClick={() => setIsMenuOpen(false)}>
               Inicio
             </MobileNavLink>
@@ -190,7 +194,7 @@ export function SubNavbar() {
           </div>
 
           {/* === SOCIAL ICONS === */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-3">
             <a
               href="https://facebook.com/jimmysmzt"
               target="_blank"
@@ -219,13 +223,13 @@ export function SubNavbar() {
 
           {/* === ACTION BUTTONS === */}
           <motion.a
-            href="https://wa.me/526692135090"
+            href="https://wa.me/526692139090"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
-            className="px-6 py-3 bg-white text-orange rounded-full text-lg font-medium cubano flex items-center gap-3"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: isMenuOpen ? 0 : 50, opacity: isMenuOpen ? 1 : 0 }}
+            className="px-5 py-2.5 bg-white text-orange rounded-full text-base font-medium cubano flex items-center gap-2"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: isMenuOpen ? 0 : 30, opacity: isMenuOpen ? 1 : 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
           >
             <span>PIDE X WHATSAPP</span>
@@ -241,7 +245,7 @@ const MobileNavLink: React.FC<{ href: string; onClick: () => void; children: Rea
   <a
     href={href}
     onClick={onClick}
-    className="block px-4 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium text-lg"
+    className="block px-4 py-2 rounded-lg hover:bg-white/10 transition-colors font-medium text-base"
   >
     {children}
   </a>
@@ -253,7 +257,7 @@ const MobileNavAccordion: React.FC<{ title: string; children: React.ReactNode }>
     <div className="border-b border-white/10">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between px-4 py-3 text-lg font-medium hover:bg-white/10 transition-colors rounded-lg"
+        className="w-full flex items-center justify-between px-4 py-2 text-base font-medium hover:bg-white/10 transition-colors rounded-lg"
       >
         <span>{title}</span>
         <svg
