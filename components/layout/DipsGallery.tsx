@@ -502,32 +502,32 @@ class App {
       {
         image: `/img/dips/salsa-1.webp`,
         text: 'Buffalo',
-        price: '$45'
+        price: '$179.00'
       },
       {
         image: `/img/dips/salsa-4.webp`,
         text: 'BBQ Smoke',
-        price: '$45'
+        price: '$179.00'
       },
       {
         image: `/img/dips/salsa-5.webp`,
         text: 'Truffalo',
-        price: '$50'
+        price: '$179.00'
       },
       {
         image: `/img/dips/salsa-9.webp`,
         text: 'Hot Honey',
-        price: '$50'
+        price: '$179.00'
       },
       {
         image: `/img/dips/salsa-7.webp`,
         text: 'BuffaRanch',
-        price: '$45'
+        price: '$179.00'
       },
       {
         image: `/img/dips/salsa-12.webp`,
         text: 'Korean Crunch',
-        price: '$50'
+        price: '$179.00'
       }
     ];
 

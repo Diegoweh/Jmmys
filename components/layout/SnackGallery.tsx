@@ -502,42 +502,42 @@ class App {
       {
         image: `/img/burgers/burger1.webp`,
         text: 'Korean',
-        price: '$180'
+        price: '$169.00'
       },
       {
         image: `/img/burgers/burger2.webp`,
         text: 'Deli Burger',
-        price: '$165'
+        price: '$179.00'
       },
       {
         image: `/img/burgers/burger3.webp`,
         text: 'Cheeseburger',
-        price: '$155'
+        price: '$99.00'
       },
       {
         image: `/img/burgers/burger4.webp`,
         text: 'Smoky',
-        price: '$175'
+        price: '$175.00'
       },
       {
         image: `/img/burgers/burger5.webp`,
         text: 'Royale',
-        price: '$185'
+        price: '$189.00'
       },
       {
         image: `/img/burgers/burger6.webp`,
         text: 'ChickenBBQ',
-        price: '$170'
+        price: '$169.00'
       },
       {
         image: `/img/burgers/burger7.webp`,
         text: 'Majestic',
-        price: '$190'
+        price: '$199.00'
       },
       {
         image: `/img/burgers/burger8.webp`,
         text: 'La Bestia',
-        price: '$200'
+        price: '$189.00'
       },
     ];
     const galleryItems = items && items.length ? items : defaultItems;

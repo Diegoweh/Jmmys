@@ -502,32 +502,32 @@ class App {
       {
         image: `/img/pizzas/pizza13.webp`,
         text: 'Truffalo Chica',
-        price: '$240'
+        price: '$259.00'
       },
       {
         image: `/img/pizzas/pizza14.webp`,
         text: 'Pork Belly',
-        price: '$260'
+        price: '$295.00'
       },
       {
         image: `/img/pizzas/pizza15.webp`,
         text: 'Pepperonisima',
-        price: '$230'
+        price: '$199.00'
       },
       {
         image: `/img/pizzas/pizza16.webp`,
         text: 'Hot Mammy',
-        price: '$250'
+        price: '$239.00'
       },
       {
         image: `/img/pizzas/pizza17.webp`,
         text: 'Dinamita',
-        price: '$255'
+        price: '$269.00'
       },
       {
         image: `/img/pizzas/pizza18.webp`,
         text: 'Veggy Lovers',
-        price: '$220'
+        price: '$229.00'
       },
       // {
       //   image: `/img/pizzas/pizza7.webp`,

@@ -184,6 +184,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Bebidas Section */}
+      <section className="bg-blue-50 py-12 md:py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Texto */}
+            <motion.div
+              className="order-1 md:order-1 text-center md:text-left"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-600 mb-6 cubano">
+                Bebidas Refrescantes
+              </h3>
+              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                Refresca tu día con nuestras deliciosas bebidas. Desde refrescos artesanales hasta bebidas naturales preparadas al momento.
+              </p>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                El complemento perfecto para tu comida. Cada bebida esta preparada con ingredientes de calidad para brindarte la mejor experiencia.
+              </p>
+              <a
+                href="/menu/bebidas"
+                className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                VER MENU DE BEBIDAS
+              </a>
+            </motion.div>
+
+            {/* Imagen */}
+            <motion.div
+              className="order-2 md:order-2"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="/img/bebidas/juzzy-frutos-rojos.webp"
+                alt="Bebidas Refrescantes"
+                className="w-full h-auto rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Se Ve Bueno Section */}
       <section
         className="relative bg-[url('/img/bannerSeVeBueno.webp')] bg-cover bg-center bg-no-repeat py-36 px-6"
@@ -198,6 +245,57 @@ export default function Home() {
           <p className="text-5xl md:text-7xl font-script italic mt-2 drop-shadow-lg demo-relgone">
             Y <span className="font-bold not-italic cubano">Sabe</span> Bueno
           </p>
+        </div>
+      </section>
+
+      {/* Calidad Jimmy's Section */}
+      <section className="bg-gradient-to-br from-orange-50 to-yellow-50 py-16 md:py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-orange mb-8 cubano">
+              Lo Hacemos con Pasión
+            </h3>
+
+            <div className="space-y-6 mb-10">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                En Jimmy's nos encanta lo que hacemos. Por eso seleccionamos cuidadosamente cada ingrediente,
+                trabajamos con productos frescos de la mejor calidad y seguimos procesos que garantizan
+                que cada platillo sea una experiencia única.
+              </p>
+
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                Nuestro equipo prepara todo con dedicación y amor, porque sabemos que cuando comes con nosotros,
+                no solo disfrutas una comida deliciosa, sino momentos especiales que mereces recordar.
+              </p>
+
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                Cada pizza, cada burger, cada alita... todo se hace pensando en ti y en darte la mejor experiencia posible.
+              </p>
+            </div>
+
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+              className="pt-4"
+            >
+              <p className="text-xl md:text-2xl text-gray-800 font-semibold mb-6">
+                ¿Quieres saber más sobre nosotros?
+              </p>
+              <a
+                href="/faqs"
+                className="inline-block px-10 py-5 bg-orange text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                Haz clic aquí
+              </a>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -216,9 +314,9 @@ export default function Home() {
           overlayOpacity="bg-opacity-40"
           images={[
             '/img/toons/full2.webp',
-            '/img/coockie3.webp',
+            '/img/cookie3.webp',
             '/img/coockie2.webp',
-            '/img/coockie4.webp'
+            '/img/cookie4.webp'
           ]}
       />
 
