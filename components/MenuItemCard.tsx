@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { MenuItem } from '@/lib/menu';
+import { useCart } from '@/contexts/CartContext';
+import { ShoppingCart, Check } from 'lucide-react';
+import { useState } from 'react';
 
 interface MenuItemCardProps {
   item: MenuItem;
@@ -11,9 +13,19 @@ interface MenuItemCardProps {
 }
 
 export default function MenuItemCard({ item, index }: MenuItemCardProps) {
-  // Generar mensaje de WhatsApp
-  const whatsappMessage = `Hola, quisiera ordenar *${item.name}* y también quisiera agregar...`;
-  const whatsappUrl = `https://wa.me/526692135090?text=${encodeURIComponent(whatsappMessage)}`;
+  const { addItem, openCart } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    addItem(item, 1);
+    setJustAdded(true);
+
+    // Mostrar feedback por 2 segundos
+    setTimeout(() => {
+      setJustAdded(false);
+    }, 2000);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -63,21 +75,39 @@ export default function MenuItemCard({ item, index }: MenuItemCardProps) {
           {item.description}
         </p>
 
-        {/* Precio */}
-        <div className="flex items-center justify-between">
+        {/* Precio y acciones */}
+        <div className="flex items-center justify-between gap-3">
           <span className="text-3xl font-bold text-orange cubano">
             ${item.price}
             <span className="text-lg ml-1">{item.currency}</span>
           </span>
 
-          <Link
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-orange hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold transition-colors duration-300 inline-block"
+          <motion.button
+            onClick={handleAddToCart}
+            disabled={item.available === false}
+            whileHover={{ scale: item.available !== false ? 1.05 : 1 }}
+            whileTap={{ scale: item.available !== false ? 0.95 : 1 }}
+            className={`
+              ${justAdded
+                ? 'bg-green-500 hover:bg-green-600'
+                : 'bg-orange hover:bg-orange-600'
+              }
+              ${item.available === false ? 'opacity-50 cursor-not-allowed' : ''}
+              text-white px-6 py-2 rounded-full font-bold transition-all duration-300 inline-flex items-center gap-2
+            `}
           >
-            Ordenar
-          </Link>
+            {justAdded ? (
+              <>
+                <Check className="w-4 h-4" />
+                <span>Agregado</span>
+              </>
+            ) : (
+              <>
+                <ShoppingCart className="w-4 h-4" />
+                <span>Agregar</span>
+              </>
+            )}
+          </motion.button>
         </div>
 
         {/* Opciones disponibles */}

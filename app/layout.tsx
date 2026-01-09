@@ -7,6 +7,9 @@ import SubNavbar from "@/components/layout/SubNavbar";
 import FloatingWhatsApp from "@/components/ui/FoatingWhatsApp";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/StructuredData";
+import { CartProvider } from "@/contexts/CartContext";
+import CartDrawer from "@/components/cart/CartDrawer";
+import FloatingCartButton from "@/components/cart/FloatingCartButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,17 +80,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden overscroll-none m-0 p-0 w-full min-h-screen`}
       >
-        {/* Header - Fixed Navigation over video */}
-        <div className="fixed top-0 left-0 right-0 z-30 pointer-events-none">
-          <div className="pointer-events-auto">
-            <Navbar logoSrc="/img/logo.png" />
-            <SubNavbar />
+        <CartProvider>
+          {/* Header - Fixed Navigation over video */}
+          <div className="fixed top-0 left-0 right-0 z-30 pointer-events-none">
+            <div className="pointer-events-auto">
+              <Navbar logoSrc="/img/logo.png" />
+              <SubNavbar />
+            </div>
           </div>
-        </div>
-        {children}
-        <FloatingWhatsApp />
-        {/* Footer */}
-      <Footer />
+          {children}
+          <FloatingWhatsApp />
+          <FloatingCartButton />
+          <CartDrawer />
+          {/* Footer */}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

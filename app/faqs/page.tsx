@@ -36,16 +36,16 @@ const faqs: FAQItem[] = [
     question: 'Tienen opciones vegetarianas?',
     answer: 'Si, contamos con opciones vegetarianas en pizzas, hamburguesas y ensaladas. Puedes personalizar tu pedido segun tus preferencias.'
   },
-  {
-    category: 'Menu',
-    question: 'Puedo personalizar mi pizza?',
-    answer: 'Por supuesto! Puedes elegir los ingredientes que desees, agregar o quitar toppings, y seleccionar el tipo de masa que prefieras.'
-  },
-  {
-    category: 'Menu',
-    question: 'Que tamanos de pizza tienen?',
-    answer: 'Ofrecemos pizzas en tres tamanos: Personal (8"), Mediana (12") y Grande (14"). Perfectas para cualquier ocasion, desde un antojo individual hasta una reunion familiar.'
-  },
+  // {
+  //   category: 'Menu',
+  //   question: 'Puedo personalizar mi pizza?',
+  //   answer: 'Por supuesto! Puedes elegir los ingredientes que desees, agregar o quitar toppings, y seleccionar el tipo de masa que prefieras.'
+  // },
+  // {
+  //   category: 'Menu',
+  //   question: 'Que tamanos de pizza tienen?',
+  //   answer: 'Ofrecemos pizzas en tres tamanos: Personal (8"), Mediana (12") y Grande (14"). Perfectas para cualquier ocasion, desde un antojo individual hasta una reunion familiar.'
+  // },
   {
     category: 'Pagos',
     question: 'Que metodos de pago aceptan?',
@@ -56,11 +56,11 @@ const faqs: FAQItem[] = [
     question: 'Tienen promociones especiales?',
     answer: 'Si! Tenemos promociones especiales semanales. Siguenos en nuestras redes sociales para estar al tanto de nuestras ofertas y descuentos.'
   },
-  {
-    category: 'Otros',
-    question: 'Organizan eventos o fiestas?',
-    answer: 'Si, podemos ayudarte a organizar tu evento con paquetes especiales para fiestas y reuniones. Contactanos para mas informacion sobre nuestros paquetes grupales.'
-  },
+  // {
+  //   category: 'Otros',
+  //   question: 'Organizan eventos o fiestas?',
+  //   answer: 'Si, podemos ayudarte a organizar tu evento con paquetes especiales para fiestas y reuniones. Contactanos para mas informacion sobre nuestros paquetes grupales.'
+  // },
   {
     category: 'Otros',
     question: 'Tienen area de comedor?',

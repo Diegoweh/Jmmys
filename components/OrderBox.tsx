@@ -65,19 +65,19 @@ const titleSlide = {
                 n: '1',
                 t1: 'Explora el',
                 t2: 'Menú',
-                p: 'Revisa el menú y elige la sección que más se te antoje.',
+                p: 'Navega por nuestras categorías y descubre todos los platillos.',
             },
             {
                 n: '2',
-                t1: 'Elige tu',
-                t2: 'Producto',
-                p: 'Selecciona el producto, ajusta detalles si aplica y agrégalo.',
+                t1: 'Agrega al',
+                t2: 'Carrito',
+                p: 'Selecciona tus productos favoritos y agrégalos al carrito.',
             },
             {
                 n: '3',
-                t1: 'Ordena',
-                t2: 'Fácil',
-                p: 'Da clic en ordenar y finaliza tu pedido.',
+                t1: 'Envía por',
+                t2: 'WhatsApp',
+                p: 'Revisa tu pedido y envíalo directo por WhatsApp.',
                 cta: true,
             },
             ].map((s, i) => (
@@ -157,17 +157,17 @@ const titleSlide = {
             {
                 n: '1',
                 title: 'Explora el menú',
-                text: 'Revisa el menú y elige la sección que más se te antoje.',
+                text: 'Navega por nuestras categorías y descubre todos los platillos.',
             },
             {
                 n: '2',
-                title: 'Elige tu producto',
-                text: 'Selecciona el producto, ajusta detalles si aplica y agrégalo.',
+                title: 'Agrega al carrito',
+                text: 'Selecciona tus productos favoritos y agrégalos al carrito.',
             },
             {
                 n: '3',
-                title: 'Ordena',
-                text: 'Da clic en ordenar y finaliza tu pedido.',
+                title: 'Envía por WhatsApp',
+                text: 'Revisa tu pedido y envíalo directo por WhatsApp.',
             },
             ].map((s, i) => (
             <motion.div
