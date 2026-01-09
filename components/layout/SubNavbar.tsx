@@ -40,6 +40,11 @@ export function SubNavbar() {
       ],
     },
     {
+      key: "faqs",
+      label: "FAQs",
+      href: "/faqs",
+    },
+    {
       key: "contacto",
       label: "Contacto",
       href: "/#contacto",
@@ -188,6 +193,9 @@ export function SubNavbar() {
               <MobileNavSubLink href="/menu/para-compartir" onClick={() => setIsMenuOpen(false)}>Pa' Picar</MobileNavSubLink>
               <MobileNavSubLink href="/menu/postres" onClick={() => setIsMenuOpen(false)}>Postres & Bebidas</MobileNavSubLink>
             </MobileNavAccordion>
+            <MobileNavLink href="/faqs" onClick={() => setIsMenuOpen(false)}>
+              FAQs
+            </MobileNavLink>
             <MobileNavLink href="/#contacto" onClick={() => setIsMenuOpen(false)}>
               Contacto
             </MobileNavLink>

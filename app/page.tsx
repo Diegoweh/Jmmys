@@ -137,6 +137,53 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ensaladas Section */}
+      <section className="bg-green-50 py-12 md:py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Imagen */}
+            <motion.div
+              className="order-2 md:order-1"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="/img/ensaladas/cesar-style.webp"
+                alt="Ensaladas Frescas"
+                className="w-full h-auto rounded-3xl shadow-2xl"
+              />
+            </motion.div>
+
+            {/* Texto */}
+            <motion.div
+              className="order-1 md:order-2 text-center md:text-left"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-green-600 mb-6 cubano">
+                Ensaladas Frescas
+              </h3>
+              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                Frescas, saludables y deliciosas. Nuestras ensaladas estan preparadas con los ingredientes mas frescos y de la mejor calidad.
+              </p>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                Perfectas como entrada o como plato principal. Cada ensalada es una explosion de sabor y nutricion.
+              </p>
+              <a
+                href="/menu/ensaladas"
+                className="inline-block px-8 py-4 bg-green-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                VER MENU DE ENSALADAS
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Se Ve Bueno Section */}
       <section
         className="relative bg-[url('/img/bannerSeVeBueno.webp')] bg-cover bg-center bg-no-repeat py-36 px-6"
