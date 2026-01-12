@@ -45,8 +45,8 @@ export default function SatisfaceSection() {
             
             {/* Big left card - Person eating burger */}
             <ImageCard
-            src="/img/meals/food.webp"
-            alt="Persona disfrutando una hamburguesa"
+            src="/img/meals/food2.webp"
+            alt="Alitas BBQ"
             className="
                 left-0
                 top-16 sm:top-12 md:top-16 lg:top-20
@@ -59,7 +59,7 @@ export default function SatisfaceSection() {
 
             {/* Top middle burger close-up */}
             <ImageCard
-              src="/img/meals/food2.webp"
+              src="/img/meals/food.webp"
               alt="Close-up burger"
               className="
                 left-[28%] sm:left-[30%] md:left-[32%] lg:left-[34%]

@@ -73,12 +73,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="m-0 p-0 w-full h-full overscroll-none">
+    <html lang="es" className="m-0 p-0 w-full h-full">
       <head>
         <StructuredData />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden overscroll-none m-0 p-0 w-full min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0 w-full min-h-screen`}
       >
         <CartProvider>
           {/* Header - Fixed Navigation over video */}

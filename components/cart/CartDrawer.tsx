@@ -4,10 +4,13 @@ import { useCart } from '@/contexts/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Minus, ShoppingCart, Trash2 } from 'lucide-react';
 import Image from 'next/image';
+import { menuByCategory, MenuItem } from '@/lib/menu';
+import { useMemo } from 'react';
 
 export default function CartDrawer() {
   const {
     items,
+    addItem,
     removeItem,
     updateQuantity,
     clearCart,
@@ -16,6 +19,49 @@ export default function CartDrawer() {
     isOpen,
     closeCart,
   } = useCart();
+
+  // Lógica inteligente de sugerencias
+  const suggestedItems = useMemo(() => {
+    if (items.length === 0) return [];
+
+    const cartCategories = new Set(items.map(item => item.category));
+    const suggestions: MenuItem[] = [];
+
+    // Prioridad 1: Si NO tienen bebidas, sugerir bebidas populares
+    if (!cartCategories.has('POSTRES')) {
+      const bebidas = menuByCategory['POSTRES'] || [];
+      const popularBebidas = bebidas.filter(b =>
+        b.name.includes('Rooky') || b.name.includes('Frutos Rojos') || b.name.includes('Honey Limonada')
+      );
+      suggestions.push(...popularBebidas.slice(0, 2));
+    }
+
+    // Prioridad 2: Si tienen comida principal pero no postres, sugerir postres
+    if ((cartCategories.has('PIZZAS') || cartCategories.has('BURGERS') || cartCategories.has('ALITAS'))
+        && suggestions.length < 3) {
+      const postres = menuByCategory['POSTRES'] || [];
+      const coolkies = postres.filter(p => p.name.includes('Coolkie'));
+      suggestions.push(...coolkies.slice(0, 3 - suggestions.length));
+    }
+
+    // Prioridad 3: Si tienen poco en el carrito, sugerir snacks
+    if (items.length <= 2 && suggestions.length < 3) {
+      const snacks = menuByCategory['PA_PICAR_Y_COMPARTIR'] || [];
+      const popularSnacks = snacks.filter(s =>
+        s.name.includes('Epic Fries') || s.name.includes('Mac Attack')
+      );
+      suggestions.push(...popularSnacks.slice(0, 3 - suggestions.length));
+    }
+
+    // Eliminar duplicados y productos que ya están en el carrito
+    const cartItemIds = new Set(items.map(item => item.id));
+    return suggestions
+      .filter((item, index, self) =>
+        !cartItemIds.has(item.id) &&
+        self.findIndex(i => i.id === item.id) === index
+      )
+      .slice(0, 3);
+  }, [items]);
 
   const handleCheckout = () => {
     if (items.length === 0) return;
@@ -84,8 +130,10 @@ export default function CartDrawer() {
             </div>
 
             {/* Items */}
-            <div className="flex-1 overflow-y-auto px-6 py-4">
-              {items.length === 0 ? (
+            <div className="flex-1 overflow-y-auto px-6 py-4 space-y-6">
+              {/* Productos en el carrito */}
+              <div>
+                {items.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center">
                   <ShoppingCart className="w-24 h-24 text-gray-300 mb-4" />
                   <p className="text-xl text-gray-500 font-medium">
@@ -183,6 +231,57 @@ export default function CartDrawer() {
                       Vaciar carrito
                     </button>
                   )}
+                </div>
+              )}
+              </div>
+
+              {/* Sugerencias - Solo si hay items en el carrito */}
+              {items.length > 0 && suggestedItems.length > 0 && (
+                <div className="border-t border-gray-200 pt-4">
+                  <h3 className="text-lg font-bold text-orange cubano mb-3 flex items-center gap-2">
+                    <span>🔥</span>
+                    NO OLVIDES LLEVAR
+                  </h3>
+                  <div className="space-y-3">
+                    {suggestedItems.map((item) => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-lg p-3 flex gap-3 items-center shadow-sm border border-orange-100"
+                      >
+                        {/* Imagen pequeña */}
+                        <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden">
+                          <Image
+                            src={item.imageUrl}
+                            alt={item.name}
+                            fill
+                            className="object-cover"
+                            sizes="64px"
+                          />
+                        </div>
+
+                        {/* Info */}
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-sm text-gray-800 leading-tight mb-1">
+                            {item.name}
+                          </h4>
+                          <p className="text-orange font-bold text-sm">
+                            ${item.price}
+                          </p>
+                        </div>
+
+                        {/* Botón agregar */}
+                        <button
+                          onClick={() => addItem(item, 1)}
+                          className="flex-shrink-0 bg-orange hover:bg-orange-dark text-white rounded-full p-2 transition-colors shadow-md"
+                          aria-label={`Agregar ${item.name}`}
+                        >
+                          <Plus className="w-4 h-4" />
+                        </button>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
