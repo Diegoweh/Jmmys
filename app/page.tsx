@@ -22,7 +22,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       
       <Header />      
 
@@ -30,7 +30,7 @@ export default function Home() {
       <MenuCharacters />      
 
       {/* Náutica Pizza Section */}
-      <section className="bg-sky-300 py-8 md:py-12 px-0">
+      <section className="bg-sky-300 py-8 md:py-12 px-0 overflow-hidden">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
           <motion.h3
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange tracking-tight cubano"
@@ -66,7 +66,7 @@ export default function Home() {
       </section>      
 
       {/* SnacksGallery */}
-      <section className="bg-orange py-8 md:py-12 px-0">
+      <section className="bg-orange py-8 md:py-12 px-0 overflow-hidden">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
           <motion.h3
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-300 tracking-tight cubano"
@@ -102,7 +102,7 @@ export default function Home() {
       </section>      
 
       {/* DipsGallery */}
-      <section className="bg-transparent py-8 md:py-12 px-0">
+      <section className="bg-transparent py-8 md:py-12 px-0 overflow-hidden">
         <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
           <motion.h3
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-400 tracking-tight cubano"
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Ensaladas Section */}
-      <section className="bg-green-50 py-12 md:py-20 px-6">
+      <section className="bg-green-50 py-12 md:py-20 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Imagen */}
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Bebidas Section */}
-      <section className="bg-blue-50 py-12 md:py-20 px-6">
+      <section className="bg-blue-50 py-12 md:py-20 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Texto */}

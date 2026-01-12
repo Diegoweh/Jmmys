@@ -423,7 +423,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-crunchylishus-korean",
     category: "BURGERS",
-    name: "CrunchyLishus Chicken Korean Burger",
+    name: "CrunchyLishus Korean",
     description:
       "Pollo crunchy en salsa coreana con col, pepino encurtido y ajonjolí.",
     price: 169,
@@ -435,7 +435,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-crunchylishus-bbq",
     category: "BURGERS",
-    name: "CrunchyLishus Chicken BBQ Burger",
+    name: "CrunchyLishus BBQ",
     description:
       "Pollo crunchy en BBQ smoke con tocino, piña grill y cebollín.",
     price: 169,
@@ -471,7 +471,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-smoky-jack-bbq",
     category: "BURGERS",
-    name: "Smoky Jack BBQ Burger",
+    name: "Smoky Jack BBQ",
     description:
       "Top sirloin con tocino extra, doble queso americano y BBQ Smoky Jack.",
     price: 179,

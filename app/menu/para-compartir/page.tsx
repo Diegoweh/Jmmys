@@ -16,7 +16,7 @@ export default function ParaCompartirPage() {
   const items = menuByCategory['PA_PICAR_Y_COMPARTIR'] || [];
 
   return (
-    <main className="min-h-screen bg-cream">
+    <main className="min-h-screen bg-cream overflow-x-hidden">
       {/* Header */}
       <section className="bg-orange py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
