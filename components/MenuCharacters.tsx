@@ -38,7 +38,7 @@ const characters: Character[] = [
   },
   {
     id: 'postres',
-    name: 'Bebidas & Postres',
+    name: 'Postres & Bebidas',
     image: '/img/toons/freskiboy.svg',
     href: '/menu/postres'
   },

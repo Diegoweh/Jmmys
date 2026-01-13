@@ -7,10 +7,10 @@ export const Header: React.FC = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Videos para desktop
+  // Videos para desktop (horizontales)
   const desktopVideos = [
-    '/video/jimmys-desktop-compressed.mp4',
-    '/video/jimmys-desktop-2-compressed.mp4'
+    '/video/jimmys-pizza-horizontal-compressed.mp4',
+    '/video/jimmys-hamburguesa-horizontal-compressed.mp4'
   ];
 
   // Detectar si es mobile
@@ -65,24 +65,24 @@ export const Header: React.FC = () => {
           key={isMobile ? 'mobile' : `desktop-${currentVideoIndex}`}
         >
           {isMobile ? (
-            <source src="/video/jimmys-mobile-compressed.mp4" type="video/mp4" />
+            <source src="/video/jimmys-vertical-compressed.mp4" type="video/mp4" />
           ) : (
             <source src={desktopVideos[currentVideoIndex]} type="video/mp4" />
           )}
           Tu navegador no soporta videos HTML5.
         </video>
         {/* Overlay oscuro opcional sobre el video */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/5"></div>
 
         {/* Imagen centrada sobre el video */}
-        <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+        {/* <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
           <img
             src="/tu-proxima-obsesion.png"
             alt="Tu próxima obsesión"
             className="w-full max-w-md md:max-w-2xl lg:max-w-4xl h-auto object-contain drop-shadow-2xl"
             loading="eager"
           />
-        </div>
+        </div> */}
 
         {/* Controles del carousel - solo en desktop */}
         {!isMobile && desktopVideos.length > 1 && (
