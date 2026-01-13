@@ -45,7 +45,7 @@ const characters: Character[] = [
   {
     id: 'papicar',
     name: "Pa'picar",
-    image: '/img/toons/alaladin.svg',
+    image: '/img/toons/snackyni.svg',
     href: '/menu/para-compartir'
   },
   

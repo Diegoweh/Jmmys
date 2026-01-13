@@ -29,7 +29,7 @@ export function SubNavbar() {
     { key: "inicio", label: "Inicio", href: "/" },
     {
       key: "menu",
-      label: "Menu",
+      label: "Menú",
       items: [
         { label: "Pizza", href: "/menu/pizza" },
         { label: "Hamburguesas", href: "/menu/hamburguesas" },

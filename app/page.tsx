@@ -177,7 +177,7 @@ export default function Home() {
                 href="/menu/ensaladas"
                 className="inline-block px-8 py-4 bg-green-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
-                VER MENU DE ENSALADAS
+                VER MENÚ DE ENSALADAS
               </a>
             </motion.div>
           </div>
@@ -209,7 +209,7 @@ export default function Home() {
                 href="/menu/bebidas"
                 className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
-                VER MENU DE BEBIDAS
+                VER MENÚ DE BEBIDAS
               </a>
             </motion.div>
 
