@@ -168,7 +168,7 @@ export function SubNavbar() {
               <PhoneIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Llámanos</span>
-                <span className="text-base font-medium">+52 669 213 5090</span>
+                <span className="text-base font-medium">+52 669 213 9090</span>
               </div>
             </div>
             <div className="flex items-center gap-3">
