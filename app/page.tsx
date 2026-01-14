@@ -102,49 +102,47 @@ export default function Home() {
       </section>      
 
       {/* Alitas y Boneless Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-sky-50 py-12 md:py-20 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <section className="bg-white py-12 md:py-20 px-6 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {/* Título */}
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange mb-6 cubano">
+              ALITAS Y BONELESS
+            </h3>
+
+            {/* Texto */}
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+              Crujientes por fuera, jugosas por dentro. Al estilo JIMMYS.
+            </p>
+
             {/* Imagen */}
             <motion.div
-              className="order-2 md:order-1"
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-8"
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <img
                 src="/img/meals/food2.webp"
                 alt="Alitas y Boneless"
-                className="w-full h-auto rounded-3xl shadow-2xl"
+                className="w-full max-w-md md:max-w-full mx-auto h-auto rounded-3xl shadow-2xl"
               />
             </motion.div>
 
-            {/* Texto */}
-            <motion.div
-              className="order-1 md:order-2 text-center md:text-left"
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}
+            {/* Botón */}
+            <a
+              href="/menu/alitas"
+              className="inline-block px-8 py-4 bg-orange text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-400 mb-6 cubano">
-                Alitas y Boneless
-              </h3>
-              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                Crujientes por fuera, jugosas por dentro. Nuestras alitas y boneless están preparados con pollo de la mejor calidad.
-              </p>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Elige tu salsa favorita y disfruta de un sabor único. Desde clásicas Buffalo hasta nuestras especiales con trufa y miel picante.
-              </p>
-              <a
-                href="/menu/alitas"
-                className="inline-block px-8 py-4 bg-blue-400 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                Ordenar Ahora
-              </a>
-            </motion.div>
-          </div>
+              ORDENAR AHORA
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -180,96 +178,114 @@ export default function Home() {
       </section>
 
       {/* Ensaladas Section */}
-      <section className="bg-green-50 py-12 md:py-20 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <section className="bg-white py-12 md:py-20 px-6 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {/* Título */}
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange mb-6 cubano">
+              ENSALADAS
+            </h3>
+
+            {/* Texto */}
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+              Frescas y bien preparadas. Una opción ligera para acompañar tu comida o elegir algo más fresco, sin salir del estilo JIMMYS.
+            </p>
+
             {/* Imagen */}
             <motion.div
-              className="order-2 md:order-1"
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-8"
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <img
                 src="/img/ensaladas/cesar-style.webp"
                 alt="Ensaladas Frescas"
-                className="w-full h-auto rounded-3xl shadow-2xl"
+                className="w-full max-w-md md:max-w-full mx-auto h-auto rounded-3xl shadow-2xl"
               />
             </motion.div>
 
-            {/* Texto */}
-            <motion.div
-              className="order-1 md:order-2 text-center md:text-left"
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              viewport={{ once: true }}
+            {/* Botón */}
+            <a
+              href="/menu/ensaladas"
+              className="inline-block px-8 py-4 bg-orange text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-green-600 mb-6 cubano">
-                Ensaladas
-              </h3>
-              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                Frescas y bien preparadas. Una opción ligera para acompañar tu comida o elegir algo mas fresco, sin salir del estilo JIMMYS.
-              </p>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Perfectas como entrada o plato principal. Cada ensalada es una explosión de sabor y nutrición.
-              </p>
-              <a
-                href="/menu/ensaladas"
-                className="inline-block px-8 py-4 bg-green-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                VER MENÚ DE ENSALADAS
-              </a>
-            </motion.div>
-          </div>
+              VER MENÚ DE ENSALADAS
+            </a>
+          </motion.div>
         </div>
       </section>
 
       {/* Bebidas Section */}
-      <section className="bg-blue-50 py-12 md:py-20 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Texto */}
-            <motion.div
-              className="order-1 md:order-1 text-center md:text-left"
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-blue-600 mb-6 cubano">
-                Bebidas
-              </h3>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Refrescantes, frutales y llenas de sabor. Bebidas naturales con notas vibrantes y un toque refrescante.
-              </p>
-              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                Ideales para disfrutar junto a tus platillos favoritos en JIMMYS.
-              </p>
-              <a
-                href="/menu/bebidas"
-                className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                VER MENÚ DE BEBIDAS
-              </a>
-            </motion.div>
+      <section className="bg-white py-12 md:py-20 px-8 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {/* Título Principal */}
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange mb-8 cubano">
+              BEBIDAS
+            </h3>
+
+            {/* Rookys */}
+            <h4 className="text-2xl md:text-3xl font-bold mb-4 cubano">
+              ROOKYS
+            </h4>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+              Intensas, cremosas y bien balanceadas.
+            </p>
+
+            {/* Juzzys */}
+            <h4 className="text-2xl md:text-3xl font-bold mb-4 cubano">
+              JUZZYS
+            </h4>
+            <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+              Refrescantes, frutales y llenas de sabor.
+            </p>
+
+            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+              Agrégalas a tu combo y refresca tu experiencia JIMMYS.
+            </p>
 
             {/* Imagen */}
             <motion.div
-              className="order-2 md:order-2"
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="mb-8"
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
+              {/* Imagen Mobile */}
               <img
-                src="/img/bebidas/juzzy-frutos-rojos.webp"
+                src="/img/vasos_celular.webp"
                 alt="Bebidas Refrescantes"
-                className="w-full h-auto rounded-3xl shadow-2xl"
+                className="md:hidden w-full max-w-md mx-auto h-auto rounded-3xl"
+              />
+              {/* Imagen Desktop */}
+              <img
+                src="/img/vasos_escritorio.webp"
+                alt="Bebidas Refrescantes"
+                className="hidden md:block w-full mx-auto h-auto rounded-3xl"
               />
             </motion.div>
-          </div>
+
+            {/* Botón */}
+            <a
+              href="/menu/postres"
+              className="inline-block px-8 py-4 bg-orange text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              VER MENÚ DE BEBIDAS
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -371,7 +387,7 @@ export default function Home() {
         title="Encuéntranos"
         address="Av. Carlos Canseco 603 - Mazatlán, Sin."
         hours={[
-          "Lunes a Domingo",
+          "Miercoles a Lunes",
           "01:00 PM - 10:00 PM"
         ]}
         phone="(669) 213 9090"
