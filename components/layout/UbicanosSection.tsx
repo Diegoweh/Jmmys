@@ -118,7 +118,7 @@ const UbicanosSection: React.FC<UbicanosSectionProps> = ({
 
             {/* Botón opcional */}
             <motion.a
-              href={mapUrl}
+              href="https://www.google.com/maps/place/JIMMYS/@23.2554916,-106.4392103,21z/data=!4m6!3m5!1s0x869f53ef59bdd34b:0x33261140dda0eb24!8m2!3d23.2555416!4d-106.4390914!16s%2Fg%2F11w3l9ttt9?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-orange text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
