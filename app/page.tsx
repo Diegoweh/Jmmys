@@ -358,7 +358,7 @@ export default function Home() {
             '/img/toons/full2.webp',
             '/img/cookie3.webp',
             '/img/coockie2.webp',
-            '/img/cookie4.webp'
+            
           ]}
       />
 

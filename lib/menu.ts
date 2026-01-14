@@ -625,7 +625,7 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Coolkie 1",
     description:
-      "Descripcion de ejemplo así mero.",
+      "Galleta mitad chocolate, mitad vainilla.",
     price: 55,
     currency: "MXN",
     imageUrl: "/img/postres/galleta1.webp",
@@ -637,7 +637,7 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Coolkie 2",
     description:
-      "Descripcion de ejemplo así mero.",
+      "Galleta con chispas dulces.",
     price: 55,
     currency: "MXN",
     imageUrl: "/img/postres/galleta2.webp",
@@ -649,10 +649,22 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Coolkie 3",
     description:
-      "Descripcion de ejemplo así mero.",
+      "Galleta de chocolate con nuez.",
     price: 55,
     currency: "MXN",
     imageUrl: "/img/postres/galleta3.webp",
+    tags: ["chocolate", "nuez", "crumble"],
+    available: true,
+  },
+  {
+    id: "postre-coolkie-skillet-combo",
+    category: "POSTRES",
+    name: "Coolkies Combo",
+    description:
+      "Tres galletas por un super precio. Elige entre nuestras deliciosas opciones y disfruta de una experiencia dulce única.",
+    price: 149,
+    currency: "MXN",
+    imageUrl: "/img/postres/galleta-combo.webp",
     tags: ["chocolate", "nuez", "crumble"],
     available: true,
   },
