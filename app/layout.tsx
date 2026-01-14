@@ -28,20 +28,20 @@ export const metadata: Metadata = {
   authors: [{ name: 'Jimmy\'s Restaurant' }],
   creator: 'Jimmy\'s',
   publisher: 'Jimmy\'s',
-  metadataBase: new URL('https://jimmys.com'), // Reemplaza con tu dominio real
+  metadataBase: new URL('https://jimmysmzt.com'), // Reemplaza con tu dominio real
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    url: 'https://jimmys.com',
+    url: 'https://jimmysmzt.com',
     title: "Jimmy's - Tu próxima obsesión",
     description: 'Las mejores pizzas, hamburguesas y alitas en Mazatlán. ¡Ordena ahora!',
     siteName: "Jimmy's Restaurant",
     images: [
       {
-        url: '/img/Header.webp', // Imagen principal del sitio
+        url: '/img/meals/J.png', // Imagen principal del sitio
         width: 1200,
         height: 630,
         alt: "Jimmy's Restaurant - Deliciosa comida",

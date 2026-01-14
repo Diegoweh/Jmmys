@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jimmys.com'; // Reemplaza con tu dominio real
+  const baseUrl = 'https://jimmysmzt.com'; // Reemplaza con tu dominio real
 
   // Rutas estáticas
   const routes = [

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://jimmys.com/sitemap.xml
+Sitemap: https://jimmysmzt.com/sitemap.xml
 
 # Disallow admin or private areas (if any in the future)
 # Disallow: /admin/
