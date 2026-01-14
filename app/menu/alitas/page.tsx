@@ -1,5 +1,6 @@
 import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
+import MenuNavigation from '@/components/layout/MenuNavigation';
 
 export const metadata = {
   title: 'Alitas y Boneless - Jimmy\'s Mazatlán',
@@ -30,6 +31,9 @@ export default function AlitasPage() {
           </p>
         </div>
       </section>
+
+      {/* Navegación de Menú */}
+      <MenuNavigation />
 
       {/* Grid de productos */}
       <section className="py-16 px-6">

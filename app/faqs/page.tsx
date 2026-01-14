@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   {
     category: 'Horarios',
     question: 'Cual es su horario de atencion?',
-    answer: 'Estamos abiertos de lunes a domingo de 1:00 PM a 10:00 PM para que puedas satisfacer tus antojos todos los dias.'
+    answer: 'Estamos abiertos de lunes a domingo de 1:00 PM a 10:00 PM para que puedas satisfacer tus antojos. Descansamos los martes.'
   },
   {
     category: 'Menu',

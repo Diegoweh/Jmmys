@@ -1,5 +1,6 @@
 import { menuByCategory } from '@/lib/menu';
 import MenuItemCard from '@/components/MenuItemCard';
+import MenuNavigation from '@/components/layout/MenuNavigation';
 
 export const metadata = {
   title: 'Postres y Bebidas - Jimmy\'s Mazatlán',
@@ -28,6 +29,9 @@ export default function PostresPage() {
           </p>
         </div>
       </section>
+
+      {/* Navegación de Menú */}
+      <MenuNavigation />
 
       {/* Grid de productos */}
       <section className="py-16 px-6">

@@ -219,7 +219,7 @@ export const menuItems: MenuItem[] = [
     category: "ENSALADAS",
     name: "Jimmy’s Garden Salad",
     description:
-      "Lechugas mixtas, manzana verde, arándanos, nuez garapiñada y queso de cabra con balsámico.Pollo grill o crunchy +$49 · Camarón grill +$59.",
+      "Lechugas mixtas, manzana verde, arándanos, nuez garapiñada y queso de cabra con balsámico. Pollo grill o crunchy +$49 · Camarón grill +$59.",
     price: 145,
     currency: "MXN",
     imageUrl: "/img/ensaladas/jimmys-garden.webp",
@@ -413,7 +413,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "JIMMYS Royale Burger",
     description:
-      "Doble carne, mozzarella, cheddar, tocino ahumado y mermelada de tocino con bourbon.Con toque de mantequilla de maní dulce.",
+      "Doble carne, mozzarella, cheddar, tocino ahumado y mermelada de tocino con bourbon. Con toque de mantequilla de maní dulce.",
     price: 189,
     currency: "MXN",
     imageUrl: "/img/burgers/jimmys-royale.webp",
@@ -618,6 +618,42 @@ export const menuItems: MenuItem[] = [
     currency: "MXN",
     imageUrl: "/img/postres/coolkie-apple-crumble.webp",
     tags: ["manzana", "cajeta", "crumble"],
+    available: true,
+  },
+  {
+    id: "postre-coolkie-skillet-1",
+    category: "POSTRES",
+    name: "Coolkie 1",
+    description:
+      "Descripcion de ejemplo así mero.",
+    price: 55,
+    currency: "MXN",
+    imageUrl: "/img/postres/galleta1.webp",
+    tags: ["chocolate", "blanco", "chips"],
+    available: true,
+  },
+  {
+    id: "postre-coolkie-skillet-2",
+    category: "POSTRES",
+    name: "Coolkie 2",
+    description:
+      "Descripcion de ejemplo así mero.",
+    price: 55,
+    currency: "MXN",
+    imageUrl: "/img/postres/galleta2.webp",
+    tags: ["chispas", "dulce", "crumble"],
+    available: true,
+  },
+  {
+    id: "postre-coolkie-skillet-3",
+    category: "POSTRES",
+    name: "Coolkie 3",
+    description:
+      "Descripcion de ejemplo así mero.",
+    price: 55,
+    currency: "MXN",
+    imageUrl: "/img/postres/galleta3.webp",
+    tags: ["chocolate", "nuez", "crumble"],
     available: true,
   },
 

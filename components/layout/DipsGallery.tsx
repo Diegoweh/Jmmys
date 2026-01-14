@@ -500,35 +500,25 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `/img/dips/salsa-1.webp`,
-        text: 'Buffalo',
-        price: '$179.00'
+        image: `/img/dips/caramba.webp`,
+        text: '¡Ay Caramba!'
       },
       {
-        image: `/img/dips/salsa-4.webp`,
-        text: 'BBQ Smoke',
-        price: '$179.00'
+        image: `/img/dips/mambo.webp`,
+        text: 'Mambo Yambo'
       },
       {
-        image: `/img/dips/salsa-5.webp`,
-        text: 'Truffalo',
-        price: '$179.00'
+        image: `/img/dips/pomodoro.webp`,
+        text: 'Chunky Pomodoro'
       },
       {
-        image: `/img/dips/salsa-9.webp`,
-        text: 'Hot Honey',
-        price: '$179.00'
+        image: `/img/dips/yum-yum.webp`,
+        text: 'Yum Yum'
       },
       {
-        image: `/img/dips/salsa-7.webp`,
-        text: 'BuffaRanch',
-        price: '$179.00'
+        image: `/img/dips/ranch.webp`,
+        text: 'Ranch'
       },
-      {
-        image: `/img/dips/salsa-12.webp`,
-        text: 'Korean Crunch',
-        price: '$179.00'
-      }
     ];
 
     const galleryItems = items && items.length ? items : defaultItems;
