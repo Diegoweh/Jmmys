@@ -102,7 +102,7 @@ export default function Home() {
       </section>      
 
       {/* Alitas y Boneless Section */}
-      <section className="bg-white py-12 md:py-20 px-6 overflow-hidden">
+      <section className="bg-orange-100 py-12 md:py-20 px-6 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* Ensaladas Section */}
-      <section className="bg-white py-12 md:py-20 px-6 overflow-hidden">
+      <section className="bg-green-100 py-12 md:py-20 px-6 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -223,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* Bebidas Section */}
-      <section className="bg-white py-12 md:py-20 px-8 overflow-hidden">
+      <section className="bg-blue-100 py-12 md:py-20 px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -358,7 +358,7 @@ export default function Home() {
       </section>
 
       {/* Cómo Ordenar Section */}
-      <section className="bg-cream px-6 py-4">
+      <section className="bg-orange-50 px-6 py-4">
         <div className="max-w-5xl mx-auto">
           <OrderBox />          
         </div>
