@@ -129,7 +129,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <img
-                src="/img/meals/food2.webp"
+                src="/img/boneless.webp"
                 alt="Alitas y Boneless"
                 className="w-full max-w-md md:max-w-full mx-auto h-auto rounded-3xl shadow-2xl"
               />
@@ -187,7 +187,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {/* Título */}
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange mb-6 cubano">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-green-600 mb-6 cubano">
               ENSALADAS
             </h3>
 
@@ -214,7 +214,7 @@ export default function Home() {
             {/* Botón */}
             <a
               href="/menu/ensaladas"
-              className="inline-block px-8 py-4 bg-orange text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-block px-8 py-4 bg-green-600 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               VER MENÚ DE ENSALADAS
             </a>
@@ -232,7 +232,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {/* Título Principal */}
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-orange mb-8 cubano">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-violet-700 mb-8 cubano">
               BEBIDAS
             </h3>
 
@@ -281,7 +281,7 @@ export default function Home() {
             {/* Botón */}
             <a
               href="/menu/postres"
-              className="inline-block px-8 py-4 bg-orange text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-block px-8 py-4 bg-violet-700 text-white rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               VER MENÚ DE BEBIDAS
             </a>
