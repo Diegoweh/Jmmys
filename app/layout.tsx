@@ -23,12 +23,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jimmy's - Tu próxima genial obsesión",
+  title: "Jimmys - Tu próxima genial obsesión",
   description: "Satisface tu antojo más grande con nuestras deliciosas pizzas, hamburguesas, alitas y más. Restaurante en Mazatlán con las mejores opciones para disfrutar.",
-  keywords: ['pizzas mazatlán', 'hamburguesas mazatlán', 'alitas mazatlán', 'restaurante mazatlán', 'comida rápida', 'Jimmy\'s', 'boneless', 'postres'],
-  authors: [{ name: 'Jimmy\'s Restaurant' }],
-  creator: 'Jimmy\'s',
-  publisher: 'Jimmy\'s',
+  keywords: ['pizzas mazatlán', 'hamburguesas mazatlán', 'alitas mazatlán', 'restaurante mazatlán', 'comida rápida', 'Jimmys', 'boneless', 'postres'],
+  authors: [{ name: 'Jimmys Restaurant' }],
+  creator: 'Jimmys',
+  publisher: 'Jimmys',
   metadataBase: new URL('https://jimmysmzt.com'), // Reemplaza con tu dominio real
   alternates: {
     canonical: '/',
@@ -37,21 +37,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_MX',
     url: 'https://jimmysmzt.com',
-    title: "Jimmy's - Tu próxima obsesión",
+    title: "Jimmys - Tu próxima obsesión",
     description: 'Las mejores pizzas, hamburguesas y alitas en Mazatlán. ¡Ordena ahora!',
-    siteName: "Jimmy's Restaurant",
+    siteName: "Jimmys Restaurant",
     images: [
       {
         url: '/img/meals/J.png', // Imagen principal del sitio
         width: 1200,
         height: 630,
-        alt: "Jimmy's Restaurant - Deliciosa comida",
+        alt: "Jimmys Restaurant - Deliciosa comida",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Jimmy's - Tu próxima obsesión",
+    title: "Jimmys - Tu próxima obsesión",
     description: 'Las mejores pizzas, hamburguesas y alitas en Mazatlán.',
     images: ['/img/Header.webp'],
   },
