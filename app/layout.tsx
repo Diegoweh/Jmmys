@@ -23,9 +23,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jimmys - Tu próxima genial obsesión",
-  description: "Satisface tu antojo más grande con nuestras deliciosas pizzas, hamburguesas, alitas y más. Restaurante en Mazatlán con las mejores opciones para disfrutar.",
-  keywords: ['pizzas mazatlán', 'hamburguesas mazatlán', 'alitas mazatlán', 'restaurante mazatlán', 'comida rápida', 'Jimmys', 'boneless', 'postres'],
+  title: "Jimmys | Pizza Estilo Detroit, Burgers, Alitas y Boneless",
+  description: "Prueba la mejor pizza estilo Detroit en Mazatlán. En Jimmys servimos pizzas crujientes, burgers premium, alitas y boneless y más. ¡Satisface tu antojo hoy mismo!",
+  keywords: ['pizzas mazatlán', 'hamburguesas mazatlán', 'alitas mazatlán', 'restaurante mazatlán', 'comida rápida', 'Jimmys', 'boneless', 'postres', 'servicio a domicilio', 'delivery'],
   authors: [{ name: 'Jimmys Restaurant' }],
   creator: 'Jimmys',
   publisher: 'Jimmys',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       {
         url: '/img/meals/J.png', // Imagen principal del sitio
         width: 1200,
-        height: 630,
+        height: 530,
         alt: "Jimmys Restaurant - Deliciosa comida",
       },
     ],

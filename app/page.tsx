@@ -23,8 +23,11 @@ export default function Home() {
   
   return (
     <div className="min-h-screen overflow-x-hidden">
-      
-      <Header />      
+
+      <Header />
+
+      {/* H1 para SEO - visualmente oculto */}
+      <h1 className="sr-only">La auténtica Pizza Detroit Cheese Crust en Mazatlán</h1>
 
       {/* Menu Characters Section */}
       <MenuCharacters />      
