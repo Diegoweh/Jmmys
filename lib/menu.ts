@@ -538,7 +538,7 @@ export const menuItems: MenuItem[] = [
     name: "Veggy Lovers Pizza",
     description:
       "Vegetales frescos, excelente sabor y mucho queso. ",
-    price: 247,
+    price: 229,
     currency: "MXN",
     imageUrl: "/img/pizzas/veggy-lovers.webp",
     tags: ["veggie", "champiñon", "balsamico"],
