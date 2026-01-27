@@ -590,7 +590,7 @@ export const menuItems: MenuItem[] = [
     name: "Coolkie Skillet Chocochips",
     description:
       "Galleta tibia hecha en casa con helado casero derritiéndose, crumble de chocolate, chocolate derretido y nuez garapiñada.",
-    price: 169,
+    price: 179,
     currency: "MXN",
     imageUrl: "/img/postres/coolkie-chocochips.webp",
     tags: ["galleta", "helado", "chocolate"],
@@ -602,7 +602,7 @@ export const menuItems: MenuItem[] = [
     name: "Coolkie Skillet S’mores Vibes",
     description:
       "Galleta de chocolate dúo con helado, crumble de graham y chocolate con malvaviscos flameados. Termina con lluvia de chocolate.",
-    price: 119,
+    price: 179,
     currency: "MXN",
     imageUrl: "/img/postres/coolkie-smores.webp",
     tags: ["smores", "chocolate", "malvavisco"],
@@ -614,7 +614,7 @@ export const menuItems: MenuItem[] = [
     name: "Coolkie Skillet Apple Crumble Star",
     description:
       "Galleta de chispas de chocolate dúo con manzana caramelizada, crumble doradito y helado. Se corona con cajeta artesanal, toque de sal de mar y nuez garapiñada.",
-    price: 129,
+    price: 179,
     currency: "MXN",
     imageUrl: "/img/postres/coolkie-apple-crumble.webp",
     tags: ["manzana", "cajeta", "crumble"],
@@ -678,7 +678,7 @@ export const menuItems: MenuItem[] = [
     name: "Honey Limonada",
     description:
       "Limonada con miel de agave. Dulce, ligera y perfecta para refrescar cualquier antojo. Pídela con agua mineral o Sprite… ¡y arma tu mood!",
-    price: 99,
+    price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/juzzy-honey-limonada.webp",
     tags: ["miel", "agave", "limonada"],
@@ -702,7 +702,7 @@ export const menuItems: MenuItem[] = [
     name: "Frutos Rojos",
     description:
       "Color, sabor y energía. Frambuesa, fresa y zarzamora mezcladas para un trago dulce con actitud.",
-    price: 99,
+    price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/juzzy-frutos-rojos.webp",
     tags: ["frambuesa", "fresa", "zarzamora"],
@@ -726,7 +726,7 @@ export const menuItems: MenuItem[] = [
     name: "Naranja con Miel y Jazmín",
     description:
       "Naranja brillante con un toque floral. Inesperada, elegante y sorprendentemente adictiva.",
-    price: 99,
+    price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/juzzy-naranja-jazmin.webp",
     tags: ["naranja", "miel", "jazmin"],
@@ -751,7 +751,7 @@ export const menuItems: MenuItem[] = [
     name: "Rooky Fresas con Crema",
     description:
       "Café helado con fresas y cremita. Fresco, frutal y brutalmente rico.",
-    price: 99,
+    price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-fresas.webp",
     tags: ["fresas", "cafe", "crema"],
@@ -775,7 +775,7 @@ export const menuItems: MenuItem[] = [
     name: "Rooky Matcha Azul",
     description:
       "Café helado con matcha azul. Fresco, vibrante y listo para el selfie.",
-    price: 99,
+    price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-matcha-azul.webp",
     tags: ["matcha", "cafe", "postre"],
@@ -799,7 +799,7 @@ export const menuItems: MenuItem[] = [
     name: "Rooky Nutella",
     description:
       "Café helado con Nutella. Cremoso, chocolatoso y totalmente antojadizo.",
-    price: 99,
+    price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-nutella.webp",
     tags: ["nutella", "cafe", "postre"],
