@@ -621,9 +621,9 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "postre-coolkie-skillet-1",
+    id: "postre-coolkie-duo",
     category: "POSTRES",
-    name: "Coolkie 1",
+    name: "Coolkie Duo",
     description:
       "Galleta mitad chocolate, mitad vainilla.",
     price: 55,
@@ -633,9 +633,9 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "postre-coolkie-skillet-2",
+    id: "postre-coolkie-chispas",
     category: "POSTRES",
-    name: "Coolkie 2",
+    name: "Coolkie Chispas",
     description:
       "Galleta con chispas dulces.",
     price: 55,
@@ -645,9 +645,9 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "postre-coolkie-skillet-3",
+    id: "postre-coolkie-nuez-chocolate",
     category: "POSTRES",
-    name: "Coolkie 3",
+    name: "Coolkie Nuez y Chocolate",
     description:
       "Galleta de chocolate con nuez.",
     price: 55,

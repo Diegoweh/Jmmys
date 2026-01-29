@@ -1,7 +1,8 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
 import { MenuItem } from '@/lib/menu';
+import { debounce } from '@/lib/debounce';
 
 export interface CartItem extends MenuItem {
   quantity: number;
@@ -31,6 +32,15 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const isInitialMount = useRef(true);
+
+  // Crear función debounced para guardar en localStorage (500ms delay)
+  const saveToLocalStorage = useCallback(
+    debounce((cartItems: CartItem[]) => {
+      localStorage.setItem('jimmys-cart', JSON.stringify(cartItems));
+    }, 500),
+    []
+  );
 
   // Cargar carrito desde localStorage al montar
   useEffect(() => {
@@ -39,15 +49,25 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       try {
         setItems(JSON.parse(savedCart));
       } catch (error) {
-        console.error('Error loading cart from localStorage:', error);
+        // Silently fail in production, log in development
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Error loading cart from localStorage:', error);
+        }
       }
     }
   }, []);
 
-  // Guardar carrito en localStorage cuando cambie
+  // Guardar carrito en localStorage cuando cambie (debounced)
   useEffect(() => {
-    localStorage.setItem('jimmys-cart', JSON.stringify(items));
-  }, [items]);
+    // Skip saving on initial mount (already loaded from localStorage)
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    // Use debounced save for better performance
+    saveToLocalStorage(items);
+  }, [items, saveToLocalStorage]);
 
   const addItem = (item: MenuItem, quantity: number = 1) => {
     setItems((prevItems) => {
