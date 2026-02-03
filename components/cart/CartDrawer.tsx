@@ -101,8 +101,37 @@ export default function CartDrawer() {
 
   // Auto-cleanup: Remover items promocionales excedentes cuando se reducen pizzas
   useEffect(() => {
-    if (!pizzaPromotion.available) return;
+    // If promo is NOT available (0 pizzas), remove ALL promo items
+    if (!pizzaPromotion.available) {
+      // Remove all promo drinks ($89 non-rooky)
+      const drinkIds = menuByCategory['POSTRES']
+        ?.filter(item => item.price === 89 && !item.name.includes('Coolkie') && !item.id.toLowerCase().includes('rooky'))
+        .map(item => item.id) || [];
 
+      items.forEach(item => {
+        if (drinkIds.includes(item.id)) {
+          removeItem(item.id);
+        }
+      });
+
+      // Remove all promo cookies (price: 0)
+      const freeCookieIds = [
+        'postre-coolkie-duo',
+        'postre-coolkie-chispas',
+        'postre-coolkie-nuez-chocolate',
+      ];
+      const promoCookieIds = freeCookieIds.map(id => `${id}-promo`);
+
+      items.forEach(item => {
+        if (promoCookieIds.includes(item.id) && item.price === 0) {
+          removeItem(item.id);
+        }
+      });
+
+      return;
+    }
+
+    // If promo IS available, handle excess items
     // Calcular exceso de bebidas promocionales
     const excessDrinks = pizzaPromotion.drinksAdded - pizzaPromotion.totalPizzas;
     if (excessDrinks > 0) {
