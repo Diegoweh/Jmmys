@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Plus, Minus, ShoppingCart, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import { menuByCategory, MenuItem } from '@/lib/menu';
-import { useMemo, useEffect } from 'react';
+import { useMemo, useEffect, useState } from 'react';
+import { isMondayPromoActive } from '@/lib/promotions';
 
 export default function CartDrawer() {
   const {
@@ -20,6 +21,22 @@ export default function CartDrawer() {
     closeCart,
   } = useCart();
 
+  // Track if Monday promotion is active
+  const [isMondayPromo, setIsMondayPromo] = useState(false);
+
+  // Check Monday promo status on mount and periodically
+  useEffect(() => {
+    // Initial check
+    setIsMondayPromo(isMondayPromoActive());
+
+    // Check every minute in case time/day changes
+    const interval = setInterval(() => {
+      setIsMondayPromo(isMondayPromoActive());
+    }, 60000); // 60 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Detectar promociones de pizza
   const pizzaPromotion = useMemo(() => {
     // Contar pizzas totales (con cantidades)
@@ -27,7 +44,8 @@ export default function CartDrawer() {
       .filter(item => item.category === 'PIZZAS')
       .reduce((sum, item) => sum + item.quantity, 0);
 
-    if (totalPizzas === 0) {
+    // Promotion is NOT available if: no pizzas OR not Monday
+    if (totalPizzas === 0 || !isMondayPromo) {
       return {
         available: false,
         totalPizzas: 0,
@@ -70,7 +88,7 @@ export default function CartDrawer() {
       canClaimDrink: drinksAdded < totalPizzas,
       canClaimCookie: drinksAdded > cookiesAdded,
     };
-  }, [items]);
+  }, [items, isMondayPromo]);
 
   // Bebidas disponibles para la promoción
   const pizzaPromotionDrinks = useMemo(() => {
@@ -180,7 +198,7 @@ export default function CartDrawer() {
         }
       });
     }
-  }, [pizzaPromotion.totalPizzas, pizzaPromotion.drinksAdded, pizzaPromotion.cookiesAdded]);
+  }, [pizzaPromotion.available, pizzaPromotion.totalPizzas, pizzaPromotion.drinksAdded, pizzaPromotion.cookiesAdded]);
 
   // Sugerencias: Solo mostrar items de PA_PICAR_Y_COMPARTIR y ENSALADAS
   const suggestedItems = useMemo(() => {

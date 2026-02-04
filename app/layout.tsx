@@ -11,6 +11,7 @@ import StructuredData from "@/components/StructuredData";
 import { CartProvider } from "@/contexts/CartContext";
 import CartDrawer from "@/components/cart/CartDrawer";
 import FloatingCartButton from "@/components/cart/FloatingCartButton";
+import { PromoDevTools } from "@/components/PromoDevTools";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,6 +95,8 @@ export default function RootLayout({
             gtag('config', 'G-NG7VWR0K6D');
           `}
         </Script>
+
+        
 
         <CartProvider>
           {/* Header - Fixed Navigation over video */}

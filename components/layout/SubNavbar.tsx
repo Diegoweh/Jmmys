@@ -116,7 +116,7 @@ export function SubNavbar() {
                 <InstagramIcon className="h-5 w-5" />
               </a>
               <a
-                href="https://tiktok.com/jimmysmzt"
+                href="https://tiktok.com/@jimmysmzt"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
@@ -220,7 +220,7 @@ export function SubNavbar() {
               <InstagramIcon className="h-6 w-6" />
             </a>
             <a
-              href="https://tiktok.com/jimmysmzt"
+              href="https://tiktok.com/@jimmysmzt"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-md hover:bg-white/10 transition-colors text-white"

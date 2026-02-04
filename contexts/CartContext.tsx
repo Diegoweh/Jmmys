@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
 import { MenuItem } from '@/lib/menu';
 import { debounce } from '@/lib/debounce';
+import { isMondayPromoActive } from '@/lib/promotions';
 
 export interface CartItem extends MenuItem {
   quantity: number;
@@ -47,7 +48,26 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const savedCart = localStorage.getItem('jimmys-cart');
     if (savedCart) {
       try {
-        setItems(JSON.parse(savedCart));
+        let loadedItems: CartItem[] = JSON.parse(savedCart);
+
+        // If it's not Monday, remove promotional items from loaded cart
+        if (!isMondayPromoActive()) {
+          // Filter out promotional drinks ($89 non-rooky beverages)
+          // and promotional cookies (price: 0 with -promo suffix)
+          loadedItems = loadedItems.filter(item => {
+            const isPromoDrink = item.price === 89 &&
+              !item.name.includes('Coolkie') &&
+              !item.id.toLowerCase().includes('rooky') &&
+              item.category === 'POSTRES';
+
+            const isPromoCookie = item.id.includes('-promo') && item.price === 0;
+
+            // Keep item if it's NOT a promo item
+            return !isPromoDrink && !isPromoCookie;
+          });
+        }
+
+        setItems(loadedItems);
       } catch (error) {
         // Silently fail in production, log in development
         if (process.env.NODE_ENV === 'development') {
