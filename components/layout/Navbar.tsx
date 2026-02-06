@@ -93,12 +93,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Botón WhatsApp */}
-        <button
-          onClick={onDeliveryClick}
+        <a
+          href="/#menu"          
+          rel="noopener noreferrer"
           className="px-4 py-2 bg-white text-orange rounded-full text-lg font-medium cubano flex items-center gap-2"
         >
           <span>PIDE POR WHATSAPP</span>
-        </button>
+        </a>
       </motion.nav>
     </motion.header>
   );

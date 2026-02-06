@@ -12,6 +12,7 @@ const menuCategories = [
   { label: "Alitas & Boneless", href: "/menu/alitas" },
   { label: "Pa' Picar", href: "/menu/para-compartir" },
   { label: "Postres & Bebidas", href: "/menu/postres" },
+  { label: "Promociones", href: "/menu/promociones" },
 ];
 
 export function MenuNavigation() {

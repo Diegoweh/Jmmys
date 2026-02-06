@@ -94,9 +94,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-NG7VWR0K6D');
           `}
-        </Script>
-
-        
+        </Script>        
 
         <CartProvider>
           {/* Header - Fixed Navigation over video */}

@@ -14,6 +14,7 @@ import UbicanosSection from '@/components/layout/UbicanosSection';
 import MenuCharacters from '@/components/MenuCharacters';
 import SnackGallery from '@/components/layout/SnackGallery';
 import DipsGallery from '@/components/layout/DipsGallery';
+import PromoPopup from '@/components/PromoPopup';
 
 
 
@@ -23,6 +24,13 @@ export default function Home() {
   
   return (
     <div className="min-h-screen overflow-x-hidden">
+
+      {/* Monthly Promotion Popup */}
+      <PromoPopup
+        imageSrc="/img/promo-superbowl.webp"
+        imageAlt="Promoción del mes"
+        link="/menu/promociones"
+      />
 
       <Header />
 

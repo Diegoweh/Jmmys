@@ -10,7 +10,8 @@ export type MenuCategory =
   | "BURGERS"
   | "PIZZAS"
   | "POSTRES"
-  | "SALSAS";
+  | "SALSAS"
+  | "PROMOCIONES";
 
 export type MenuAddOn = {
   id: string;
@@ -805,6 +806,36 @@ export const menuItems: MenuItem[] = [
     tags: ["nutella", "cafe", "postre"],
     available: true,
   },
+
+  // =========================
+  // Promociones
+  // =========================
+  
+  {
+    id: "paquete-seahawk",
+    category: "PROMOCIONES",
+    name: "Paquete Seahawk",
+    description:
+      "1 alitas truffalo, 1 alitas jack bbq, 1 alitas buffaranch, 1 alitas buffalo classic, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
+    price: 1154,
+    currency: "MXN",
+    imageUrl: "/img/promociones/promo-img.webp",
+    tags: ["alitas", "pizza", "papas"],
+    available: true,
+  },
+  {
+    id: "paquete-seattle",
+    category: "PROMOCIONES",
+    name: "Paquete Seattle",
+    description:
+      "2 burgers majestic, 2 burgers jimmys royale, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
+    price: 1214,
+    currency: "MXN",
+    imageUrl: "/img/promociones/promo-img.webp",
+    tags: ["burger", "pizza", "papas"],
+    available: true,
+  },
+
 ];
 
 // Útil si quieres render por secciones

@@ -37,6 +37,7 @@ export function SubNavbar() {
         { label: "Alitas & Boneless", href: "/menu/alitas" },
         { label: "Pa' picar", href: "/menu/para-compartir" },
         { label: "Postres & Bebidas", href: "/menu/postres" },
+        { label: "Promociones", href: "/menu/promociones" },
       ],
     },
     {
@@ -192,6 +193,7 @@ export function SubNavbar() {
               <MobileNavSubLink href="/menu/alitas" onClick={() => setIsMenuOpen(false)}>Alitas & Boneless</MobileNavSubLink>
               <MobileNavSubLink href="/menu/para-compartir" onClick={() => setIsMenuOpen(false)}>Pa' Picar</MobileNavSubLink>
               <MobileNavSubLink href="/menu/postres" onClick={() => setIsMenuOpen(false)}>Postres & Bebidas</MobileNavSubLink>
+              <MobileNavSubLink href="/menu/promociones" onClick={() => setIsMenuOpen(false)}>Promociones</MobileNavSubLink>
             </MobileNavAccordion>
             <MobileNavLink href="/faqs" onClick={() => setIsMenuOpen(false)}>
               FAQs
