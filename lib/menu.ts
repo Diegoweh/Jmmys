@@ -812,9 +812,9 @@ export const menuItems: MenuItem[] = [
   // =========================
   
   {
-    id: "paquete-seahawk",
+    id: "paquete-patriots",
     category: "PROMOCIONES",
-    name: "Paquete Seahawk",
+    name: "Paquete Patriots",
     description:
       "1 alitas truffalo, 1 alitas jack bbq, 1 alitas buffaranch, 1 alitas buffalo classic, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
     price: 1154,
@@ -824,9 +824,9 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "paquete-patriots",
+    id: "paquete-seahawk",
     category: "PROMOCIONES",
-    name: "Paquete Patriots",
+    name: "Paquete Seahawks",
     description:
       "2 burgers majestic, 2 burgers jimmys royale, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
     price: 1214,

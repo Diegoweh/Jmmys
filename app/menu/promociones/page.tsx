@@ -25,7 +25,7 @@ export default function PromocionesPage() {
             PROMOCIONES
           </h1>
           <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-            Paquetes especiales para disfrutar al maximo con amigos y familia
+            Paquetes especiales para disfrutar al máximo con amigos y familia
           </p>
         </div>
       </section>
