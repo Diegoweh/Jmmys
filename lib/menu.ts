@@ -824,9 +824,9 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "paquete-seattle",
+    id: "paquete-patriots",
     category: "PROMOCIONES",
-    name: "Paquete Seattle",
+    name: "Paquete Patriots",
     description:
       "2 burgers majestic, 2 burgers jimmys royale, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
     price: 1214,
