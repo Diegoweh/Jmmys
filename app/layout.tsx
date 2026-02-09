@@ -97,6 +97,7 @@ export default function RootLayout({
         </Script>        
 
         <CartProvider>
+          <PromoDevTools />
           {/* Header - Fixed Navigation over video */}
           <div className="fixed top-0 left-0 right-0 z-30 pointer-events-none">
             <div className="pointer-events-auto">
