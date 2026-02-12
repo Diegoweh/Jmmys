@@ -845,7 +845,7 @@ export const menuItems: MenuItem[] = [
     category: "PROMOCIONES",
     name: "A tu manera",
     description:
-      "1 Burger (Royal o Mjestic) con Papas o 1 Pizza Cheese Crust Peperonísima + 1 JUZZY (bebida refrescante) + 1 COOLKIE (sabor a elegir)",
+      "1 Burger (Royale o Majestic) con Papas o 1 Pizza Cheese Crust Peperonísima + 1 JUZZY (bebida refrescante) + 1 COOLKIE (sabor a elegir)",
     price: 329,
     currency: "MXN",
     imageUrl: "/img/promociones/a-tu-manera.webp",
