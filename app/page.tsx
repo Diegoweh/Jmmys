@@ -26,11 +26,11 @@ export default function Home() {
     <div className="min-h-screen overflow-x-hidden">
 
       {/* Monthly Promotion Popup */}
-      {/* <PromoPopup
-        imageSrc="/img/promo-superbowl.webp"
+      <PromoPopup
+        imageSrc="/img/promo-valentine.webp"
         imageAlt="Promoción del mes"
         link="/menu/promociones"
-      /> */}
+      />
 
       <Header />
 

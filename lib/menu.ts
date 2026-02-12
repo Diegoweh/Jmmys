@@ -808,33 +808,75 @@ export const menuItems: MenuItem[] = [
   },
 
   // =========================
-  // Promociones
+  // Promociones superbowl
   // =========================
   
+  // {
+  //   id: "paquete-patriots",
+  //   category: "PROMOCIONES",
+  //   name: "Paquete Patriots",
+  //   description:
+  //     "1 alitas truffalo, 1 alitas jack bbq, 1 alitas buffaranch, 1 alitas buffalo classic, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
+  //   price: 1154,
+  //   currency: "MXN",
+  //   imageUrl: "/img/promociones/promo-img.webp",
+  //   tags: ["alitas", "pizza", "papas"],
+  //   available: false,
+  // },
+  // {
+  //   id: "paquete-seahawk",
+  //   category: "PROMOCIONES",
+  //   name: "Paquete Seahawks",
+  //   description:
+  //     "2 burgers majestic, 2 burgers jimmys royale, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
+  //   price: 1214,
+  //   currency: "MXN",
+  //   imageUrl: "/img/promociones/promo-img.webp",
+  //   tags: ["burger", "pizza", "papas"],
+  //   available: false,
+  // },
+
+  // =========================
+  // Promociones valentine
+  // =========================
+
   {
-    id: "paquete-patriots",
+    id: "a-tu-manera",
     category: "PROMOCIONES",
-    name: "Paquete Patriots",
+    name: "A tu manera",
     description:
-      "1 alitas truffalo, 1 alitas jack bbq, 1 alitas buffaranch, 1 alitas buffalo classic, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
-    price: 1154,
+      "1 Burger (Royal o Mjestic) con Papas o 1 Pizza Cheese Crust Peperonísima + 1 JUZZY (bebida refrescante) + 1 COOLKIE (sabor a elegir)",
+    price: 329,
     currency: "MXN",
-    imageUrl: "/img/promociones/promo-img.webp",
-    tags: ["alitas", "pizza", "papas"],
-    available: true,
-  },
-  {
-    id: "paquete-seahawk",
-    category: "PROMOCIONES",
-    name: "Paquete Seahawks",
-    description:
-      "2 burgers majestic, 2 burgers jimmys royale, 1 pizza peperoníssima, 1 pizza hot mammy, 3 órdenes epic fries",
-    price: 1214,
-    currency: "MXN",
-    imageUrl: "/img/promociones/promo-img.webp",
+    imageUrl: "/img/promociones/a-tu-manera.webp",
     tags: ["burger", "pizza", "papas"],
     available: true,
   },
+  {
+    id: "match-perfecto",
+    category: "PROMOCIONES",
+    name: "Match Perfecto",
+    description:
+      "1 Pizza Cheese Crust Dinamita Explosión + 1 orden de Boneless (elige tu salsa) + 2 JUZZYS + 2 COOLKIES (sabor a elegir)",
+    price: 649,
+    currency: "MXN",
+    imageUrl: "/img/promociones/match-perfecto.webp",
+    tags: ["pizza", "Boneless", "Juzzy", "Coolkie"],
+    available: true,
+  },
+  {
+    id: "entre-amigos",
+    category: "PROMOCIONES",
+    name: "Entre Amigos",
+    description:
+      "1 Orden de Epic Fries + 1 orden de Mac Attack bombs + 1 Pizza Cheese Crust Pepperonísima + 1 Pizza Cheese Crust Dinamita Explosión + 1 orden de Boneless (elige tu salsa) + 4 JUZZYS o ROOKYS + 4 COOLKIES (sabor a elegir)",
+    price: 1379,
+    currency: "MXN",
+    imageUrl: "/img/promociones/entre-amigos.webp",
+    tags: ["burger", "pizza", "papas"],
+    available: true,
+  },
+  
 
 ];
 
