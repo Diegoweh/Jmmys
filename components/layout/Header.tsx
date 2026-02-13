@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
           key={isMobile ? 'mobile' : `desktop-${currentVideoIndex}`}
         >
           {isMobile ? (
-            <source src="/video/jimmys-vertical-compressed.mp4" type="video/mp4" />
+            <source src="/video/jimmys-vertical-2-compressed.mp4" type="video/mp4" />
           ) : (
             <source src={desktopVideos[currentVideoIndex]} type="video/mp4" />
           )}
