@@ -96,18 +96,18 @@ export const menuItems: MenuItem[] = [
   // =========================
   // PA’PICAR & COMPARTIR
   // =========================
-  {
-    id: "papicar-jalapeno-popper-panetto",
-    category: "PA_PICAR_Y_COMPARTIR",
-    name: "Jalapeño Popper Panetto",
-    description:
-      "Garlic bread artesanal con jalapeño y 3 quesos derretidos. Se sirve con Chunky Pomodoro. Picante e irresistible.",
-    price: 159,
-    currency: "MXN",
-    imageUrl: "/img/papicar/jalapeno-popper-panetto.webp",
-    tags: ["para-compartir", "queso", "jalapeño"],
-    available: true,
-  },
+  // {
+  //   id: "papicar-jalapeno-popper-panetto",
+  //   category: "PA_PICAR_Y_COMPARTIR",
+  //   name: "Jalapeño Popper Panetto",
+  //   description:
+  //     "Garlic bread artesanal con jalapeño y 3 quesos derretidos. Se sirve con Chunky Pomodoro. Picante e irresistible.",
+  //   price: 159,
+  //   currency: "MXN",
+  //   imageUrl: "/img/papicar/jalapeno-popper-panetto.webp",
+  //   tags: ["para-compartir", "queso", "jalapeño"],
+  //   available: true,
+  // },
   {
     id: "papicar-epic-fries",
     category: "PA_PICAR_Y_COMPARTIR",
