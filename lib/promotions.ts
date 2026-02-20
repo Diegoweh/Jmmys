@@ -45,29 +45,25 @@ export function isMondayPromoActive(): boolean {
   }
 
   try {
-    // Get current date/time in Mazatlán timezone
-    const mazatlanTime = new Date().toLocaleString('en-US', {
+    const now = new Date();
+    const formatter = new Intl.DateTimeFormat('en-US', {
       timeZone: 'America/Mazatlan',
       weekday: 'long',
       hour: 'numeric',
       hour12: false,
     });
 
-    // Extract day and hour
-    const [dayPart] = mazatlanTime.split(', ');
-    const hourMatch = mazatlanTime.match(/(\d+):/);
-    const currentHour = hourMatch ? parseInt(hourMatch[1], 10) : 0;
+    const parts = formatter.formatToParts(now);
+    const dayPart = parts.find(p => p.type === 'weekday')?.value ?? '';
+    const hourPart = parts.find(p => p.type === 'hour')?.value ?? '0';
+    const currentHour = parseInt(hourPart, 10);
 
-    // Check if it's Monday
     const isMonday = dayPart === 'Monday';
-
-    // Check if within business hours (1 PM = 13:00 to 10 PM = 22:00)
-    // Note: 22:00 means up to 22:59:59, so we check hour < 23
+    // Business hours: 1 PM (13:00) to 10:59 PM (22:59)
     const isDuringBusinessHours = currentHour >= 13 && currentHour < 23;
 
     return isMonday && isDuringBusinessHours;
   } catch (error) {
-    // If timezone detection fails, default to false (don't show promo)
     console.error('Error checking Monday promo status:', error);
     return false;
   }
@@ -88,16 +84,18 @@ export function getMondayPromoStatus(): {
   const isTestMode = isTestModeEnabled();
 
   try {
-    const mazatlanTime = new Date().toLocaleString('en-US', {
+    const now = new Date();
+    const formatter = new Intl.DateTimeFormat('en-US', {
       timeZone: 'America/Mazatlan',
       weekday: 'long',
       hour: 'numeric',
       hour12: false,
     });
 
-    const [dayPart] = mazatlanTime.split(', ');
-    const hourMatch = mazatlanTime.match(/(\d+):/);
-    const currentHour = hourMatch ? parseInt(hourMatch[1], 10) : 0;
+    const parts = formatter.formatToParts(now);
+    const dayPart = parts.find(p => p.type === 'weekday')?.value ?? 'Unknown';
+    const hourPart = parts.find(p => p.type === 'hour')?.value ?? '0';
+    const currentHour = parseInt(hourPart, 10);
 
     const isMonday = dayPart === 'Monday';
     const isDuringBusinessHours = currentHour >= 13 && currentHour < 23;
