@@ -248,7 +248,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "alitas-buffalo-classic",
     category: "ALITAS",
-    name: "Buffalo Classic",
+    name: "Alitas Buffalo Classic",
     description:
       "Clásicas al estilo Buffalo, picor equilibrado y sabor potente. Se sirven con apio, cebollín y ranch casero.",
     price: 179,
@@ -260,7 +260,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "alitas-jack-bbq-smoke",
     category: "ALITAS",
-    name: "Jack BBQ Smoke",
+    name: "Alitas Jack BBQ Smoke",
     description:
       "BBQ con Bourbon Jack Daniels, ajonjolí y cebollita crispy. Ahumadas, intensas y deliciosas.",
     price: 179,
@@ -272,7 +272,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "alitas-buffaranch",
     category: "ALITAS",
-    name: "BuffaRanch",
+    name: "Alitas BuffaRanch",
     description:
       "Mitad Buffalo, mitad Ranch. Bañadas en mezcla especial con ¡Ay Caramba!, ajonjolí negro y Crunchy Peas.",
     price: 179,
@@ -284,7 +284,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "alitas-hot-honey",
     category: "ALITAS",
-    name: "Hot Honey",
+    name: "Alitas Hot Honey",
     description:
       "Alitas glaseadas con miel picante de agave.Dulce, picante y perfectamente balanceadas.",
     price: 179,
@@ -296,7 +296,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "alitas-truffalo-supreme",
     category: "ALITAS",
-    name: "Truffalo Supreme",
+    name: "Alitas Truffalo Supreme",
     description:
       "Buffalo con toque de trufa. Intensa, elegante y llena de sabor.",
     price: 179,
@@ -308,7 +308,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "alitas-korean-crunch",
     category: "ALITAS",
-    name: "Korean Crunch",
+    name: "Alitas Korean Crunch",
     description:
       "Gochujang, miel, soya y jengibre. Dulce, picante y crujiente.",
     price: 179,
