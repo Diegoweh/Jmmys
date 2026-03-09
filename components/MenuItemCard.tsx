@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { MenuItem } from '@/lib/menu';
-import { useCart } from '@/contexts/CartContext';
+import { useCart, CartItem } from '@/contexts/CartContext';
 import { ShoppingCart, Check } from 'lucide-react';
 import { useState } from 'react';
+import OptionsModal from '@/components/OptionsModal';
 
 interface MenuItemCardProps {
   item: MenuItem;
@@ -13,20 +14,29 @@ interface MenuItemCardProps {
 }
 
 export default function MenuItemCard({ item, index }: MenuItemCardProps) {
-  const { addItem, openCart } = useCart();
+  const { addItem } = useCart();
   const [justAdded, setJustAdded] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleAddToCart = () => {
+    if (item.options && item.options.length > 0) {
+      setShowModal(true);
+      return;
+    }
     addItem(item, 1);
     setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 2000);
+  };
 
-    // Mostrar feedback por 2 segundos
-    setTimeout(() => {
-      setJustAdded(false);
-    }, 2000);
+  const handleModalConfirm = (selectedOptions: CartItem['selectedOptions']) => {
+    addItem(item, 1, selectedOptions);
+    setShowModal(false);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 2000);
   };
 
   return (
+    <>
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -126,11 +136,20 @@ export default function MenuItemCard({ item, index }: MenuItemCardProps) {
         {item.options && item.options.length > 0 && (
           <div className="mt-4 pt-4 border-t border-gray-200">
             <p className="text-sm text-gray-500">
-              {item.options.length} {item.options.length === 1 ? 'opción' : 'opciones'} disponibles
+              Personaliza tu pedido al agregar
             </p>
           </div>
         )}
       </div>
     </motion.div>
+
+    {showModal && (
+      <OptionsModal
+        item={item}
+        onClose={() => setShowModal(false)}
+        onConfirm={handleModalConfirm}
+      />
+    )}
+    </>
   );
 }

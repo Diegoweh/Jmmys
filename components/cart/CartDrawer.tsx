@@ -136,8 +136,15 @@ export default function CartDrawer() {
     items.forEach((item, index) => {
       message += `${index + 1}. *${item.name}* x${item.quantity}\n`;
       message += `   💲 $${item.price} c/u = $${item.price * item.quantity}\n`;
-      if (item.description) {
-        message += `   📝 ${item.description.substring(0, 60)}...\n`;
+      if (item.selectedOptions && item.options) {
+        item.options.forEach(group => {
+          const val = item.selectedOptions![group.id];
+          if (!val) return;
+          const label = Array.isArray(val)
+            ? val.map(id => group.items.find(i => i.id === id)?.label ?? id).join(', ')
+            : group.items.find(i => i.id === val)?.label ?? val;
+          message += `   • ${group.title}: ${label}\n`;
+        });
       }
       message += '\n';
     });
@@ -286,6 +293,24 @@ export default function CartDrawer() {
                               );
                             })()}
                           </div>
+
+                          {/* Opciones seleccionadas */}
+                          {item.selectedOptions && item.options && (
+                            <div className="mt-1 space-y-0.5">
+                              {item.options.map(group => {
+                                const val = item.selectedOptions![group.id];
+                                if (!val) return null;
+                                const label = Array.isArray(val)
+                                  ? val.map(id => group.items.find(i => i.id === id)?.label ?? id).join(', ')
+                                  : group.items.find(i => i.id === val)?.label ?? val;
+                                return (
+                                  <p key={group.id} className="text-xs text-gray-500">
+                                    <span className="font-semibold">{group.title}:</span> {label}
+                                  </p>
+                                );
+                              })}
+                            </div>
+                          )}
 
                           {/* Nota para items promocionales */}
                           {(item.id === 'postre-churro-bites-promo' && item.price === 0) && (

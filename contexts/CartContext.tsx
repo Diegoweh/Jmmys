@@ -16,7 +16,7 @@ export interface CartItem extends MenuItem {
 
 interface CartContextType {
   items: CartItem[];
-  addItem: (item: MenuItem, quantity?: number) => void;
+  addItem: (item: MenuItem, quantity?: number, selectedOptions?: CartItem['selectedOptions']) => void;
   removeItem: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;
@@ -79,8 +79,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     saveToLocalStorage(items);
   }, [items, saveToLocalStorage]);
 
-  const addItem = (item: MenuItem, quantity: number = 1) => {
+  const addItem = (item: MenuItem, quantity: number = 1, selectedOptions?: CartItem['selectedOptions']) => {
     setItems((prevItems) => {
+      if (selectedOptions) {
+        // Items with custom options always create new entries (unique selections)
+        const uniqueId = `${item.id}-${Date.now()}`;
+        return [...prevItems, { ...item, id: uniqueId, quantity, selectedOptions }];
+      }
+
       const existingItemIndex = prevItems.findIndex((i) => i.id === item.id);
 
       if (existingItemIndex > -1) {
