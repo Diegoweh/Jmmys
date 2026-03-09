@@ -661,6 +661,18 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
+    id: "postre-coolkie-churro",
+    category: "POSTRES",
+    name: "Coolkie Churro",
+    description:
+      "Galleta de churro.",
+    price: 55,
+    currency: "MXN",
+    imageUrl: "/img/postres/coolkie-churro.webp",
+    tags: ["churro", "galleta", "crumble"],
+    available: true,
+  },
+  {
     id: "postre-coolkie-skillet-combo",
     category: "POSTRES",
     name: "Coolkies Combo",
@@ -672,18 +684,18 @@ export const menuItems: MenuItem[] = [
     tags: ["chocolate", "nuez", "crumble"],
     available: true,
   },
-  {
-    id: "postre-churro-bites",
-    category: "POSTRES",
-    name: "Churro Bites",
-    description:
-      "Deliciosos bocados de churro, crujientes por fuera y suaves por dentro. Perfectos para compartir (o no).",
-    price: 119,
-    currency: "MXN",
-    imageUrl: "/img/postres/churro-bites.webp",
-    tags: ["churro", "dulce", "compartir"],
-    available: true,
-  },
+  // {
+  //   id: "postre-churro-bites",
+  //   category: "POSTRES",
+  //   name: "Churro Bites",
+  //   description:
+  //     "Deliciosos bocados de churro, crujientes por fuera y suaves por dentro. Perfectos para compartir (o no).",
+  //   price: 119,
+  //   currency: "MXN",
+  //   imageUrl: "/img/postres/churro-bites.webp",
+  //   tags: ["churro", "dulce", "compartir"],
+  //   available: true,
+  // },
 
   // =========================  
   // =========================
@@ -900,7 +912,8 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
-        ],
+          { id: "coolkie-churro", label: "Coolkie Churro" },
+          ],
       },      
     ],
   },
@@ -965,6 +978,7 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
+          { id: "coolkie-churro", label: "Coolkie Churro" },
         ],
       },
       {
@@ -976,6 +990,7 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
+          { id: "coolkie-churro", label: "Coolkie Churro" },
         ],
       },
     ],
@@ -1119,6 +1134,7 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
+          { id: "coolkie-churro", label: "Coolkie Churro" },
         ],
       },
       {
@@ -1130,6 +1146,7 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
+          { id: "coolkie-churro", label: "Coolkie Churro" },
         ],
       },
       {
@@ -1141,6 +1158,7 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
+          { id: "coolkie-churro", label: "Coolkie Churro" },
         ],
       },
       {
@@ -1152,6 +1170,7 @@ export const menuItems: MenuItem[] = [
           { id: "coolkie-duo", label: "Coolkie Duo" },
           { id: "coolkie-chispas", label: "Coolkie Chispas" },
           { id: "coolkie-nuez-chocolate", label: "Coolkie Nuez y Chocolate" },
+          { id: "coolkie-churro", label: "Coolkie Churro" },
         ],
       },
     ],
