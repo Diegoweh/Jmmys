@@ -43,6 +43,18 @@ export default function MenuItemCard({ item, index }: MenuItemCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
 
+        {/* Badge best seller */}
+        {item.bestSeller && (
+          <div className="absolute top-3 right-3 z-10">
+            <Image
+              src="/img/best-seller.png"
+              alt="Best Seller"
+              width={64}
+              height={64}
+            />
+          </div>
+        )}
+
         {/* Badge de disponibilidad */}
         {item.available === false && (
           <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">

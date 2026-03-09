@@ -49,156 +49,50 @@ export default function CartDrawer() {
       return {
         available: false,
         totalPizzas: 0,
-        drinksAdded: 0,
-        cookiesAdded: 0,
-        remainingPromotions: 0,
-        canClaimDrink: false,
-        canClaimCookie: false
+        churroBitesAdded: 0,
+        canClaimChurroBites: false,
       };
     }
 
-    // IDs de bebidas y cookies promocionales
-    const drinkIds = menuByCategory['POSTRES']
-      ?.filter(item => item.price === 89 && !item.name.includes('Coolkie') && !item.id.toLowerCase().includes('rooky'))
-      .map(item => item.id) || [];
-
-    const freeCookieIds = [
-      'postre-coolkie-duo', // Coolkie Duo
-      'postre-coolkie-chispas', // Coolkie Chispas
-      'postre-coolkie-nuez-chocolate', // Coolkie Nuez y Chocolate
-    ];
-
-    // Contar bebidas promocionales agregadas (con cantidades)
-    const drinksAdded = items
-      .filter(item => drinkIds.includes(item.id))
-      .reduce((sum, item) => sum + item.quantity, 0);
-
-    // Contar cookies gratuitas agregadas (con cantidades, solo las promocionales)
-    const promoCookieIds = freeCookieIds.map(id => `${id}-promo`);
-    const cookiesAdded = items
-      .filter(item => promoCookieIds.includes(item.id) && item.price === 0)
+    // Contar Churro Bites promocionales agregados
+    const churroBitesAdded = items
+      .filter(item => item.id === 'postre-churro-bites-promo' && item.price === 0)
       .reduce((sum, item) => sum + item.quantity, 0);
 
     return {
       available: true,
       totalPizzas,
-      drinksAdded,
-      cookiesAdded,
-      remainingPromotions: totalPizzas - drinksAdded,
-      canClaimDrink: drinksAdded < totalPizzas,
-      canClaimCookie: drinksAdded > cookiesAdded,
+      churroBitesAdded,
+      canClaimChurroBites: churroBitesAdded < totalPizzas,
     };
   }, [items, isMondayPromo]);
 
-  // Bebidas disponibles para la promoción
-  const pizzaPromotionDrinks = useMemo(() => {
-    if (!pizzaPromotion.available || !pizzaPromotion.canClaimDrink) return [];
-    const postres = menuByCategory['POSTRES'] || [];
-    return postres
-      .filter(item =>
-        item.price === 89 &&
-        !item.name.includes('Coolkie') &&
-        !item.id.toLowerCase().includes('rooky')
-      )
-      .slice(0, 6);
+  // Churro Bites para la promoción
+  const pizzaPromotionChurroBites = useMemo(() => {
+    if (!pizzaPromotion.available || !pizzaPromotion.canClaimChurroBites) return null;
+    return menuByCategory['POSTRES']?.find(item => item.id === 'postre-churro-bites') ?? null;
   }, [pizzaPromotion]);
 
-  // Cookies disponibles para la promoción
-  const pizzaPromotionCookies = useMemo(() => {
-    if (!pizzaPromotion.available || !pizzaPromotion.canClaimCookie) return [];
-    const postres = menuByCategory['POSTRES'] || [];
-    const freeCookieIds = [
-      'postre-coolkie-duo', // Coolkie Duo
-      'postre-coolkie-chispas', // Coolkie Chispas
-      'postre-coolkie-nuez-chocolate', // Coolkie Nuez y Chocolate
-    ];
-
-    // Permitir seleccionar la misma cookie múltiples veces
-    return postres.filter(item => freeCookieIds.includes(item.id));
-  }, [pizzaPromotion]);
-
-  // Auto-cleanup: Remover items promocionales excedentes cuando se reducen pizzas
+  // Auto-cleanup: Remover Churro Bites promocionales excedentes cuando se reducen pizzas
   useEffect(() => {
-    // If promo is NOT available (0 pizzas), remove ALL promo items
+    const promoItem = items.find(item => item.id === 'postre-churro-bites-promo' && item.price === 0);
+    if (!promoItem) return;
+
     if (!pizzaPromotion.available) {
-      // Remove all promo drinks ($89 non-rooky)
-      const drinkIds = menuByCategory['POSTRES']
-        ?.filter(item => item.price === 89 && !item.name.includes('Coolkie') && !item.id.toLowerCase().includes('rooky'))
-        .map(item => item.id) || [];
-
-      items.forEach(item => {
-        if (drinkIds.includes(item.id)) {
-          removeItem(item.id);
-        }
-      });
-
-      // Remove all promo cookies (price: 0)
-      const freeCookieIds = [
-        'postre-coolkie-duo',
-        'postre-coolkie-chispas',
-        'postre-coolkie-nuez-chocolate',
-      ];
-      const promoCookieIds = freeCookieIds.map(id => `${id}-promo`);
-
-      items.forEach(item => {
-        if (promoCookieIds.includes(item.id) && item.price === 0) {
-          removeItem(item.id);
-        }
-      });
-
+      removeItem('postre-churro-bites-promo');
       return;
     }
 
-    // If promo IS available, handle excess items
-    // Calcular exceso de bebidas promocionales
-    const excessDrinks = pizzaPromotion.drinksAdded - pizzaPromotion.totalPizzas;
-    if (excessDrinks > 0) {
-      const drinkIds = menuByCategory['POSTRES']
-        ?.filter(item => item.price === 89 && !item.name.includes('Coolkie') && !item.id.toLowerCase().includes('rooky'))
-        .map(item => item.id) || [];
-
-      let drinksToRemove = excessDrinks;
-      items.forEach(item => {
-        if (drinksToRemove > 0 && drinkIds.includes(item.id)) {
-          const removeQty = Math.min(item.quantity, drinksToRemove);
-          const newQty = item.quantity - removeQty;
-          drinksToRemove -= removeQty;
-
-          if (newQty > 0) {
-            updateQuantity(item.id, newQty);
-          } else {
-            removeItem(item.id);
-          }
-        }
-      });
+    const excess = pizzaPromotion.churroBitesAdded - pizzaPromotion.totalPizzas;
+    if (excess > 0) {
+      const newQty = promoItem.quantity - excess;
+      if (newQty > 0) {
+        updateQuantity('postre-churro-bites-promo', newQty);
+      } else {
+        removeItem('postre-churro-bites-promo');
+      }
     }
-
-    // Calcular exceso de cookies promocionales
-    const excessCookies = pizzaPromotion.cookiesAdded - pizzaPromotion.drinksAdded;
-    if (excessCookies > 0) {
-      const freeCookieIds = [
-        'postre-coolkie-duo',
-        'postre-coolkie-chispas',
-        'postre-coolkie-nuez-chocolate',
-      ];
-      const promoCookieIds = freeCookieIds.map(id => `${id}-promo`);
-
-      let cookiesToRemove = excessCookies;
-      items.forEach(item => {
-        if (cookiesToRemove > 0 && promoCookieIds.includes(item.id) && item.price === 0) {
-          const removeQty = Math.min(item.quantity, cookiesToRemove);
-          const newQty = item.quantity - removeQty;
-          cookiesToRemove -= removeQty;
-
-          if (newQty > 0) {
-            updateQuantity(item.id, newQty);
-          } else {
-            removeItem(item.id);
-          }
-        }
-      });
-    }
-  }, [pizzaPromotion.available, pizzaPromotion.totalPizzas, pizzaPromotion.drinksAdded, pizzaPromotion.cookiesAdded]);
+  }, [pizzaPromotion.available, pizzaPromotion.totalPizzas, pizzaPromotion.churroBitesAdded]);
 
   // Sugerencias: Solo mostrar items de PA_PICAR_Y_COMPARTIR y ENSALADAS
   const suggestedItems = useMemo(() => {
@@ -223,25 +117,13 @@ export default function CartDrawer() {
 
   // Helper para validar si se puede aumentar la cantidad de un item promocional
   const handleQuantityIncrease = (item: typeof items[0]) => {
-    // Identificar si es un item promocional
-    const isPromoDrink = item.price === 89 && !item.name.includes('Coolkie') && !item.id.toLowerCase().includes('rooky');
-    const isPromoCookie = item.id.includes('-promo') && item.price === 0;
+    const isPromoChurro = item.id === 'postre-churro-bites-promo' && item.price === 0;
 
-    if (isPromoDrink) {
-      // Verificar si puede reclamar más bebidas
-      if (!pizzaPromotion.canClaimDrink) {
-        alert('⚠️ Ya has reclamado todas las bebidas de promoción. Necesitas más pizzas para obtener más bebidas promocionales.');
-        return;
-      }
-    } else if (isPromoCookie) {
-      // Verificar si puede reclamar más cookies
-      if (!pizzaPromotion.canClaimCookie) {
-        alert('⚠️ Necesitas agregar una bebida promocional ($89) antes de poder obtener más cookies gratis.');
-        return;
-      }
+    if (isPromoChurro && !pizzaPromotion.canClaimChurroBites) {
+      alert('⚠️ Ya has reclamado todos los Churro Bites de promoción. Necesitas más pizzas para obtener más.');
+      return;
     }
 
-    // Si no es promocional o si pasa las validaciones, aumentar cantidad
     updateQuantity(item.id, item.quantity + 1);
   };
 
@@ -361,9 +243,7 @@ export default function CartDrawer() {
                           <div className="flex items-center justify-between">
                             {(() => {
                               // Identificar si es item promocional
-                              const isPromoDrink = item.price === 89 && !item.name.includes('Coolkie') && !item.id.toLowerCase().includes('rooky');
-                              const isPromoCookie = item.id.includes('-promo') && item.price === 0;
-                              const isPromoItem = isPromoDrink || isPromoCookie;
+                              const isPromoItem = item.id === 'postre-churro-bites-promo' && item.price === 0;
 
                               return (
                                 <>
@@ -408,7 +288,7 @@ export default function CartDrawer() {
                           </div>
 
                           {/* Nota para items promocionales */}
-                          {(item.id.includes('-promo') && item.price === 0) && (
+                          {(item.id === 'postre-churro-bites-promo' && item.price === 0) && (
                             <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
                               <span>🎁</span>
                               Item promocional - usa la sección de promoción para agregar más
@@ -449,7 +329,7 @@ export default function CartDrawer() {
                       ¡PROMO PIZZA LOVERS!
                     </h3>
                     <p className="text-sm text-gray-700 mb-3 font-medium">
-                      Lleva una bebida por solo <span className="text-orange font-bold">$89</span> y recibe una <span className="text-orange font-bold">Coolkie GRATIS</span>
+                      Por cada pizza recibe unos <span className="text-orange font-bold">Churro Bites GRATIS</span>
                     </p>
 
                     {/* Status de promociones */}
@@ -464,147 +344,65 @@ export default function CartDrawer() {
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
                         <span className="text-gray-600">
-                          Bebidas agregadas: <span className="text-orange font-semibold">{pizzaPromotion.drinksAdded}</span>
-                        </span>
-                        <span className="text-gray-600">
-                          Cookies reclamadas: <span className="text-green-600 font-semibold">{pizzaPromotion.cookiesAdded}</span>
+                          Churro Bites reclamados: <span className="text-green-600 font-semibold">{pizzaPromotion.churroBitesAdded}</span>
                         </span>
                       </div>
                     </div>
 
-                    {/* Bebidas de la promoción */}
-                    {pizzaPromotion.canClaimDrink ? (
-                      pizzaPromotionDrinks.length > 0 && (
-                        <div className="mb-4">
-                          <h4 className="text-sm font-bold text-gray-800 mb-2">
-                            Elige tu bebida ($89):
-                          </h4>
-                          <div className="space-y-2">
-                            {pizzaPromotionDrinks.map((drink) => (
-                              <motion.div
-                                key={drink.id}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                className="bg-white rounded-lg p-2 flex gap-2 items-center shadow-sm"
-                              >
-                                <div className="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
-                                  <Image
-                                    src={drink.imageUrl}
-                                    alt={drink.name}
-                                    fill
-                                    className="object-cover"
-                                    sizes="48px"
-                                  />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <h5 className="font-bold text-xs text-gray-800 leading-tight">
-                                    {drink.name}
-                                  </h5>
-                                  <p className="text-orange font-bold text-xs">$89</p>
-                                </div>
-                                <button
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-
-                                    if (!pizzaPromotion.canClaimDrink) {
-                                      return;
-                                    }
-
-                                    addItem(drink, 1);
-                                  }}
-                                  disabled={!pizzaPromotion.canClaimDrink}
-                                  className="shrink-0 bg-orange hover:bg-orange-dark text-white rounded-full p-1.5 transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
-                                  aria-label={`Agregar ${drink.name}`}
-                                >
-                                  <Plus className="w-3 h-3" />
-                                </button>
-                              </motion.div>
-                            ))}
+                    {/* Churro Bites GRATIS */}
+                    {pizzaPromotion.canClaimChurroBites && pizzaPromotionChurroBites ? (
+                      <div>
+                        <h4 className="text-sm font-bold text-gray-800 mb-2 flex items-center gap-1">
+                          <span>🎁</span>
+                          Tus Churro Bites GRATIS:
+                        </h4>
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          className="bg-white rounded-lg p-2 flex gap-2 items-center shadow-sm border-2 border-green-400"
+                        >
+                          <div className="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
+                            <Image
+                              src={pizzaPromotionChurroBites.imageUrl}
+                              alt={pizzaPromotionChurroBites.name}
+                              fill
+                              className="object-cover"
+                              sizes="48px"
+                            />
                           </div>
-                        </div>
-                      )
-                    ) : (
-                      <div className="mb-4 bg-gray-100 rounded-lg p-3 text-center">
-                        <p className="text-sm text-gray-600">
-                          ✅ ¡Has reclamado todas las bebidas de promoción!
-                        </p>
+                          <div className="flex-1 min-w-0">
+                            <h5 className="font-bold text-xs text-gray-800 leading-tight">
+                              {pizzaPromotionChurroBites.name}
+                            </h5>
+                            <div className="flex items-center gap-1">
+                              <p className="text-green-600 font-bold text-xs">¡GRATIS!</p>
+                              <p className="text-gray-400 line-through text-xs">${pizzaPromotionChurroBites.price}</p>
+                            </div>
+                          </div>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              if (!pizzaPromotion.canClaimChurroBites) return;
+                              const promoItem = {
+                                ...pizzaPromotionChurroBites,
+                                id: 'postre-churro-bites-promo',
+                                price: 0,
+                                name: `${pizzaPromotionChurroBites.name} (Promo Pizza)`,
+                              };
+                              addItem(promoItem, 1);
+                            }}
+                            className="shrink-0 bg-green-500 hover:bg-green-600 text-white rounded-full p-1.5 transition-colors shadow-md"
+                            aria-label="Agregar Churro Bites gratis"
+                          >
+                            <Plus className="w-3 h-3" />
+                          </button>
+                        </motion.div>
                       </div>
-                    )}
-
-                    {/* Cookies GRATIS de la promoción */}
-                    {pizzaPromotion.canClaimCookie ? (
-                      pizzaPromotionCookies.length > 0 && (
-                        <div>
-                          <h4 className="text-sm font-bold text-gray-800 mb-2 flex items-center gap-1">
-                            <span>🎁</span>
-                            Tu Coolkie GRATIS:
-                          </h4>
-                          <div className="space-y-2">
-                            {pizzaPromotionCookies.map((cookie) => (
-                              <motion.div
-                                key={cookie.id}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                className="bg-white rounded-lg p-2 flex gap-2 items-center shadow-sm border-2 border-green-400"
-                              >
-                                <div className="relative w-12 h-12 shrink-0 rounded-lg overflow-hidden">
-                                  <Image
-                                    src={cookie.imageUrl}
-                                    alt={cookie.name}
-                                    fill
-                                    className="object-cover"
-                                    sizes="48px"
-                                  />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <h5 className="font-bold text-xs text-gray-800 leading-tight">
-                                    {cookie.name}
-                                  </h5>
-                                  <div className="flex items-center gap-1">
-                                    <p className="text-green-600 font-bold text-xs">¡GRATIS!</p>
-                                    <p className="text-gray-400 line-through text-xs">${cookie.price}</p>
-                                  </div>
-                                </div>
-                                <button
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-
-                                    // Verificar que aún se puede reclamar una cookie
-                                    if (!pizzaPromotion.canClaimCookie) {
-                                      return;
-                                    }
-
-                                    // Crear item promocional con ID único para evitar conflictos
-                                    const promoItem = {
-                                      ...cookie,
-                                      id: `${cookie.id}-promo`,
-                                      price: 0,
-                                      name: `${cookie.name} (Promo Pizza)`,
-                                    };
-
-                                    addItem(promoItem, 1);
-                                  }}
-                                  disabled={!pizzaPromotion.canClaimCookie}
-                                  className="shrink-0 bg-green-500 hover:bg-green-600 text-white rounded-full p-1.5 transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
-                                  aria-label={`Agregar ${cookie.name} gratis`}
-                                >
-                                  <Plus className="w-3 h-3" />
-                                </button>
-                              </motion.div>
-                            ))}
-                          </div>
-                        </div>
-                      )
                     ) : (
-                      <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-3 text-center">
-                        <p className="text-sm text-yellow-800 font-medium">
-                          {pizzaPromotion.drinksAdded === 0 ? (
-                            <>⚠️ Primero agrega una bebida de $89 para desbloquear tu Coolkie gratis</>
-                          ) : (
-                            <>✅ ¡Has reclamado todas tus cookies gratis!</>
-                          )}
+                      <div className="bg-gray-100 rounded-lg p-3 text-center">
+                        <p className="text-sm text-gray-600">
+                          ✅ ¡Has reclamado todos tus Churro Bites gratis!
                         </p>
                       </div>
                     )}

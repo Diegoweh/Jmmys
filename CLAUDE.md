@@ -4,59 +4,56 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 application using the App Router architecture, bootstrapped with `create-next-app`. The project uses TypeScript, React 19, and Tailwind CSS v4 for styling.
+This is the website for **Jimmy's Restaurant** — a food venue in Mazatlán, Mexico. Built with Next.js 15 (App Router), TypeScript, React 19, Tailwind CSS v4, and Framer Motion. The site includes a full menu browser, cart system, time-based promotions, and SEO/structured data.
 
 ## Development Commands
 
-**Start development server:**
 ```bash
-npm run dev
+npm run dev       # Start dev server with Turbopack at http://localhost:3000
+npm run build     # Production build with Turbopack
+npm start         # Start production server (requires build first)
+npm run lint      # ESLint with next/core-web-vitals + next/typescript
+npm test          # Run Jest tests
+npm run test:watch  # Run Jest in watch mode
 ```
-- Uses Next.js with Turbopack for fast refresh
-- Server runs at http://localhost:3000
-- Changes to files in `app/` directory auto-reload
-
-**Build for production:**
-```bash
-npm run build
-```
-- Uses Turbopack for building
-- Outputs to `.next/` directory
-
-**Start production server:**
-```bash
-npm start
-```
-- Must run `npm run build` first
-
-**Linting:**
-```bash
-npm run lint
-```
-- Uses ESLint with Next.js TypeScript configuration
-- Extends `next/core-web-vitals` and `next/typescript`
 
 ## Architecture
 
-**App Router Structure:**
-- Uses Next.js App Router (not Pages Router)
-- Entry point: `app/page.tsx` - home page component
-- Root layout: `app/layout.tsx` - defines HTML structure, metadata, and global fonts
-- Global styles: `app/globals.css` - Tailwind CSS configuration with CSS variables for theming
+### Routes (`app/`)
+- `/` — Home page with hero, galleries, and sections
+- `/menu/[category]` — Individual menu category pages: `pizza`, `hamburguesas`, `ensaladas`, `alitas`, `para-compartir`, `postres`, `promociones`
+- `/faqs` — FAQ page
+- `app/sitemap.ts` — Auto-generated sitemap
 
-**TypeScript Configuration:**
-- Path alias `@/*` maps to root directory for cleaner imports
-- Example: `import Component from '@/components/Component'`
-- Strict mode enabled
-- Target: ES2017
+### Data Layer (`lib/`)
+- **`lib/menu.ts`** — Single source of truth for all menu data. Defines `MenuItem`, `MenuCategory`, `MenuOptionGroup`, `MenuAddOn` types. Exports `menuItems[]`, `menuSalsas[]`, `menuAddOns`, and `menuByCategory` (pre-grouped by category). To add/modify menu items, edit this file only.
+- **`lib/promotions.ts`** — Monday pizza promotion logic. Active only on Mondays 1pm–10pm (America/Mazatlan timezone). Test mode: add `?testMonday=true` to URL or `localStorage.setItem('testMondayPromo', 'true')`.
+- **`lib/utils.ts`** — `cn()` helper (clsx + tailwind-merge).
+- **`lib/debounce.ts`** — Debounce utility used by CartContext.
 
-**Styling:**
-- Tailwind CSS v4 with inline theme configuration
-- CSS variables for theming: `--background`, `--foreground`
-- Automatic dark mode support via `prefers-color-scheme`
-- Custom fonts: Geist Sans and Geist Mono loaded via `next/font/google`
+### State Management
+- **`contexts/CartContext.tsx`** — React Context for cart state. Persists to localStorage under key `jimmys-cart` with 500ms debounce. Filters out stale promotional items on load if Monday promo is inactive. Use `useCart()` hook to access.
 
-**Key Conventions:**
-- Server Components by default (no 'use client' needed unless client-side features required)
-- Metadata exports in layouts/pages for SEO
-- File-based routing: files in `app/` directory create routes automatically
+### Components
+- **`components/layout/`** — `Navbar`, `SubNavbar`, `Header` (video hero), `Footer`, `MenuNavigation`, `SaladGallery`, `SnackGallery`, `DipsGallery`, `SatisfaceSection`, `UbicanosSection`
+- **`components/cart/`** — `FloatingCartButton`, `CartDrawer`
+- **`components/ui/`** — `button` (CVA-based), `dropdown-menu` (Radix), `FoatingWhatsApp` (note: intentional typo in filename)
+- **`components/`** — `MenuItemCard`, `OrderBox`, `InfiniteMenu`, `CircularGallery` (uses OGL/WebGL + gl-matrix), `PromoPopup`, `PromoDevTools` (dev-only promo testing UI), `StructuredData` (JSON-LD SEO)
+
+### Key Conventions
+- All prices are in `MoneyMXN` (number, Mexican pesos)
+- `available?: boolean` on `MenuItem` — omitting it hides the item from menus
+- Commented-out items in `lib/menu.ts` are intentionally disabled, not deleted
+- `PromoDevTools` is commented out in `app/layout.tsx` for production; uncomment for local promo testing
+- Beverages and cookies are categorized under `"POSTRES"` in `MenuCategory`
+- The `FoatingWhatsApp` filename has a typo — keep it as-is to avoid breaking imports
+
+### Testing
+Jest with `jest-environment-jsdom` and `@testing-library/react`. Tests go in `__tests__/` directories or as `*.test.tsx` / `*.spec.tsx` files. The `@/` path alias works in tests via `moduleNameMapper`.
+
+### Notable Dependencies
+- **Framer Motion** — animations throughout the site
+- **OGL + gl-matrix** — WebGL 3D gallery (`CircularGallery`)
+- **Radix UI** — dropdown menus and slot primitives
+- **Font Awesome + Lucide + React Icons** — icons (mixed usage across components)
+- **Google Analytics** — `G-NG7VWR0K6D`, loaded via `next/script` in root layout

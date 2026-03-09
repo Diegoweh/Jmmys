@@ -45,6 +45,7 @@ export type MenuItem = {
   options?: MenuOptionGroup[];
   addOns?: MenuAddOn[];
   available?: boolean;
+  bestSeller?: boolean;
 };
 
 export const menuAddOns = {
@@ -420,6 +421,7 @@ export const menuItems: MenuItem[] = [
     imageUrl: "/img/burgers/jimmys-royale.webp",
     tags: ["doble", "tocino", "brioche"],
     available: true,
+    bestSeller: true,
   },
   {
     id: "burger-crunchylishus-korean",
@@ -468,6 +470,7 @@ export const menuItems: MenuItem[] = [
     imageUrl: "/img/burgers/majestic-bacon.webp",
     tags: ["doble", "tocino", "ay-caramba"],
     available: true,
+    bestSeller: true,
   },
   {
     id: "burger-smoky-jack-bbq",
@@ -610,15 +613,15 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "postre-coolkie-skillet-apple-crumble-star",
+    id: "postre-coolkie-skillet-peach-crumble-star",
     category: "POSTRES",
-    name: "Coolkie Skillet Apple Crumble Star",
+    name: "Coolkie Skillet Durazno Crumble Star",
     description:
-      "Galleta de chispas de chocolate dúo con manzana caramelizada, crumble doradito y helado. Se corona con cajeta artesanal, toque de sal de mar y nuez garapiñada.",
+      "Galleta de chispas de chocolate dúo con durazno caramelizado, crumble doradito y helado. Se corona con cajeta artesanal, toque de sal de mar y nuez garapiñada.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/postres/coolkie-apple-crumble.webp",
-    tags: ["manzana", "cajeta", "crumble"],
+    tags: ["durazno", "cajeta", "crumble"],
     available: true,
   },
   {
@@ -667,6 +670,18 @@ export const menuItems: MenuItem[] = [
     currency: "MXN",
     imageUrl: "/img/postres/galleta-combo.webp",
     tags: ["chocolate", "nuez", "crumble"],
+    available: true,
+  },
+  {
+    id: "postre-churro-bites",
+    category: "POSTRES",
+    name: "Churro Bites",
+    description:
+      "Deliciosos bocados de churro, crujientes por fuera y suaves por dentro. Perfectos para compartir (o no).",
+    price: 119,
+    currency: "MXN",
+    imageUrl: "/img/postres/churro-bites.webp",
+    tags: ["churro", "dulce", "compartir"],
     available: true,
   },
 
@@ -751,7 +766,7 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Rooky Fresas con Crema",
     description:
-      "Café helado con fresas y cremita. Fresco, frutal y brutalmente rico.",
+      "Bebida helada con fresas y cremita. Fresco, frutal y brutalmente rico.",
     price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-fresas.webp",
@@ -763,7 +778,7 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Rooky Cajeta",
     description:
-      "Café helado con cajeta. Dulce, suave y bien mexicano.",
+      "Bebida helada con cajeta. Dulce, suave y bien mexicano.",
     price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-cajeta.webp",
@@ -775,7 +790,7 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Rooky Matcha Azul",
     description:
-      "Café helado con matcha azul. Fresco, vibrante y listo para el selfie.",
+      "Bebida helada con matcha azul. Fresco, vibrante y listo para el selfie.",
     price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-matcha-azul.webp",
@@ -787,7 +802,7 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Rooky Chocoreta",
     description:
-      "Café helado con chocolate y menta. Refrescante, cool y 100% JIMMYS.",
+      "Bebida helada con chocolate y menta. Refrescante, cool y 100% JIMMYS.",
     price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-chocoreta.webp",
@@ -799,11 +814,11 @@ export const menuItems: MenuItem[] = [
     category: "POSTRES",
     name: "Rooky Nutella",
     description:
-      "Café helado con Nutella. Cremoso, chocolatoso y totalmente antojadizo.",
+      "Bebida helada con Nutella. Cremoso, chocolatoso y totalmente antojadizo.",
     price: 89,
     currency: "MXN",
     imageUrl: "/img/bebidas/rocky-nutella.webp",
-    tags: ["nutella", "cafe", "postre"],
+    tags: ["nutella", "chocolate", "postre"],
     available: true,
   },
 
