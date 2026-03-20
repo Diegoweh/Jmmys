@@ -584,6 +584,18 @@ export const menuItems: MenuItem[] = [
     tags: ["camaron", "cremosa", "ajo"],
     available: true,
   },
+  {
+    id: "pizza-hawaiian-crunch",
+    category: "PIZZAS",
+    name: "La Hawaiian Crunch Pizza",
+    description:
+      "Pepperoni extra, piña, toque de salsa BBQ y crujientes boneless.",
+    price: 285,
+    currency: "MXN",
+    imageUrl: "/img/pizzas/hawaiian-crunch.webp",
+    tags: ["pepperoni", "piña", "bbq"],
+    available: true,
+  },
 
   // =========================
   // BEBIDAS & POSTRES
@@ -715,7 +727,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "bebida-jazmin-soda",
     category: "POSTRES",
-    name: "Jazmín Honey Soda",
+    name: "Blu Honey limonada",
     description:
       "Flores de jazmín, miel y burbujitas felices. Sabe a verano, descanso y buen rollo.",
     price: 89,
