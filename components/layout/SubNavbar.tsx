@@ -162,7 +162,7 @@ export function SubNavbar() {
               <ClockIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Horario</span>
-                <span className="text-base font-medium">01:00 PM – 10:00 PM</span>
+                <span className="text-base font-medium">Mié–Lun 1–10 PM · Martes cerrado</span>
               </div>
             </div>
             <div className="flex items-center gap-3">

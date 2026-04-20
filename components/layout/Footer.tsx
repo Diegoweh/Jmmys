@@ -4,10 +4,10 @@ import { RiTiktokLine } from "react-icons/ri";
 // Constantes para mejor mantenibilidad
 const CONTACT_INFO = {
   phone: "+526692139090",
-  phoneDisplay: "6692 139 090",
+  phoneDisplay: "669 213 9090",
   instagram: "@jimmysmzt",
   instagramUrl: "https://instagram.com/jimmysmzt",
-  facebook: "Jimmy's Mazatlán",
+  facebook: "Jimmysmzt",
   facebookUrl: "https://facebook.com/jimmysmzt",
   tiktok: "@jimmysmzt",
   tiktokUrl: "https://tiktok.com/@jimmysmzt",
@@ -360,6 +360,8 @@ export default function Footer() {
                     <br />
                     {CONTACT_INFO.address.neighborhood}
                     <br />
+                    {CONTACT_INFO.address.postalCode}
+                    <br />
                     {CONTACT_INFO.address.city}
                   </p>
                   <a
@@ -371,7 +373,7 @@ export default function Footer() {
                     Ver en Maps
                     <ExternalLink className="w-3 h-3" />
                   </a>
-                  <img src="/img/delivery.png" alt="delivery" className="py-12" />
+                  {/* <img src="/img/delivery.png" alt="delivery" className="py-12" /> */}
                 </div>
               </div>
             </address>

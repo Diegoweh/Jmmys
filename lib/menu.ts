@@ -175,7 +175,7 @@ export const menuItems: MenuItem[] = [
   //         {
   //           id: "burger-style",
   //           label:
-  //             "Burger Style: carne top sirloin, tocino y salsa especial de queso tocino.",
+  //             "Burger Style: carne Carne, tocino y salsa especial de queso tocino.",
   //         },
   //         {
   //           id: "chicken-style",
@@ -399,12 +399,12 @@ export const menuItems: MenuItem[] = [
   // LA BURGER SECCIÓN
   // =========================
   {
-    id: "burger-original-cheeseburger",
+    id: "burger-jimmys-jr-bacon",
     category: "BURGERS",
-    name: "La Original Cheeseburger",
+    name: "Jimmys Jr. Bacon",
     description:
-      "100% Top Sirloin con cheddar, tomate, lechuga, cebolla y pepinillos.",
-    price: 99,
+      "La cheeseburger al estilo JIMMYS. Carne con bacon y triple queso, mazclada en plancha para un sabor dorado y brutalmente jugosa.",
+    price: 139,
     currency: "MXN",
     imageUrl: "/img/burgers/original-cheeseburger.webp",
     tags: ["top-sirloin", "clasica"],
@@ -415,7 +415,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "JIMMYS Royale Burger",
     description:
-      "Doble carne, mozzarella, cheddar, tocino ahumado y mermelada de tocino con bourbon. Con toque de mantequilla de maní dulce.",
+      "Carne gruesa y jugosa al estilo Jimmys, mozzarella, cheddar, tocino ahumado y mermelada de tocino con bourbon. Con toque de mantequilla de maní dulce.",
     price: 189,
     currency: "MXN",
     imageUrl: "/img/burgers/jimmys-royale.webp",
@@ -452,7 +452,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "Deli Burger",
     description:
-      "Top sirloin con mozzarella, champiñones, aguacate y tocino ahumado.",
+      "Carne con mozzarella, champiñones, aguacate y tocino ahumado.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/burgers/especial.webp",
@@ -464,7 +464,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "Majestic Bacon Burger",
     description:
-      "Doble top sirloin con mozzarella, champiñones y tocino crujiente.",
+      "Carne gruesa y jugosa al estilo Jimmys con mozzarella, champiñones y tocino crujiente.",
     price: 199,
     currency: "MXN",
     imageUrl: "/img/burgers/majestic-bacon.webp",
@@ -477,7 +477,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "Smoky Jack BBQ",
     description:
-      "Top sirloin con tocino extra, doble queso americano y BBQ Smoky Jack.",
+      "Carne con tocino extra, doble queso cheddar y BBQ Smoky Jack.",
     price: 179,
     currency: "MXN",
     imageUrl: "/img/burgers/smoky-jack-bbq.webp",
@@ -489,7 +489,7 @@ export const menuItems: MenuItem[] = [
     category: "BURGERS",
     name: "La Bestia Ruffles Burger",
     description:
-      "Top sirloin con mac & cheese, cheddar, tocino y Ruffle-Ranch.",
+      "Carne con mac & cheese, cheddar, tocino y Ruffle-Ranch.",
     price: 189,
     currency: "MXN",
     imageUrl: "/img/burgers/bestia-ruffles.webp",
@@ -513,12 +513,12 @@ export const menuItems: MenuItem[] = [
     available: true,
   },
   {
-    id: "pizza-hot-mammy",
+    id: "pizza-honey-diabla-pepperoni",
     category: "PIZZAS",
-    name: "Hot Mammy",
+    name: "Honey Diabla Pepperoni",
     description:
-      "Jalapeños, pepperoni y un picor que se queda contigo.",
-    price: 239,
+      "Extra crispy pepperoni, jalapeños confitados, mousse de 3 quesos, pomodoro casera, parmesano reggiano, ¡Dulce y picosita!",
+    price: 259,
     currency: "MXN",
     imageUrl: "/img/pizzas/hot-mammy.webp",
     tags: ["pepperoni", "jalapeño", "sweet-heat"],
@@ -648,18 +648,18 @@ export const menuItems: MenuItem[] = [
     tags: ["chocolate", "blanco", "chips"],
     available: true,
   },
-  {
-    id: "postre-coolkie-chispas",
-    category: "POSTRES",
-    name: "Coolkie Chispas",
-    description:
-      "Galleta con chispas dulces.",
-    price: 55,
-    currency: "MXN",
-    imageUrl: "/img/postres/galleta2.webp",
-    tags: ["chispas", "dulce", "crumble"],
-    available: true,
-  },
+  // {
+  //   id: "postre-coolkie-chispas",
+  //   category: "POSTRES",
+  //   name: "Coolkie Chispas",
+  //   description:
+  //     "Galleta con chispas dulces.",
+  //   price: 55,
+  //   currency: "MXN",
+  //   imageUrl: "/img/postres/galleta2.webp",
+  //   tags: ["chispas", "dulce", "crumble"],
+  //   available: true,
+  // },
   {
     id: "postre-coolkie-nuez-chocolate",
     category: "POSTRES",

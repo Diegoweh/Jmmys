@@ -8,13 +8,41 @@ import { useState } from 'react'
 import CircularGallery from '@/components/CircularGallery';
 import { OrderBox } from '@/components/OrderBox';
 
-import Banner from '@/components/layout/BannerCoolkies';
 import UbicanosSection from '@/components/layout/UbicanosSection';
 
 import MenuCharacters from '@/components/MenuCharacters';
 import SnackGallery from '@/components/layout/SnackGallery';
 import DipsGallery from '@/components/layout/DipsGallery';
 import PromoPopup from '@/components/PromoPopup';
+import ImageCarousel from '@/components/ImageCarousel';
+
+const alitasBonelessImages = [
+  { src: '/img/alitas/buffalo-classic.webp', alt: 'Alitas Buffalo Classic', title: 'Alitas · Buffalo Classic' },
+  { src: '/img/alitas/buffaranch.webp', alt: 'Alitas Buffaranch', title: 'Alitas · Buffaranch' },
+  { src: '/img/alitas/hot-honey.webp', alt: 'Alitas Hot Honey', title: 'Alitas · Hot Honey' },
+  { src: '/img/alitas/jack-smoke.webp', alt: 'Alitas Jack Smoke', title: 'Alitas · Jack Smoke' },
+  { src: '/img/alitas/korean-crunch.webp', alt: 'Alitas Korean Crunch', title: 'Alitas · Korean Crunch' },
+  { src: '/img/alitas/truffalo-supreme.webp', alt: 'Alitas Truffalo Supreme', title: 'Alitas · Truffalo Supreme' },
+  { src: '/img/boneless/buffalo-classic.webp', alt: 'Boneless Buffalo Classic', title: 'Boneless · Buffalo Classic' },
+  { src: '/img/boneless/buffaranch.webp', alt: 'Boneless Buffaranch', title: 'Boneless · Buffaranch' },
+  { src: '/img/boneless/hot-honey.webp', alt: 'Boneless Hot Honey', title: 'Boneless · Hot Honey' },
+  { src: '/img/boneless/jack-bbq-smoke.webp', alt: 'Boneless Jack BBQ Smoke', title: 'Boneless · Jack BBQ Smoke' },
+  { src: '/img/boneless/korean-crunch.webp', alt: 'Boneless Korean Crunch', title: 'Boneless · Korean Crunch' },
+  { src: '/img/boneless/truffalo-supreme.webp', alt: 'Boneless Truffalo Supreme', title: 'Boneless · Truffalo Supreme' },
+];
+
+const ensaladasImages = [
+  { src: '/img/ensaladas/cesar-style.webp', alt: 'Ensalada Cesar Style', title: 'Cesar Style' },
+  { src: '/img/ensaladas/jimmys-garden.webp', alt: 'Ensalada Jimmys Garden', title: "Jimmy's Garden" },
+  { src: '/img/ensaladas/taco-ranch-superstar.webp', alt: 'Ensalada Taco Ranch Superstar', title: 'Taco Ranch Superstar' },
+];
+
+const cookiesImages = [
+  { src: '/img/postres/coolkie-chocochips.webp', alt: 'Coolkie Chocochips', title: 'Coolkie Chocochips' },
+  { src: '/img/postres/coolkie-smores.webp', alt: 'Coolkie Smores', title: "Coolkie S'mores" },
+  { src: '/img/postres/coolkie-apple-crumble.webp', alt: 'Coolkie Apple Crumble', title: 'Coolkie Apple Crumble' },
+  { src: '/img/postres/galleta-combo.webp', alt: 'Combo de galletas', title: 'Cookie Combo' },
+];
 
 
 
@@ -131,7 +159,7 @@ export default function Home() {
               Crujientes por fuera, jugosas por dentro. Al estilo JIMMYS.
             </p>
 
-            {/* Imagen */}
+            {/* Carrusel */}
             <motion.div
               className="mb-8"
               initial={{ scale: 0.9, opacity: 0 }}
@@ -139,11 +167,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <img
-                src="/img/boneless.webp"
-                alt="Alitas y Boneless"
-                className="w-full max-w-md md:max-w-full mx-auto h-auto rounded-3xl shadow-2xl"
-              />
+              <ImageCarousel images={alitasBonelessImages} accentColor="#ff6b35" />
             </motion.div>
 
             {/* Botón */}
@@ -155,38 +179,7 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
-      </section>
-
-      {/* Salsas Gallery */}
-      <section className="bg-white py-8 md:py-12 px-0 overflow-hidden">
-        <div className="flex items-center gap-4 mb-2 sm:mb-3 text-center justify-center">
-          <motion.h3
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-orange tracking-tight cubano"
-            initial={{ y: -30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            Nuestras Salsas
-          </motion.h3>
-        </div>
-        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
-          <DipsGallery bend={0} textColor="#ff6b35" borderRadius={0.05} scrollEase={0.02}/>
-        </div>
-
-        {/* Texto descriptivo de salsas */}
-        <motion.div
-          className="max-w-3xl mx-auto text-center mt-8 px-6"
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          {/* <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            Todas nuestras salsas son preparadas en casa con ingredientes frescos y recetas únicas que hacen de cada bocado una experiencia inolvidable.
-          </p> */}
-        </motion.div>
-      </section>
+      </section>      
 
       {/* Ensaladas Section */}
       <section className="bg-green-100 py-12 md:py-20 px-6 overflow-hidden">
@@ -207,7 +200,7 @@ export default function Home() {
               Frescas y bien preparadas. Una opción ligera para acompañar tu comida o elegir algo más fresco, sin salir del estilo JIMMYS.
             </p>
 
-            {/* Imagen */}
+            {/* Carrusel */}
             <motion.div
               className="mb-8"
               initial={{ scale: 0.9, opacity: 0 }}
@@ -215,11 +208,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <img
-                src="/img/ensaladas/cesar-style.webp"
-                alt="Ensaladas Frescas"
-                className="w-full max-w-md md:max-w-full mx-auto h-auto rounded-3xl shadow-2xl"
-              />
+              <ImageCarousel images={ensaladasImages} accentColor="#16a34a" />
             </motion.div>
 
             {/* Botón */}
@@ -277,13 +266,13 @@ export default function Home() {
             >
               {/* Imagen Mobile */}
               <img
-                src="/img/vasos_celular.webp"
+                src="/img/vasos_punch.webp"
                 alt="Bebidas Refrescantes"
                 className="md:hidden w-full max-w-md mx-auto h-auto rounded-3xl"
               />
               {/* Imagen Desktop */}
               <img
-                src="/img/vasos_escritorio.webp"
+                src="/img/vasos_punch.webp"
                 alt="Bebidas Refrescantes"
                 className="hidden md:block w-full mx-auto h-auto rounded-3xl"
               />
@@ -376,18 +365,45 @@ export default function Home() {
       </section>
 
       {/* Cookies Section */}
-      <Banner
-          backgroundImage="/img/banner.png"
-          height="h-[420px]"
-          overlay
-          overlayOpacity="bg-opacity-40"
-          images={[
-            '/img/toons/full2.webp',
-            '/img/cookie3.webp',
-            '/img/coockie2.webp',
-            
-          ]}
-      />
+      <section className="bg-amber-100 py-12 md:py-20 px-6 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {/* Título */}
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-amber-700 mb-6 cubano">
+              COOLKIES
+            </h3>
+
+            {/* Texto */}
+            <p className="text-lg md:text-xl text-stone-700 mb-8 leading-relaxed">
+              Calientitas, suaves al centro y con ese toque dulce que cierra perfecto tu antojo JIMMYS.
+            </p>
+
+            {/* Carrusel */}
+            <motion.div
+              className="mb-8"
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <ImageCarousel images={cookiesImages} accentColor="#b45309" />
+            </motion.div>
+
+            {/* Botón */}
+            <a
+              href="/menu/postres"
+              className="inline-block px-8 py-4 bg-amber-700 text-amber-50 rounded-full text-xl font-bold cubano shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              VER MENÚ DE POSTRES
+            </a>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Satisface Section */}
       <SatisfaceSection />

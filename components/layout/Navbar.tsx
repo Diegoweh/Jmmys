@@ -87,9 +87,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       >
         {/* Información */}
         <div className="flex items-center gap-6 pr-2 mr-2 border-r border-white/20">
-          <InfoItem icon={<ClockIcon />} label="Horario" value="1 – 10 PM" />
+          <InfoItem icon={<ClockIcon />} label="Horario" value="Mié–Lun 1–10 PM · Martes cerrado" />
           <InfoItem icon={<PhoneIcon />} label="Llámanos" value="+52 669 213 9090" />
-          <InfoItem icon={<PinIcon />} label="Dirección" value="Av. Carlos Canseco 603" />
+          <InfoItem icon={<PinIcon />} label="Dirección" value="Av. Carlos Canseco 603 - 82127" />
         </div>
 
         {/* Botón WhatsApp */}
