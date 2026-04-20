@@ -516,7 +516,7 @@ class App {
       },
       {
         image: `/img/pizzas/pizza16.webp`,
-        text: 'Hot Mammy',
+        text: 'Honey Diabla Pepperoni',
         price: '$239.00'
       },
       {

@@ -511,8 +511,8 @@ class App {
       },
       {
         image: `/img/burgers/burger3.webp`,
-        text: 'Cheeseburger',
-        price: '$99.00'
+        text: 'Jimmys Jr. Bacon',
+        price: '$139.00'
       },
       {
         image: `/img/burgers/burger4.webp`,
