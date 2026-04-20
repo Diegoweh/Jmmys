@@ -41,7 +41,7 @@ const cookiesImages = [
   { src: '/img/postres/coolkie-chocochips.webp', alt: 'Coolkie Chocochips', title: 'Coolkie Chocochips' },
   { src: '/img/postres/coolkie-smores.webp', alt: 'Coolkie Smores', title: "Coolkie S'mores" },
   { src: '/img/postres/coolkie-apple-crumble.webp', alt: 'Coolkie Apple Crumble', title: 'Coolkie Apple Crumble' },
-  { src: '/img/postres/galleta-combo.webp', alt: 'Combo de galletas', title: 'Cookie Combo' },
+  { src: '/img/postres/galleta-combo.webp', alt: 'Combo de galletas', title: 'Coolkie Combo' },
 ];
 
 
