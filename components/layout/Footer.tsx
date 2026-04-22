@@ -194,7 +194,6 @@ export default function Footer() {
                     Ver en Google Maps
                     <ExternalLink className="w-3 h-3" />
                   </a>
-                  <img src="/img/delivery.png" alt="delivery" className="py-12 w-full max-w-md mx-auto" />
                 </div>
               </div>
             </address>
