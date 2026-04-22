@@ -407,7 +407,7 @@ export const menuItems: MenuItem[] = [
     price: 139,
     currency: "MXN",
     imageUrl: "/img/burgers/original-cheeseburger.webp",
-    tags: ["top-sirloin", "clasica"],
+    tags: ["tocino", "queso"],
     available: true,
   },
   {
