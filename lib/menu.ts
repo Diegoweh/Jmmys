@@ -401,7 +401,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-jimmys-jr-bacon",
     category: "BURGERS",
-    name: "Jimmys Jr. Bacon",
+    name: "Jimmys Jr. Bacon Burger",
     description:
       "La cheeseburger al estilo JIMMYS. Carne con bacon y triple queso, mazclada en plancha para un sabor dorado y brutalmente jugosa.",
     price: 139,
@@ -426,7 +426,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-crunchylishus-korean",
     category: "BURGERS",
-    name: "CrunchyLishus Korean",
+    name: "CrunchyLishus Korean Burger",
     description:
       "Pollo crunchy en salsa coreana con col, pepino encurtido y ajonjolí.",
     price: 169,
@@ -438,7 +438,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-crunchylishus-bbq",
     category: "BURGERS",
-    name: "CrunchyLishus BBQ",
+    name: "CrunchyLishus BBQ Burger",
     description:
       "Pollo crunchy en BBQ smoke con tocino, piña grill y cebollín.",
     price: 169,
@@ -475,7 +475,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "burger-smoky-jack-bbq",
     category: "BURGERS",
-    name: "Smoky Jack BBQ",
+    name: "Smoky Jack BBQ Burger",
     description:
       "Carne con tocino extra, doble queso cheddar y BBQ Smoky Jack.",
     price: 179,
@@ -503,7 +503,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pizza-pepperonisima",
     category: "PIZZAS",
-    name: "La Pepperonísima",
+    name: "La Pepperonísima Pizza",
     description:
       "Machin Pepperoni y queso mozzarella derretido.",
     price: 199,
@@ -515,7 +515,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pizza-honey-diabla-pepperoni",
     category: "PIZZAS",
-    name: "Honey Diabla Pepperoni",
+    name: "Honey Diabla Pepperoni Pizza",
     description:
       "Extra crispy pepperoni, jalapeños confitados, mousse de 3 quesos, pomodoro casera, parmesano reggiano, ¡Dulce y picosita!",
     price: 259,
@@ -551,7 +551,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pizza-dinamita-explosion",
     category: "PIZZAS",
-    name: "La Dinamita Explosión",
+    name: "La Dinamita Explosión Pizza",
     description:
       "Pepperoni, salchicha italiana, chorizo ahumado y tocino. Quesos + CheeseCrust crujiente. Topping de Chunky Pomodoro y parmesano reggiano.",
     price: 269,
@@ -563,7 +563,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pizza-truffalo-chica-wow",
     category: "PIZZAS",
-    name: "Truffalo Chica Wow (TCW)",
+    name: "Truffalo Chica Wow (TCW) Pizza",
     description:
       "Boneless trufalo, tocino y queso derretido. Aromática y sofisticada.",
     price: 259,
@@ -615,7 +615,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "postre-coolkie-skillet-smores-vibes",
     category: "POSTRES",
-    name: "Coolkie Skillet S’mores Vibes",
+    name: "Coolkie Skillet S'mores Vibes",
     description:
       "Galleta de chocolate dúo con helado, crumble de graham y chocolate con malvaviscos flameados. Termina con lluvia de chocolate.",
     price: 179,
