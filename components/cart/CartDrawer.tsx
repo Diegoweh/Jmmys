@@ -2,7 +2,7 @@
 
 import { useCart } from '@/contexts/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Plus, Minus, ShoppingCart, Trash2 } from 'lucide-react';
+import { X, Plus, Minus, ShoppingCart, Trash2, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
 import { menuByCategory, MenuItem } from '@/lib/menu';
 import { useMemo, useEffect, useState } from 'react';
@@ -14,6 +14,7 @@ export default function CartDrawer() {
     addItem,
     removeItem,
     updateQuantity,
+    updateNotes,
     clearCart,
     getTotalItems,
     getTotalPrice,
@@ -145,6 +146,10 @@ export default function CartDrawer() {
             : group.items.find(i => i.id === val)?.label ?? val;
           message += `   • ${group.title}: ${label}\n`;
         });
+      }
+      const notes = item.notes?.trim().replace(/\s+/g, ' ');
+      if (notes) {
+        message += `   📝 Comentarios: ${notes}\n`;
       }
       message += '\n';
     });
@@ -320,6 +325,26 @@ export default function CartDrawer() {
                             </p>
                           )}
                         </div>
+                      </div>
+
+                      {/* Comentarios del producto */}
+                      <div className="mt-3">
+                        <label
+                          htmlFor={`notes-${item.id}`}
+                          className="mb-1.5 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-gray-600"
+                        >
+                          <MessageSquare className="w-3.5 h-3.5 text-orange" />
+                          Comentarios
+                        </label>
+                        <textarea
+                          id={`notes-${item.id}`}
+                          value={item.notes ?? ''}
+                          onChange={(event) => updateNotes(item.id, event.target.value)}
+                          maxLength={160}
+                          rows={2}
+                          placeholder="Ej. sin tomate, bebida sin hielo"
+                          className="w-full resize-none rounded-lg border border-orange-200 bg-white px-3 py-2 text-sm text-gray-800 shadow-sm outline-none transition-colors placeholder:text-gray-400 focus:border-orange focus:ring-2 focus:ring-orange/20"
+                        />
                       </div>
 
                       {/* Subtotal del item */}
