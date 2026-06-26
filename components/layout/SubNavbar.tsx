@@ -121,7 +121,7 @@ export function SubNavbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
-                className="p-2 rounded-md hidden md:block hover:bg-white/10 transition-colors"
+                className="p-2 rounded-md hidden md:block hover:bg-whizte/10 transition-colors"
               >
                 <TiktokIcon className="h-5 w-5" />
               </a>
@@ -162,7 +162,7 @@ export function SubNavbar() {
               <ClockIcon />
               <div className="leading-tight">
                 <span className="block uppercase text-xs opacity-70 tracking-wider">Horario</span>
-                <span className="text-base font-medium">Mié–Lun 1–10 PM · Martes cerrado</span>
+                <span className="text-base font-medium">Mar–Dom 1–10 PM · Lunes cerrado</span>
               </div>
             </div>
             <div className="flex items-center gap-3">

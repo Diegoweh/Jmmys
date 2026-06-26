@@ -414,7 +414,7 @@ export default function Home() {
         title="Encuéntranos"
         address="Av. Carlos Canseco 603 - Mazatlán, Sin."
         hours={[
-          "Miércoles a Lunes",
+          "Martes a Domingo",
           "01:00 PM - 10:00 PM"
         ]}
         phone="(669) 213 9090"
