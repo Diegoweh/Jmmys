@@ -58,7 +58,7 @@ export function isMondayPromoActive(): boolean {
     const hourPart = parts.find(p => p.type === 'hour')?.value ?? '0';
     const currentHour = parseInt(hourPart, 10);
 
-    const isMonday = dayPart === 'Monday';
+    const isMonday = dayPart === 'Tuesday';
     // Business hours: 1 PM (13:00) to 10:59 PM (22:59)
     const isDuringBusinessHours = currentHour >= 13 && currentHour < 23;
 
@@ -97,7 +97,7 @@ export function getMondayPromoStatus(): {
     const hourPart = parts.find(p => p.type === 'hour')?.value ?? '0';
     const currentHour = parseInt(hourPart, 10);
 
-    const isMonday = dayPart === 'Monday';
+    const isMonday = dayPart === 'Tuesday';
     const isDuringBusinessHours = currentHour >= 13 && currentHour < 23;
 
     return {
